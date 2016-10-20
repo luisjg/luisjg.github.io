@@ -2,7 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
     <title>GitHub</title>
+=======
+    <title>Sample</title>
+>>>>>>> conflicts
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -16,6 +20,7 @@
 
   <div class="container">
     <div class="row">
+<<<<<<< HEAD
         <div class="col s12">
           <div class="card">
             <div class="card-content center-align">
@@ -27,4 +32,68 @@
       </div>
   </div>
   </body>
+=======
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content center-align">
+            <div id="steve-image">
+            </div>
+            <span id="steve-name" class="card-title"></span><br />
+            <div id="steve-info">
+            </div>
+            <strong>Bio:</strong>
+            <div id="bio">
+
+            </div>
+            <strong>Degrees:</strong>
+            <div id="steve-degrees">
+            </div>
+            <strong>Class List:</strong>
+            <div id="steve-classes">
+
+            </div>
+            <br>
+            <p><strong>See a different version at <a href="https://www.csun.edu/faculty/profiles/steven.fitzgerald">Faculty</a></strong></p>
+          </div>
+        </div>
+      </div>
+
+  </body>
+  <script type="text/javascript">
+  // this example assumes jQuery integration for ease of use
+  // and a <div> elhttp://curriculum.ptg.csun.edu/api/classes?instructor=jeffrey.wiegley@csun.eduement with the ID of "course-results"
+
+    // query all CompSci courses
+    var steveDirectory = 'https://directory.ptg.csun.edu/api/members/email/steven.fitzgerald@csun.edu';
+    var steveDegrees = 'https://degrees.ptg.csun.edu/degrees?person=steven.fitzgerald@csun.edu';
+    var steveClasses = 'http://curriculum.ptg.csun.edu/api/classes?instructor=steven.fitzgerald@csun.edu';
+    $(document).ready(function() {
+
+      // perform a shorthand AJAX call to grab the information
+      $.get(steveDirectory, function(data) {
+
+        // iterate over the returned courses
+        var steve = data.people;
+        $('#steve-image').append('<img  class=\"circle\" src=\"' + steve.image.image_url + '\"/>');
+        $('#steve-name').append('<a href=\"' + steve.contacts[1].website + '\">' + steve.display_name + '</a>');
+        $('#steve-info').append(steve.contacts[1].title + '<br/>' + '<a href=\"mailto:' + steve.contacts[1].email + '\">' + steve.contacts[1].email + '</a>' );
+        $('#bio').append(steve.biography);
+      });
+
+      $.get(steveDegrees, function(data) {
+        var degree = data.degrees;
+        $(degree).each(function(index, degree) {
+          $('#steve-degrees').append('<p><strong>' + degree.degree + '</strong> ' + degree.year + ' from ' + degree.institute);
+        });
+      });
+
+      $.get(steveClasses, function(data) {
+        var classes = data.classes;
+        $(classes).each(function(index, classw) {
+          $('#steve-classes' ).append(classw.subject + ' ' + classw.catalog_number + ' ' + classw.title + ' (' + (classw.units === 'null' ? '0' : classw.units) + ')'  + '<br/>' );
+        });
+      });
+  });
+    </script>
+>>>>>>> conflicts
 </html>
