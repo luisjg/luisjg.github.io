@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <!--Import Google Icon Font-->
+    <script type="text/javascript" src="js/scripts.js"></script>
     <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="grey lighten-3">
 
@@ -33,58 +31,61 @@
         </div>
       </nav>
     </header>
-
-    <div class="row container">
-      <div class="col m12 center-align">
-        <h4>Presentations</h4>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
+    
+    <main aria-label="Content">
+      <div class="container">
+        <div class="row">
+          <div class="col m12">
+            <h4 class="center-align">Presentations</h4>
+          </div>
+        </div>
+        <div class="row">
           <div class="col m12">
             <div class="card">
-              <div class="card-title center-align">GitHub Basics</div>
+              <div class="card-title">
+                <span class="center-align">GitHub Basics</span>
+              </div>
               <div class="card-content center-align">
-                <iframe src="https://docs.google.com/presentation/d/1BHswxcNoPjIRRfP-cntGklwSRW3vSOnbb8NAS7KEJUI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe><br>
+                <div class="video-wrapper">
+                  <iframe src="https://docs.google.com/presentation/d/1BHswxcNoPjIRRfP-cntGklwSRW3vSOnbb8NAS7KEJUI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe><br>
+                </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
-
-
-    <div class="container">
-      <div class="row">
+        <div class="row">
           <div class="col m12">
             <div class="card">
-            <div class="card-title center-align">META<span style="color:red">+</span>LAB Web Services</div>
+              <div class="card-title">
+                <span class="center-align">META<span style="color:red">+</span>LAB Web Services</span>
+              </div>
               <div class="card-content center-align">
-                <iframe src="https://docs.google.com/presentation/d/1e8TG7Mj8hqo31s_pLYcorrND3Jnq9v2ojGjTC0h5qhg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <div class="video-wrapper">
+                  <iframe src="https://docs.google.com/presentation/d/1e8TG7Mj8hqo31s_pLYcorrND3Jnq9v2ojGjTC0h5qhg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                </div>
                 <br>
               </div>
             </div>
           </div>
         </div>
-    </div>
-
-    <footer class="page-footer purple lighten-2">
-      <div class="row container center-align">
-        <a href="https://github.com/luisjg" class="purple-text lighten-text-4"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a> &nbsp;
-        <a href="https://www.linkedin.com/in/luis-guzman-a6b59866" class="purple-text lighten-text-4"><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></a>
       </div>
-      <div class="footer-copyright center-align">
-          &copy; luisjg 2017
+    </main>
+    
+    <footer class="page-footer purple lighten-2">
+      <div class="container">
+        <div class="row">
+          <div class="col m12 center-align">
+            <a href="https://github.com/luisjg" class="purple-text lighten-text-4"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a> &nbsp;
+            <a href="https://www.linkedin.com/in/luis-guzman-a6b59866" class="purple-text lighten-text-4"><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="center-align">
+          &copy; luisjg <span id="current-year"></span>
+        </div>
       </div>
     </footer>
 
 </body>
-<script type="text/javascript">
-$(document).ready(
-  function() {
-      $(".button-collapse").sideNav();
-      $('#current-year').text(moment().format('YYYY'));
-  }
-);
-</script>
 </html>
