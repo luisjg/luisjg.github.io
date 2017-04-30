@@ -2,7 +2,7 @@ $(document).ready(
   function() {
     $(".button-collapse").sideNav();
     $('#current-year').text(moment().format('YYYY'));
-    if('#experience-timeline'.length) {
+    if($('#experience-timeline').length) {
       $('#experience-timeline').each(function() {          
         $this = $(this); // Store reference to this
         $userContent = $this.children('div'); // user content
