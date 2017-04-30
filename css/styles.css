@@ -59,7 +59,7 @@ main {
   margin: 0 0 15px 0;
 }
 .vtimeline-content p {
-  color: #74808a;
+  color: rgba(0,0,0,0.87);
   font-size: 1em;
   margin: 0;
 }
