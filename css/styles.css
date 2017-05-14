@@ -9,6 +9,18 @@ main {
   flex: 1 0 auto;
 }
 
+#education-section {
+  display: none;
+}
+
+#projects-section {
+  display: none;
+}
+
+#skills-section {
+  display: none;
+}
+
 #experience-timeline {
   margin: 30px auto 0 auto;
   position: relative;
