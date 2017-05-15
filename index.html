@@ -6,6 +6,7 @@
     <meta name="description" content="Personal website for luisjg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="grey lighten-3">
@@ -26,7 +28,17 @@
             <li><a href="/presentations">Presentations</a></li>
           </ul>
           <ul class="side-nav" id="mobile-menu">
-            <li><a class="waves-effect" href="/presentations">Presentations</a></li>
+            <li>
+              <div class="userView">
+                <img class="background" src="http://materializecss.com/images/office.jpg">
+                <a href="/"><img class="circle z-depth-3" src="imgs/16617588.jpg"></a>
+                <a href="/"><span class="white-text name">luisjg</span></a>
+                <a href="mailto:contact@luisjg.io"><span class="white-text email">contact@luisjg.io</span></a>
+              </div>
+            </li>
+            <li>
+              <a href="/presentations">Presentations</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -54,23 +66,26 @@
           </div>
         </div>
         
+        <br>
+        <br>
+        
         <div class="row">
           <div class="col m10 push-m2">
             <div class="col m3">
               <a id="work" class="btn-floating btn-large waves-effect waves-light purple hoverable"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
-              <p style="margin-left: 8px;">Work</p>
+              <p id="work-label" style="font-weight: bold; margin-left: 8px;">Work</p>
             </div>
             <div class="col m3">  
-              <a id="projects" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable"><i class="fa fa-list alt" aria-hidden="true"></i></a>
-              <p>Projects</p>
+              <a id="projects" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+              <p id="projects-label">Projects</p>
             </div>
             <div class="col m3">  
               <a id="skills" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable"><i class="fa fa-magic" aria-hidden="true"></i></a>
-              <p style="margin-left: 8px;">Skills</p>
+              <p id="skills-label" style="margin-left: 8px;">Skills</p>
             </div>
             <div class="col m3">  
               <a id="education" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-              <p>Education</p>
+              <p id="education-label">Education</p>
             </div>
           </div>
         </div>
@@ -196,51 +211,44 @@
               <br>
             </div>
             
+
             <div id="skills-section">
-                
+              <div class="row">
                 <div class="col m10 push-m1">
-                  <div class="card-panel center-align">
-                    <div class="chip purple lighten-2 white-text">
-                      Agile Scrum
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      Android Development
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      C
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      C ++
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      CSS
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      Git
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      HTML
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      Java
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      JavaScript
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      JQuery
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      Laravel
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      Linux
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      MySQL
-                    </div>
-                    <div class="chip purple lighten-2 white-text">
-                      PHP
+                  <div class="card-panel">
+                    <div class="row center-align">
+                      <div class="col m3">
+                        <span style="font-size: 5em;" class="devicons devicons-html5"></span>
+                        <p>HTML</p>
+                      </div>
+                      <div class="col m3">
+                        <span style="font-size: 5em;" class="devicons devicons-css3"></span>
+                        <p>CSS</p>
+                      </div>
+                      <div class="col m3">
+                        <span style="font-size: 5em;" class="devicons devicons-javascript_shield"></span>
+                        <p>JavaScript</p>
+                      </div>
+                      <div class="col m3">
+                        <span style="font-size: 5em;" class="devicons devicons-jquery"></span>
+                        <p>JQuery</p>
+                      </div>
+                      <div class="col m3">
+                        <span style="font-size: 5em;" class="devicons devicons-laravel"></span>
+                        <p>Laravel</p>
+                      </div>
+                      <div class="col m3">
+                        <span style="font-size: 5em;" class="devicons devicons-mysql"></span>
+                        <p>MySQL</p>
+                      </div>
+                      <div class="col m3">
+                        <span style="font-size: 5em;" class="devicons devicons-git"></span>
+                        <p>Git</p>
+                      </div>
+                      <div class="col m3">
+                        <span style="font-size: 5em;" class="devicons devicons-ubuntu"></span>
+                        <p>Ubuntu</p>
+                      </div>
                     </div>
                   </div>
                 </div>

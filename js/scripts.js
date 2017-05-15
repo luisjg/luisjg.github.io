@@ -10,19 +10,25 @@ function checkVisible(element) {
 }
 
 function makeActive(item) {
+  label = '#' + $(item).attr('id') + '-label';
+  $(label).css('fontWeight', 'bold');
   $(item).removeClass('btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable').addClass('btn-floating btn-large waves-effect waves-light purple hoverable');
 }
 
 function makeInactive(item) {
+  label = '#' + $(item).attr('id') + '-label';
+  $(label).css('fontWeight', '');
   $(item).removeClass('btn-floating btn-large waves-effect waves-light purple hoverable').addClass('btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable');
 }
 
 $(document).ready(function() {
   
-  var windowLocation = $(location).attr('pathname');
   $(".button-collapse").sideNav();
   $('#current-year').text(moment().format('YYYY'));
-  if(windowLocation.indexOf('presentations') < 0) {    
+  
+  // handle the button clicks
+  var windowLocation = $(location).attr('pathname');
+  if(windowLocation.indexOf('presentations') < 0) {   
     $('#work').click(function() {
       checkVisible($(this));
       $('#work-section').toggle();
@@ -39,6 +45,8 @@ $(document).ready(function() {
       checkVisible($(this));
       $('#education-section').toggle();
     });
+    
+    // paint the experience timeline
     $('#experience-timeline').each(function() {          
       $this = $(this); // Store reference to this
       $userContent = $this.children('div'); // user content
