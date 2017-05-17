@@ -26,6 +26,7 @@ main {
   position: relative;
   max-width: 1000px;
 }
+
 #experience-timeline:before {
   position: absolute;
   content: '';
@@ -38,6 +39,7 @@ main {
   background: #9c27b0;
   z-index: 0;
 }
+
 #experience-timeline:after {
   position: absolute;
   content: '';
@@ -49,6 +51,43 @@ main {
   left: 303px;
 }
 
+.devicons {
+  font-size: 5em;
+  text-shadow: rgba(0,0,0,0.40) 1px 0 5px; 
+}
+
+.devicons-html5 {
+  color: #e15023;
+}
+
+.devicons-css3 {
+  color: #0070ba;
+}
+
+.devicons-javascript_shield {
+  color: #ffce34;
+}
+
+.devicons-jquery {
+  color: #0769ad;
+}
+
+.devicons-laravel {
+  color: #f4645f;
+}
+
+.devicons-mysql {
+  color: #4479a1;
+}
+
+.devicons-git {
+  color: #f14e32;
+}
+
+.devicons-ubuntu {
+  color: #e95420;
+}
+
 .vtimeline-content {
   margin-left: 350px;
   background: #fff;
@@ -57,6 +96,7 @@ main {
   border-radius: 3px;
   text-align: left;
 }
+
 .vtimeline-content h3 {
   font-size: 1.5em;
   font-weight: 700;
@@ -64,12 +104,14 @@ main {
   display: inline-block;
   margin: 0;
 }
+
 .vtimeline-content h4 {
   font-size: 1.2em;
   font-weight: 300;
   color: #7e8890;
   margin: 0 0 15px 0;
 }
+
 .vtimeline-content p {
   color: rgba(0,0,0,0.87);
   font-size: 1em;
@@ -92,8 +134,9 @@ main {
   border-radius: 50%;
   float: left;
   z-index: 99;
-  margin-left: 285px;
+  margin-left: 287px;
 }
+
 .vtimeline-icon i {
   display: block;
   font-size: 2em;
