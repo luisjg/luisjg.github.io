@@ -3,6 +3,7 @@
 > visit [luisjg.io](luisjg.io)
 
 ### Built using the following
+
 - HTML
 - CSS
   - [Materialize](https://materializecss.com)
@@ -11,5 +12,5 @@
   - [DevIcons](https://vorillaz.github.io/devicons/#/main)
   - [MaterialIcons](https://fonts.googleapis.com/icon?family=Material+Icons)
 - JavaScript
-  - [JQuery 2.x](https://code.jquery.com/jquery/)
+  - [JQuery 2.2.4](https://code.jquery.com/jquery/)
   - [MomentJS](https://momentjs.com/)
