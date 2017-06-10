@@ -9,15 +9,7 @@ main {
   flex: 1 0 auto;
 }
 
-#education-section {
-  display: none;
-}
-
-#projects-section {
-  display: none;
-}
-
-#skills-section {
+.inactive {
   display: none;
 }
 

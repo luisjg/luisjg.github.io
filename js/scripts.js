@@ -2,7 +2,6 @@ function checkVisible(element) {
   var buttons = ['work', 'skills', 'projects', 'education'];
   jQuery.each(buttons, function(i, val) {
     if($('#' + val + '-section').is(':visible')) {
-      $('#' + val + '-section').toggle();
       makeInactive('#' + val);
     }
   });
@@ -12,17 +11,16 @@ function checkVisible(element) {
 function makeActive(item) {
   label = '#' + $(item).attr('id') + '-label';
   $(label).css('fontWeight', 'bold');
-  $(item).removeClass('btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable').addClass('btn-floating btn-large waves-effect waves-light purple hoverable');
+  $(item).removeClass('purple lighten-3 hoverable').addClass('purple hoverable');
 }
 
 function makeInactive(item) {
   label = '#' + $(item).attr('id') + '-label';
   $(label).css('fontWeight', '');
-  $(item).removeClass('btn-floating btn-large waves-effect waves-light purple hoverable').addClass('btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable');
+  $(item).removeClass('purple hoverable').addClass('purple lighten-3 hoverable');
 }
 
 $(document).ready(function() {
-  
   $(".button-collapse").sideNav();
   $('#current-year').text(moment().format('YYYY'));
   
@@ -31,19 +29,31 @@ $(document).ready(function() {
   if(windowLocation.indexOf('presentations') < 0) {   
     $('#work').click(function() {
       checkVisible($(this));
-      $('#work-section').toggle();
+      $('#work-section').removeClass('inactive');
+      $('#skills-section').addClass('inactive');
+      $('#projects-section').addClass('inactive');
+      $('#education-section').addClass('inactive');
     });
     $('#skills').click(function() {
       checkVisible($(this));
-      $('#skills-section').toggle();
+      $('#skills-section').removeClass('inactive');
+      $('#work-section').addClass('inactive');
+      $('#projects-section').addClass('inactive');
+      $('#education-section').addClass('inactive');
     });
     $('#projects').click(function() {
       checkVisible($(this));
-      $('#projects-section').toggle();
+      $('#projects-section').removeClass('inactive');
+      $('#work-section').addClass('inactive');
+      $('#skills-section').addClass('inactive');
+      $('#education-section').addClass('inactive');
     });
     $('#education').click(function() {
       checkVisible($(this));
-      $('#education-section').toggle();
+      $('#education-section').removeClass('inactive');
+      $('#work-section').addClass('inactive');
+      $('#projects-section').addClass('inactive');
+      $('#skills-section').addClass('inactive');
     });
     
     // paint the experience timeline
