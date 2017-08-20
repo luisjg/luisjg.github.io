@@ -51,9 +51,9 @@
     <div class="container">
       <main aria-label="Content">
 
-        <div class="row">
+        <div id="intro-section" class="row hide">
           <div class="col m12">
-            <h4 class="center-align">Intro</h4>
+            <h4 class="center-align">Intro<span class="blinking-text">|</span></h4>
           </div>
           <div class="col m10 push-m1">
             <div class="card-panel">
@@ -62,8 +62,6 @@
                 I currently work for <strong><a class="purple-text" href="http://www.metalab.csun.edu">CSUN META<span class="red-text">+</span>LAB</a></strong> where
                 my primary role is Web Development &amp; Quality Assurance as well as mentoring the university students by onboarding them with the toolset used at
                 META+LAB which includes <strong>Laravel</strong>, <strong>Git</strong> and <strong>Agile Scrum</strong> Methodologies.
-                <!-- <br><br> -->
-                <!-- GitHub push counter: <span id="push-count"></span> -->
               </p>
             </div>
           </div>
@@ -96,8 +94,7 @@
         <br>
         <br>
 
-        <div id="work-section">
-
+        <div id="work-section" class="hide">
           <div id="experience" class="background-alt">
             <div id="experience-timeline">
               <div data-date="March 2017 – Present">
@@ -242,6 +239,13 @@
             <div id="skills-section" class="hide">
               <div class="row">
                 <div class="col m10 push-m1">
+                <div id="git-stats" class="center-align hidden">
+                <p class="flow-text">GitHub Stats</p>
+                <br>
+                pushes : <span id="push-count"></span>
+                <br>
+                pull requests : <span id="pr-count"></span>
+                </div>
                   <div class="card-panel">
                     <div class="row center-align">
                       <div class="col m3 s6">
