@@ -4,10 +4,10 @@ function makeActive(item) {
 }
 
 function makeInactive(item) {
-  $(item).removeClass('hide');
+  $(item).fadeIn('slow').removeClass('hide');
   jQuery.each($buttons, function(key, val) {
     if(val !== item) {
-      $(val).addClass('hide');
+      $(val).fadeOut('slow').addClass('hide');
       $('#' + key + '-label').css('fontWeight', '');
       $('#' + key).addClass('lighten-3');
     }
@@ -27,9 +27,11 @@ function gitHubApi(page) {
       if(data.length > 0) {
         gitHubApi('?page='+$gitCall);
       }
-      jQuery.each(data, function(i, item){
+      jQuery.each(data, function(i, item) {
       if(item.type === 'PushEvent') {
         $gitPushCount++;
+      } else if(item.type === 'PullRequestEvent') {
+        $gitPrCount++;
       }
     });
   })
@@ -37,20 +39,30 @@ function gitHubApi(page) {
 
 // listen on the document ready event to do our scripting
 $(document).ready(function() {
+  $('#intro-section').fadeIn('slow').removeClass('hide');
+  $('#work-section').fadeIn('slow').removeClass('hide');
   $(".button-collapse").sideNav();
   $('#current-year').text(moment().format('YYYY'));
 
   // handle the button clicks only on the index page.
   windowLocation = $(location).attr('pathname');
   if(windowLocation.indexOf('presentations') < 0) {
-    $gitPushCount = 0;
-    $gitCall = 1;
+    // $gitPushCount = 0;
+    // $gitPrCount = 0;
+    // $gitCall = 1;
 
-    // gitHubApi();
+    // if(!sessionStorage.getItem('pushes') && !sessionStorage.getItem('prs')) {
+    //   gitHubApi();
+    // }
 
-    $(document).ajaxStop(function () {
-      $('#push-count').text($gitPushCount);
-    });
+    // $(document).ajaxStop(function () {
+    //   sessionStorage.setItem('pushes', $gitPushCount);
+    //   sessionStorage.setItem('prs', $gitPrCount);
+    // });
+
+    // $('#push-count').text(sessionStorage.getItem('pushes'));
+    // $('#pr-count').text(sessionStorage.getItem('prs'));
+    // $('#git-stats').fadeIn('slow').removeClass('hide');
 
     $buttons = {
       work: "#work-section",
@@ -59,7 +71,7 @@ $(document).ready(function() {
       education: "#education-section"
     };
 
-    jQuery.each($buttons, function(key, val){
+    jQuery.each($buttons, function(key, val) {
       $('#' + key).click(function() {
         makeActive('#' + key);
         makeInactive(val);
