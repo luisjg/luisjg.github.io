@@ -1,26 +1,38 @@
-function checkVisible(element) {
-  buttons = ['#work', '#skills', '#projects', '#education'];
-  jQuery.each(buttons, function(i, val) {
-    if($(val + '-section').is(':visible')) {
-      makeInactive(val);
-      // quit looking for more.
-      // at worst n look up time.
-      return false;
-    }
-  });
-  makeActive(element);
-}
-
 function makeActive(item) {
-  label = '#' + $(item).attr('id') + '-label';
-  $(label).css('fontWeight', 'bold');
+  $(item + '-label').css('fontWeight', 'bold');
   $(item).removeClass('lighten-3');
 }
 
 function makeInactive(item) {
-  label = '#' + $(item).attr('id') + '-label';
-  $(label).css('fontWeight', '');
-  $(item).addClass('lighten-3');
+  $(item).removeClass('hide');
+  jQuery.each($buttons, function(key, val) {
+    if(val !== item) {
+      $(val).addClass('hide');
+      $('#' + key + '-label').css('fontWeight', '');
+      $('#' + key).addClass('lighten-3');
+    }
+  });
+}
+
+function gitHubApi(page) {
+  $gitCall++;
+  if(typeof page === 'undefined') {
+    page='';
+  }
+
+  $.ajax({
+    url: 'https://api.github.com/users/luisjg/events'+page,
+    dataType: 'json',
+    }).done(function(data) {
+      if(data.length > 0) {
+        gitHubApi('?page='+$gitCall);
+      }
+      jQuery.each(data, function(i, item){
+      if(item.type === 'PushEvent') {
+        $gitPushCount++;
+      }
+    });
+  })
 }
 
 // listen on the document ready event to do our scripting
@@ -31,40 +43,27 @@ $(document).ready(function() {
   // handle the button clicks only on the index page.
   windowLocation = $(location).attr('pathname');
   if(windowLocation.indexOf('presentations') < 0) {
-    // TODO: Improve code with the following idea...
-    // buttons = ['#work', '#skills', '#projects', '#education'];
-    // jQuery.each(buttons, function(i, btn){
-    //   $(btn).click(function(){
-    //     console.log($(btn));
-    //   });
-    // });
-    $('#work').click(function() {
-      checkVisible($(this));
-      $($(this).attr('href')).removeClass('inactive');
-      $('#skills-section').addClass('inactive');
-      $('#projects-section').addClass('inactive');
-      $('#education-section').addClass('inactive');
+    $gitPushCount = 0;
+    $gitCall = 1;
+
+    // gitHubApi();
+
+    $(document).ajaxStop(function () {
+      $('#push-count').text($gitPushCount);
     });
-    $('#skills').click(function() {
-      checkVisible($(this));
-      $($(this).attr('href')).removeClass('inactive');
-      $('#work-section').addClass('inactive');
-      $('#projects-section').addClass('inactive');
-      $('#education-section').addClass('inactive');
-    });
-    $('#projects').click(function() {
-      checkVisible($(this));
-      $($(this).attr('href')).removeClass('inactive');
-      $('#work-section').addClass('inactive');
-      $('#skills-section').addClass('inactive');
-      $('#education-section').addClass('inactive');
-    });
-    $('#education').click(function() {
-      checkVisible($(this));
-      $($(this).attr('href')).removeClass('inactive');
-      $('#work-section').addClass('inactive');
-      $('#projects-section').addClass('inactive');
-      $('#skills-section').addClass('inactive');
+
+    $buttons = {
+      work: "#work-section",
+      skills: "#skills-section",
+      projects: "#projects-section",
+      education: "#education-section"
+    };
+
+    jQuery.each($buttons, function(key, val){
+      $('#' + key).click(function() {
+        makeActive('#' + key);
+        makeInactive(val);
+      });
     });
 
     // paint the experience timeline
