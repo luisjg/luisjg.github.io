@@ -72,7 +72,8 @@ $(document).ready(function() {
     };
 
     jQuery.each($buttons, function(key, val) {
-      $('#' + key).click(function() {
+      $('#' + key).click(function(e) {
+        e.preventDefault();
         makeActive('#' + key);
         makeInactive(val);
       });
