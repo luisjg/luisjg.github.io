@@ -9,6 +9,28 @@ main {
   flex: 1 0 auto;
 }
 
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('../imgs/faculty.png');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #experience-timeline {
   margin: 30px auto 0 auto;
   position: relative;
@@ -97,7 +119,7 @@ main {
 
 .devicons {
   font-size: 5em;
-  text-shadow: rgba(0,0,0,0.40) 1px 0 5px; 
+  text-shadow: rgba(0,0,0,0.40) 1px 0 5px;
 }
 
 .devicons-html5 {
