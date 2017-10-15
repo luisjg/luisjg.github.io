@@ -40,6 +40,8 @@ $(document).ready(function() {
         retrievedObject = sessionStorage.getItem('projects');
         jsonObject = JSON.parse(retrievedObject);
         id = $(this).attr("id");
+        link = $(this).attr("href");
+        $(".modal-content > h4").text($(this).text() + " Application");
         if(id === "aa2") {
           content = jsonObject.aa2;
         } else if(id === "faculty") {
@@ -48,9 +50,8 @@ $(document).ready(function() {
           content = jsonObject.helix;
         } else {
           content = jsonObject.mom;
+          $(".modal-content > h4").text($(this).text() + " Website");
         }
-        link = $(this).attr("href");
-        $(".modal-content > h4").text($(this).text() + " Application");
         $(".modal-content > p").html(content);
         $(".modal-footer > a").attr("href", link).attr("target", "_blank").text("Visit " + $(this).text());
         $(this).addClass("modal-trigger");
