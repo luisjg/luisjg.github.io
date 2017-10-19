@@ -34,7 +34,7 @@ $(document).ready(function() {
     android = "Android";
     mac     = "Macintosh";
     windows = "Windows";
-    if(userAgent.indexOf(mac) || !(userAgent.indexOf(android))) || userAgent.indexOf(windows)) {
+    if(userAgent.indexOf(mac) || !(userAgent.indexOf(android)) || userAgent.indexOf(windows)) {
       $(".card-title").click(function(e) {
         e.preventDefault();
         retrievedObject = sessionStorage.getItem('projects');
