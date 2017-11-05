@@ -31,10 +31,9 @@ $(document).ready(function() {
     $("#intro-section").fadeIn("slow").removeClass("hide");
     $("#work-section").fadeIn("slow").removeClass("hide");
     userAgent = navigator.userAgent;
-    android = "Android";
     mac     = "Macintosh";
     windows = "Windows";
-    if(userAgent.indexOf(mac) || !(userAgent.indexOf(android)) || userAgent.indexOf(windows)) {
+    if(userAgent.indexOf(mac) || userAgent.indexOf(windows)) {
       $(".card-title").click(function(e) {
         e.preventDefault();
         retrievedObject = sessionStorage.getItem('projects');
