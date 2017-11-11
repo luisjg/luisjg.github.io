@@ -9,11 +9,20 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108163478-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-108163478-1');
+    </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -31,10 +40,12 @@
           <ul class="side-nav" id="mobile-menu">
             <li>
               <div class="userView">
-                <img class="background" src="http://materializecss.com/images/office.jpg">
+                <div class="background purple lighten-2">
+
+                </div>
                 <a href="/"><img class="circle z-depth-3" src="imgs/16617588.jpg"></a>
-                <a href="/"><span class="white-text name">luisjg</span></a>
-                <a href="mailto:contact@luisjg.io"><span class="white-text email">contact@luisjg.io</span></a>
+                <a href="/"><span class="black-text name">luisjg</span></a>
+                <a href="mailto:contact@luisjg.io"><span class="black-text email">contact@luisjg.io</span></a>
               </div>
             </li>
             <li>
@@ -73,19 +84,19 @@
         <div class="row">
           <div class="col m10 push-m2 s11 push-s1">
             <div class="col m3">
-              <a href="#work-section" id="work" class="btn-floating btn-large waves-effect waves-light purple hoverable"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
+              <a href="#work-section" id="work" class="btn-floating btn-large waves-effect waves-light purple hoverable pulse"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
               <p id="work-label" style="font-weight: bold; margin-left: 8px;">Work</p>
             </div>
             <div class="col m3">
-              <a href="#projects-section" id="projects" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+              <a href="#projects-section" id="projects" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable pulse"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
               <p id="projects-label">Projects</p>
             </div>
             <div class="col m3">
-              <a href="#skills-section" id="skills" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable"><i class="fa fa-magic" aria-hidden="true"></i></a>
+              <a href="#skills-section" id="skills" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable pulse"><i class="fa fa-magic" aria-hidden="true"></i></a>
               <p id="skills-label" style="margin-left: 8px;">Skills</p>
             </div>
             <div class="col m3">
-              <a href="#education-section" id="education" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+              <a href="#education-section" id="education" class="btn-floating btn-large waves-effect waves-light purple lighten-3 hoverable pulse"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
               <p id="education-label">Education</p>
             </div>
           </div>
@@ -143,7 +154,7 @@
                       <img class="responsive-img" src="imgs/faculty.png" alt="CSUN Faculty">
                     </div>
                     <div class="card-content">
-                      <a class="card-title purple-text text-lighten-2" href="http://metalab.csun.edu/faculty">CSUN Faculty</a>
+                      <a id="faculty" class="card-title purple-text text-lighten-2" href="http://metalab.csun.edu/faculty">CSUN Faculty</a>
                       <p>Showcasing CSUN's unique Faculty</p>
                     </div>
                   </div>
@@ -151,10 +162,10 @@
                 <div class="col l6 s12">
                   <div class="card card small">
                     <div class="card-image">
-                      <img class="responsive-img" src="imgs/aa2.jpg" alt="CSUN AA2">
+                      <img class="responsive-img" src="imgs/aa2.png" alt="CSUN AA2">
                     </div>
                     <div class="card-content">
-                      <a class="card-title purple-text text-lighten-2" href="http://metalab.csun.edu/aa2">Equity &amp; Diversity Database</a>
+                      <a id="aa2" class="card-title purple-text text-lighten-2" href="http://metalab.csun.edu/aa2">Equity &amp; Diversity Database</a>
                       <p>Campus Diversity Management Application</p>
                     </div>
                   </div>
@@ -165,8 +176,8 @@
                       <img class="responsive-img" src="imgs/metalab.png" alt="CSUN METALAB">
                     </div>
                     <div class="card-content">
-                      <a class="card-title purple-text text-lighten-2" href="http://metalab.csun.edu">CSUN META+LAB</a>
-                      <p>META+LAB Website</p>
+                      <a id="mom" class="card-title purple-text text-lighten-2" href="http://metalab.csun.edu">CSUN META+LAB</a>
+                      <p>META<span class="red-text">+</span>LAB Website</p>
                     </div>
                   </div>
                 </div>
@@ -176,8 +187,8 @@
                       <img class="responsive-img" src="imgs/helix.png" alt="Scholarship">
                     </div>
                     <div class="card-content">
-                      <a class="card-title purple-text text-lighten-2" href="http://metalab.csun.edu/faculty/beta/scholarship">Scholarship</a>
-                      <p>Letting Faculty showcase their research &amp; expertise</p>
+                      <a id="helix" class="card-title purple-text text-lighten-2" href="http://metalab.csun.edu/faculty/beta/scholarship">Scholarship</a>
+                      <p>A place where Faculty can showcase their projects, research &amp; expertise</p>
                     </div>
                   </div>
                 </div>
@@ -239,13 +250,6 @@
             <div id="skills-section" class="hide">
               <div class="row">
                 <div class="col m10 push-m1">
-                <!-- <div id="git-stats" class="center-align hidden">
-                <p class="flow-text">GitHub Stats</p>
-                <br>
-                pushes : <span id="push-count"></span>
-                <br>
-                pull requests : <span id="pr-count"></span>
-                </div> -->
                   <div class="card-panel">
                     <div class="row center-align">
                       <div class="col m3 s6">
@@ -287,6 +291,17 @@
               <br>
             </div>
         </main>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="project-modal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4></h4>
+          <p></p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="modal-action modal-close waves-effect waves-purple btn-flat"></a>
+        </div>
       </div>
 
       <footer class="page-footer purple lighten-2">

@@ -11,55 +11,53 @@ function toggleButtons(item) {
   $((item).attr("href")).fadeIn("slow").removeClass("hide");
 }
 
-function gitHubApi(page) {
-  $gitCall++;
-  if(typeof page === 'undefined') {
-    page='';
-  }
-
-  $.ajax({
-    url: 'https://api.github.com/users/luisjg/events'+page,
-    dataType: 'json',
-    }).done(function(data) {
-      if(data.length > 0) {
-        gitHubApi('?page='+$gitCall);
-      }
-      jQuery.each(data, function(i, item) {
-      if(item.type === 'PushEvent') {
-        $gitPushCount++;
-      } else if(item.type === 'PullRequestEvent') {
-        $gitPrCount++;
-      }
-    });
-  })
-}
-
 // listen on the document ready event to do our scripting
 $(document).ready(function() {
-  $("#intro-section").fadeIn("slow").removeClass("hide");
-  $("#work-section").fadeIn("slow").removeClass("hide");
   $(".button-collapse").sideNav();
   $("#current-year").text(moment().format("YYYY"));
 
   // handle the button clicks only on the index page.
   windowLocation = $(location).attr("pathname");
   if(windowLocation.indexOf("presentations") < 0) {
-    // $gitPushCount = 0;
-    // $gitPrCount = 0;
-    // $gitCall = 1;
+    if(sessionStorage.getItem('projects') == null) {
+      $.ajax({
+        url: 'http://luisjg.io/json/projects.json',
+        dataType: 'json',
+      }).done(function(data) {
+        sessionStorage.setItem('projects', JSON.stringify(data));
+      });
+    }
 
-    // if(!sessionStorage.getItem('pushes') && !sessionStorage.getItem('prs')) {
-    //   gitHubApi();
-    // }
-
-    // $(document).ajaxStop(function () {
-    //   sessionStorage.setItem('pushes', $gitPushCount);
-    //   sessionStorage.setItem('prs', $gitPrCount);
-    // });
-
-    // $('#push-count').text(sessionStorage.getItem('pushes'));
-    // $('#pr-count').text(sessionStorage.getItem('prs'));
-    // $('#git-stats').fadeIn('slow').removeClass('hide');
+    $("#intro-section").fadeIn("slow").removeClass("hide");
+    $("#work-section").fadeIn("slow").removeClass("hide");
+    userAgent = navigator.userAgent;
+    mac     = "Macintosh";
+    windows = "Windows";
+    if(userAgent.indexOf(mac) || userAgent.indexOf(windows)) {
+      $(".card-title").click(function(e) {
+        e.preventDefault();
+        retrievedObject = sessionStorage.getItem('projects');
+        jsonObject = JSON.parse(retrievedObject);
+        id = $(this).attr("id");
+        link = $(this).attr("href");
+        $(".modal-content > h4").text($(this).text() + " Application");
+        if(id === "aa2") {
+          content = jsonObject.aa2;
+        } else if(id === "faculty") {
+          content = jsonObject.faculty;
+        } else if(id === "helix") {
+          content = jsonObject.helix;
+        } else {
+          content = jsonObject.mom;
+          $(".modal-content > h4").text($(this).text() + " Website");
+        }
+        $(".modal-content > p").html(content);
+        $(".modal-footer > a").attr("href", link).attr("target", "_blank").text("Visit " + $(this).text());
+        $(this).addClass("modal-trigger");
+        $(this).attr("href", "#project-modal");
+        $($(this).attr("href")).modal();
+      });
+    }
 
     $(".btn-floating").click(function(e) {
       e.preventDefault();
