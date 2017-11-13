@@ -9,17 +9,21 @@ main {
   flex: 1 0 auto;
 }
 
-.navbar {
+.red-text {
+  color: #D00D2D;
+}
+
+/*.navbar {
   position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1
-}
+}*/
 
 .parallax {
     /* The image used */
-    background-image: url('../imgs/faculty.png');
+    background-image: url('../imgs/metalab.png');
 
     /* Full height */
     height: 100%;
