@@ -6,7 +6,7 @@
     <meta name="description" content="Personal website for luisjg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
@@ -26,6 +26,9 @@
       }
       .red-text {
         color: #D00D2D;
+      }
+      .lilac-text {
+        color: #9b4dca;
       }
       .progress.is-cadet::-webkit-progress-value {
         background-color: #2e2e4e;
@@ -93,7 +96,7 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active">
+                <a href="/redesign/" class="navbar-item is-active">
                   Home
                 </a>
                 <a href="/redesign/presentations" class="navbar-item">
@@ -112,7 +115,9 @@
             Intro
           </h1>
           <p class="subtitle">
-            Subtitle
+            <i class="lilac-text fa fa-map-marker" aria-hidden="true"></i> Los Angeles <span class="red-text">|</span>
+            <i class="lilac-text fa fa-graduation-cap" aria-hidden="true"></i> Computer Science <span class="red-text">|</span>
+            <i class="lilac-text fa fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor
           </p>
         </div>
       </div>
@@ -122,7 +127,7 @@
         <nav class="tabs is-boxed is-fullwidth">
           <div class="container">
             <ul>
-              <li class="is-active sub-nav-item">
+              <li class="is-active sub-nav-item has-text-weight-bold">
                 <a href="#projects">Projects</a>
               </li>
               <li class="sub-nav-item">
@@ -251,30 +256,30 @@
     <div class="columns">
       <div class="column is-5 is-offset-2">
         <div class="column is-6">
-          <strong>LARAVEL</strong> <progress class="progress is-danger" value="90" max="100">90%</progress>
+          <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-danger" value="90" max="100">90%</progress>
         </div>
         <div class="column is-6">
-          <strong>PHP</strong> <progress class="progress is-warning" value="78" max="100">78%</progress>
+          <span class="has-text-weight-bold">PHP</span> <progress class="progress is-warning" value="78" max="100">78%</progress>
         </div>
         <div class="column is-6">
-          <strong>HTML</strong> <progress class="progress is-success" value="69" max="100">69%</progress>
+          <span class="has-text-weight-bold">HTML</span> <progress class="progress is-success" value="69" max="100">69%</progress>
         </div>
         <div class="column is-6">
-          <strong>JQUERY</strong> <progress class="progress is-info" value="50" max="100">50%</progress>
+          <span class="has-text-weight-bold">JQUERY</span> <progress class="progress is-info" value="50" max="100">50%</progress>
         </div>
       </div>
       <div class="column is-5">
         <div class="column is-6">
-          <strong>LINUX</strong> <progress class="progress is-link" value="45" max="100">45%</progress>
+          <span class="has-text-weight-bold">LINUX</span> <progress class="progress is-link" value="45" max="100">45%</progress>
         </div>
         <div class="column is-6">
-          <strong>MYSQL</strong> <progress class="progress is-lilac" value="40" max="100">40%</progress>
+          <span class="has-text-weight-bold">MYSQL</span> <progress class="progress is-lilac" value="40" max="100">40%</progress>
         </div>
         <div class="column is-6">
-          <strong>CSS</strong> <progress class="progress is-amazon" value="35" max="100">35%</progress>
+          <span class="has-text-weight-bold">CSS</span> <progress class="progress is-amazon" value="35" max="100">35%</progress>
         </div>
         <div class="column is-6">
-          <strong>VUE</strong> <progress class="progress is-green" value="30" max="100">30%</progress>
+          <span class="has-text-weight-bold">VUE</span> <progress class="progress is-green" value="30" max="100">30%</progress>
         </div>
       </div>
     </div>
@@ -448,6 +453,7 @@
       $(".sub-nav-item").click(function(e) {
         removeIsActive();
         $(this).addClass("is-active");
+        $(this).addClass("has-text-weight-bold")
       });
 
       /* HELPERS */
@@ -455,6 +461,7 @@
         $(".sub-nav-item").each(function() {
           if($(this).hasClass("is-active")) {
             $(this).removeClass("is-active");
+            $(this).removeClass("has-text-weight-bold")
           }
         });
       }

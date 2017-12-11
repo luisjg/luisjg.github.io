@@ -20,6 +20,17 @@
 
       gtag('config', 'UA-108163478-1');
     </script>
+    <style>
+      footer {
+        background-image: linear-gradient(141deg,#dfd8d9 0,#f5f5f5 71%,#fff 100%);
+      }
+      .red-text {
+        color: #D00D2D;
+      }
+      .lilac-text {
+        color: #9b4dca;
+      }
+    </style>
   </head>
   <body>
 
@@ -40,7 +51,7 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item">
+                <a href="/redesign/" class="navbar-item">
                   Home
                 </a>
                 <a href="/redesign/presentations" class="navbar-item is-active">
@@ -59,7 +70,9 @@
             Intro
           </h1>
           <h2 class="subtitle">
-            Subtitle
+            <i class="lilac-text fa fa-map-marker" aria-hidden="true"></i> Los Angeles <span class="red-text">|</span>
+            <i class="lilac-text fa fa-graduation-cap" aria-hidden="true"></i> Computer Science <span class="red-text">|</span>
+            <i class="lilac-text fa fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor
           </h2>
         </div>
       </div>
@@ -69,10 +82,10 @@
         <nav class="tabs is-boxed is-fullwidth">
           <div class="container">
             <ul>
-              <li class="is-active">
+              <li class="is-active sub-nav-item has-text-weight-bold">
                 <a href="#meta-wbs">META+LAB Web Services</a>
               </li>
-              <li>
+              <li class="sub-nav-item">
                 <a href="#github">GitHub basics</a>
               </li>
             </ul>
@@ -90,16 +103,12 @@
       </div>
     </section>
 
-    <section id="github" class="hero is-medium is-light is-bold">
-      <div class="hero">
-        <div class="hero-body">
-          <div class="container">
-            <h2 class="title">
-              GitHub Basics
-            </h2>
-            <iframe src="https://docs.google.com/presentation/d/1BHswxcNoPjIRRfP-cntGklwSRW3vSOnbb8NAS7KEJUI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-          </div>
-        </div>
+    <section id="github" class="section">
+      <div class="container">
+        <h2 class="title">
+          GitHub Basics
+        </h2>
+        <iframe src="https://docs.google.com/presentation/d/1BHswxcNoPjIRRfP-cntGklwSRW3vSOnbb8NAS7KEJUI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
     </section>
 
@@ -160,6 +169,22 @@
         $(".modal").addClass("is-active");
         rootElement.addClass('is-clipped');
       });
+
+      $(".sub-nav-item").click(function(e) {
+        removeIsActive();
+        $(this).addClass("is-active");
+        $(this).addClass("has-text-weight-bold")
+      });
+
+      /* HELPERS */
+      function removeIsActive() {
+        $(".sub-nav-item").each(function() {
+          if($(this).hasClass("is-active")) {
+            $(this).removeClass("is-active");
+            $(this).removeClass("has-text-weight-bold")
+          }
+        });
+      }
 
       function closeModals() {
         $(".modal").removeClass("is-active");
