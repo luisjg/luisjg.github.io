@@ -167,7 +167,7 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content has-text-centered">
-                <p class="title is-4"><a class="app-links" href="#">Faculty</a></p>
+                <p class="title is-4"><a id="faculty" class="app-links" href="#">Faculty</a></p>
               </div>
             </div>
             <div class="content">
@@ -188,7 +188,7 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content has-text-centered">
-                <p class="title is-4"><a class="app-links" href="#">Scholarship</a></p>
+                <p class="title is-4"><a id="helix" class="app-links" href="#">Scholarship</a></p>
               </div>
             </div>
             <div class="content">
@@ -230,7 +230,7 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content has-text-centered">
-                <p class="title is-4"><a class="app-links">META<span class="red-text">+</span>LAB</a></p>
+                <p class="title is-4"><a id="meta" class="app-links">META<span class="red-text">+</span>LAB</a></p>
               </div>
             </div>
             <div class="content">
@@ -431,10 +431,12 @@
         $(".modal-card-title").text("CSUN " + $(this).text() + " Application");
         $(".is-success").text("Visit " + $(this).text());
         $(".is-success").attr("target", "blank");
-        if ($(this).text() === "Scholarship") {
+        if ($(this).attr("id") === "helix") {
           $(".is-success").attr("href", metaUrl + "/faculty/beta/" + $(this).text().toLowerCase());
         } else if ($(this).attr("id") === "aa2") {
           $(".is-success").attr("href", metaUrl + "/" + $(this).attr("id"));
+        } else if ($(this).attr("id") == "meta") {
+          $(".is-success").attr("href", metaUrl);
         } else {
           $(".is-success").attr("href", metaUrl + "/" + $(this).text().toLowerCase());
         }
