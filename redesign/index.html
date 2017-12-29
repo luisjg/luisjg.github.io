@@ -432,13 +432,13 @@
         $(".is-success").text("Visit " + $(this).text());
         $(".is-success").attr("target", "blank");
         if ($(this).attr("id") === "helix") {
-          $(".is-success").attr("href", metaUrl + "/faculty/beta/" + $(this).text().toLowerCase());
+          $(".is-success").attr("href", metaUrl + "faculty/beta/" + $(this).text().toLowerCase());
         } else if ($(this).attr("id") === "aa2") {
-          $(".is-success").attr("href", metaUrl + "/" + $(this).attr("id"));
+          $(".is-success").attr("href", metaUrl + $(this).attr("id"));
         } else if ($(this).attr("id") == "meta") {
           $(".is-success").attr("href", metaUrl);
         } else {
-          $(".is-success").attr("href", metaUrl + "/" + $(this).text().toLowerCase());
+          $(".is-success").attr("href", metaUrl + $(this).text().toLowerCase());
         }
         $(".modal").addClass("is-active");
         rootElement.addClass('is-clipped');
