@@ -1,7 +1,7 @@
 {
   "aa2": {
     "description": "Campus Diversity Management Application.",
-    "details": "This Laravel application is used by CSUN HR to keep track of staff hires.<br><br><strong>Role in the project</strong><ul><li>Scrum Master</li><li>Developer</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/aa2.6989012.phg\" width=\"600px\">"
+    "details": "This Laravel application is used by CSUN HR to keep track of staff hires.<br><br><strong>Role in the project</strong><ul><li>Scrum Master</li><li>Developer</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/aa2.6989012.png\" width=\"600px\">"
   },
   "etd": {
     "description":"Graduate Student's Thesis and Dissertation manager.",
