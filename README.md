@@ -6,11 +6,10 @@
 
 - HTML
 - CSS
-  - [Materialize 0.100.1](https://materializecss.com)
-  - [Vertical Timeline](https://github.com/RyanFitzgerald/vertical-timeline)
+  - [Bulma 0.6.2](https://bulma.io)
   - [FontAwesome 4.7.0](http://fontawesome.io/)
-  - [DevIcons 1.8.0](https://vorillaz.github.io/devicons/#/main)
-  - [MaterialIcons](https://fonts.googleapis.com/icon?family=Material+Icons)
+  - [Devicon 2.0](https://konpa.github.io/devicon/)
+  - [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono?selection.family=Roboto+Mono)
 - JavaScript
-  - [JQuery 2.2.4](https://code.jquery.com/jquery/)
+  - [Vue.js](https://vuejs.org)
   - [MomentJS 2.18.1](https://momentjs.com/)
