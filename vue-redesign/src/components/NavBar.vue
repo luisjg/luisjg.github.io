@@ -31,12 +31,9 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title">
-            <figure>
-              <img src="../assets/profile.jpg" class="profile-img" alt="profile image" width="10%">
-            </figure>
-            Intro
-          </h1>
+          <figure>
+            <img src="../assets/profile.jpg" class="profile-img" alt="profile image" width="10%">
+          </figure>
           <ul class="subtitle">
             <li>
               <i class="lilac-text fa fa-map-marker" aria-hidden="true"></i> Los Angeles, CA

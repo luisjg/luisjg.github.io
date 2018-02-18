@@ -8,8 +8,6 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-Vue.prototype.$bus = new Vue({})
-
 Vue.component('nav-bar', NavBar)
 Vue.component('footer-content', Footer)
 

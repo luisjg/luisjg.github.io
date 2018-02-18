@@ -62,7 +62,7 @@
     },
     methods: {
       retrieveWorkJson () {
-        axios.get('http://luisjg.io/json/work.json')
+        axios.get('https://luisjg.io/json/work.json')
         .then(response => {
           this.work = response.data
           sessionStorage.setItem('work', JSON.stringify(this.work))
@@ -72,7 +72,7 @@
         })
       },
       retrieveEducationJson () {
-        axios.get('http://luisjg.io/json/education.json')
+        axios.get('https://luisjg.io/json/education.json')
         .then(response => {
           this.education = response.data
           sessionStorage.setItem('education', JSON.stringify(this.education))
