@@ -12,5 +12,5 @@
   - [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono?selection.family=Roboto+Mono)
 - JavaScript
   - [Vue.js](https://vuejs.org)
-    - [Vue Roter](https://router.vuejs.org/en/)
-  - [MomentJS 2.18.1](https://momentjs.com/)
+    - [Vue Router](https://router.vuejs.org/en/)
+  - [MomentJS 2.20.1](https://momentjs.com/)
