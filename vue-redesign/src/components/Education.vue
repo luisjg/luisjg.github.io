@@ -15,13 +15,13 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/gcc.png" alt="Glendale Community College image">
+              <img src="../assets/gcc.png" :alt="json['gcc'].title +' image'">
             </figure>
           </div>
           <div class="card-content">
             <div class="content">
-              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="gcc" href="#">Glendale Community College</a></p>
-              <span v-html="json['gcc']['description']"></span>
+              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="gcc" href="#" v-html="json['gcc'].title"></a></p>
+              <span v-html="json['gcc'].description"></span>
             </div>
           </div>
         </div>
@@ -30,19 +30,19 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/csun.png" alt="California State University, Northridge image">
+              <img src="../assets/csun.png" :alt="json['gcc'].title +' image'">
             </figure>
           </div>
           <div class="card-content">
             <div class="content">
-              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction"  id="csun" href="#">Cal State University, Northridge</a></p>
-              <span v-html="json['csun']['description']"></span>
+              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction"  id="csun" href="#" v-html="json['csun'].title"></a></p>
+              <span v-html="json['csun'].description"></span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <modal v-bind:class="{'is-active': modalAttrs.status}" v-on:disable="updateModal" v-bind:modalAttrs="modalAttrs"></modal>
+    <modal v-bind:class="{'is-active': status}" v-on:disable="updateModal" v-bind:modalAttrs="modalAttrs"></modal>
   </div>
 </template>
 
@@ -52,10 +52,11 @@
     data () {
       return {
         json: '',
+        status: false,
         modalAttrs: {
           title: '',
           body: '',
-          status: false
+          url: ''
         }
       }
     },
@@ -64,8 +65,8 @@
     },
     methods: {
       modalAction: function (event) {
-        this.modalAttrs.title = event.srcElement.outerText
-        this.modalAttrs.body = this.json[event.target.id]['details']
+        this.modalAttrs.title = this.json[event.target.id].title
+        this.modalAttrs.body = this.json[event.target.id].details
         this.modalAttrs.url = this.generateUrls(event.target.id)
         document.documentElement.classList.add('is-clipped')
         this.updateModal()
@@ -77,7 +78,7 @@
         return 'https://www.csun.edu'
       },
       updateModal: function () {
-        this.modalAttrs.status = !this.modalAttrs.status
+        this.status = !this.status
       }
     },
     components: {
