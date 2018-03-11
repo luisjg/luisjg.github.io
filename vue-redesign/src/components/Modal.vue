@@ -3,13 +3,13 @@
     <div v-on:click="closeModal" class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">{{ modalAttrs.title }}</p>
+        <p class="modal-card-title" v-html="modalAttrs.title"></p>
         <button v-on:click.prevent="closeModal" class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body" v-html="modalAttrs.body">
       </section>
       <footer class="modal-card-foot">
-        <a v-bind:href="modalAttrs.url" class="button is-success" v-bind:title="modalAttrs.title + ' link'" target="_blank">Visit {{ modalAttrs.title }}</a>
+        <a v-bind:href="modalAttrs.url" class="button is-success" v-bind:title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
       </footer>
     </div>
   </div>
