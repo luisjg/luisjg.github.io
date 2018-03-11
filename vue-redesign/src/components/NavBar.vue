@@ -16,10 +16,10 @@
             </div>
             <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <router-link v-on:click.native="hamburger" to="/" v-bind:class="checkActive('home')" class="navbar-item">
+                <router-link v-on:click.native="hamburger" to="/" exact-active-class="is-active" class="navbar-item">
                   Home
                 </router-link>
-                <router-link v-on:click.native="hamburger" to="portfolio" v-bind:class="checkActive('info')" class="navbar-item">
+                <router-link v-on:click.native="hamburger" to="/portfolio" active-class="is-active" class="navbar-item">
                   About
                 </router-link>
               </div>
@@ -50,7 +50,7 @@
       </div>
 
       <!-- Hero footer: will stick at the bottom -->
-      <div v-show="section !== 'home'" class="hero-foot">
+      <div v-if="this.$route.name !== 'home'" class="hero-foot">
         <nav class="tabs is-boxed is-fullwidth">
           <div class="container">
             <ul>
@@ -89,14 +89,13 @@
     },
     methods: {
       checkActive: function (section) {
-        this.section = this.$route.name
         if (this.$route.name === section) {
           return 'is-active'
         } else if (this.$route.name !== 'home' && section === 'info') {
           return 'is-active'
         }
       },
-      hamburger: function (event) {
+      hamburger: function () {
         this.isActive = !this.isActive
       }
     }
