@@ -1,7 +1,8 @@
 <template>
   <div id="home" class="container">
-    <span class="is-size-4-desktop">
-      Hello there! I'm a <strong>Computer Science</strong> graduate from the
+    <h2 class="title">Hello there!</h2>
+    <p class="is-size-4-desktop tab">
+      I'm a <strong>Computer Science</strong> graduate from the
       <strong>Los Angeles</strong> area. I currently work for
       <strong>
         CSUN
@@ -12,7 +13,7 @@
       <strong>software engineering</strong> tool-set which revolves around
       <strong>Laravel</strong>, <strong>Git</strong>, <strong>AWS</strong> and
       <strong>Agile Scrum</strong>.
-    </span>
+    </p>
   </div>
 </template>
 
@@ -20,4 +21,7 @@
  #home {
    padding: 3rem 1.5rem;
  }
+ .tab {
+   text-indent:5%;
+  }
 </style>
