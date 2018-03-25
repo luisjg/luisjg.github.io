@@ -4,6 +4,7 @@ import Education from '@/components/Education'
 import Experience from '@/components/Experience'
 import Hobbies from '@/components/Hobbies'
 import Home from '@/components/Home'
+import NotFound from '@/components/NotFound'
 import Portfolio from '@/components/Portfolio'
 
 Vue.use(Router)
@@ -14,11 +15,6 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/portfolio',
-      name: 'portfolio',
-      component: Portfolio
     },
     {
       path: '/education',
@@ -34,6 +30,16 @@ export default new Router({
       path: '/hobbies',
       name: 'hobbies',
       component: Hobbies
+    },
+    {
+      path: '/portfolio',
+      name: 'portfolio',
+      component: Portfolio
+    },
+    {
+      path: '*',
+      name: '404',
+      component: NotFound
     }
   ]
 })
