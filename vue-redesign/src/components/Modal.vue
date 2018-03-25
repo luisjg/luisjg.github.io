@@ -9,12 +9,18 @@
       <section class="modal-card-body" v-html="modalAttrs.body">
       </section>
       <footer class="modal-card-foot">
-        <a v-bind:href="modalAttrs.url" class="button is-success" v-bind:title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
+        <a v-bind:href="modalAttrs.url" class="button btn-color" v-bind:title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
       </footer>
     </div>
   </div>
 </template>
 
+<style scoped>
+  .btn-color {
+    background-color: #766C7F;
+    color: whitesmoke;
+  }
+</style>
 <script>
 export default {
   props: ['modalAttrs'],
