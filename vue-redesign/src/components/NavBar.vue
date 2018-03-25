@@ -8,7 +8,7 @@
               <router-link to="/" class="navbar-item">
                 <span class="is-size-4 has-text-weight-bold">luisjg.io</span>
               </router-link>
-              <span v-on:click="hamburger" v-bind:class="{'is-active': isActive }" class="navbar-burger burger">
+              <span v-on:click="hamburgerToggle()" v-bind:class="{'is-active': isActive }" class="navbar-burger burger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -16,10 +16,10 @@
             </div>
             <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <router-link v-on:click.native="hamburger" to="/" exact-active-class="is-active" class="navbar-item">
+                <router-link v-on:click.native="hamburgerToggle()" to="/" exact-active-class="is-active" class="navbar-item">
                   Home
                 </router-link>
-                <router-link v-on:click.native="hamburger" to="/portfolio" active-class="is-active" class="navbar-item">
+                <router-link v-on:click.native="hamburgerToggle()" to="/portfolio" v-bind:class="applyActive()" class="navbar-item">
                   About
                 </router-link>
               </div>
@@ -36,13 +36,13 @@
           </figure>
           <ul class="subtitle">
             <li>
-              <i class="lilac-text fa fa-map-marker" aria-hidden="true"></i> Los Angeles, CA
+              <i class="russian-green fa fa-map-marker" aria-hidden="true"></i> Los Angeles, CA
             </li>
             <li>
-              <i class="lilac-text fa fa-graduation-cap" aria-hidden="true"></i> Computer Science, BS
+              <i class="russian-green fa fa-graduation-cap" aria-hidden="true"></i> Computer Science, BS
             </li>
             <li>
-              <i class="lilac-text fa fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor @
+              <i class="russian-green fa fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor @
               META<span class="red-text">+</span>LAB
             </li>
           </ul>
@@ -50,20 +50,20 @@
       </div>
 
       <!-- Hero footer: will stick at the bottom -->
-      <div v-if="this.$route.name !== 'home'" class="hero-foot">
+      <div v-if="toggleHeroFooter()" class="hero-foot">
         <nav class="tabs is-boxed is-fullwidth">
           <div class="container">
             <ul>
-              <li v-bind:class="checkActive('portfolio')">
+              <li v-bind:class="checkActiveTab('portfolio')">
                 <router-link to="portfolio">Portfolio</router-link>
               </li>
-              <li v-bind:class="checkActive('experience')">
+              <li v-bind:class="checkActiveTab('experience')">
                 <router-link to="experience">Experience</router-link>
               </li>
-              <li v-bind:class="checkActive('hobbies')">
+              <li v-bind:class="checkActiveTab('hobbies')">
                 <router-link to="hobbies">Hobbies</router-link>
               </li>
-              <li v-bind:class="checkActive('education')">
+              <li v-bind:class="checkActiveTab('education')">
                 <router-link to="education">Education</router-link>
               </li>
             </ul>
@@ -77,6 +77,20 @@
   .profile-img {
     border-radius: 50%;
   }
+  .hero.is-light .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover {
+  background-color: #766C7F;
+  border-color: #766C7F;
+  color: whitesmoke;
+}
+.hero.is-light a.navbar-item:hover, .navbar-link:hover {
+  background-color: rgba(10, 10, 10, 0.1);
+}
+
+.hero.is-light a.navbar-item.is-active,
+.hero.is-light .navbar-link.is-active {
+  background-color: #766C7F;
+  color: white;
+}
 </style>
 
 <script>
@@ -88,15 +102,29 @@
       }
     },
     methods: {
-      checkActive: function (section) {
-        if (this.$route.name === section) {
+      applyActive: function () {
+        if (this.$route.name !== 'home' && this.$route.name !== '404') {
           return 'is-active'
-        } else if (this.$route.name !== 'home' && section === 'info') {
-          return 'is-active'
+        } else {
+          return ''
         }
       },
-      hamburger: function () {
+      checkActiveTab: function (section) {
+        if (this.$route.name === section) {
+          return 'is-active'
+        } else {
+          return ''
+        }
+      },
+      hamburgerToggle: function () {
         this.isActive = !this.isActive
+      },
+      toggleHeroFooter: function () {
+        if (this.$route.name !== 'home' && this.$route.name !== '404') {
+          return true
+        } else {
+          return false
+        }
       }
     }
   }
