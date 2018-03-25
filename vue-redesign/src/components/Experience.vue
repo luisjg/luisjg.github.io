@@ -13,30 +13,30 @@
     <div class="columns">
       <div class="column is-5 is-offset-2">
         <div class="column is-6">
-          <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-danger" value="90" max="100">90%</progress>
+          <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-deep-lilac" value="90" max="100">90%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">PHP</span> <progress class="progress is-warning" value="78" max="100">78%</progress>
+          <span class="has-text-weight-bold">PHP</span> <progress class="progress is-blue-bell" value="78" max="100">78%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">HTML</span> <progress class="progress is-success" value="69" max="100">69%</progress>
+          <span class="has-text-weight-bold">HTML</span> <progress class="progress is-old-lavender" value="69" max="100">69%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">JQUERY</span> <progress class="progress is-info" value="50" max="100">50%</progress>
+          <span class="has-text-weight-bold">JQUERY</span> <progress class="progress is-russian-green" value="50" max="100">50%</progress>
         </div>
       </div>
       <div class="column is-5">
         <div class="column is-6">
-          <span class="has-text-weight-bold">LINUX</span> <progress class="progress is-link" value="45" max="100">45%</progress>
+          <span class="has-text-weight-bold">LINUX</span> <progress class="progress is-deep-lilac" value="50" max="100">50%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">MYSQL</span> <progress class="progress is-lilac" value="40" max="100">40%</progress>
+          <span class="has-text-weight-bold">MYSQL</span> <progress class="progress is-blue-bell" value="45" max="100">45%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">CSS</span> <progress class="progress is-amazon" value="35" max="100">35%</progress>
+          <span class="has-text-weight-bold">VUE</span> <progress class="progress is-old-lavender" value="40" max="100">40%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">VUE</span> <progress class="progress is-green" value="30" max="100">30%</progress>
+          <span class="has-text-weight-bold">CSS</span> <progress class="progress is-russian-green" value="35" max="100">35%</progress>
         </div>
       </div>
     </div>
@@ -44,49 +44,59 @@
 </template>
 
 <style scoped>
-  .progress.is-cadet::-webkit-progress-value {
-    background-color: #2e2e4e;
-  }
-  .progress.is-cadet::-moz-progress-bar {
-    background-color: #2e2d4d;
-  }
-  .progress.is-cadet::-ms-fill {
-    background-color: #2e2e4e;
-  }
-  .progress.is-lilac::-webkit-progress-value {
+  .progress.is-deep-lilac::-webkit-progress-value {
     background-color: #9b4dca;
   }
-  .progress.is-lilac::-moz-progress-bar {
+  .progress.is-deep-lilac::-moz-progress-bar {
     background-color: #9b4dca;
   }
-  .progress.is-lilac::-ms-fill {
+  .progress.is-deep-lilac::-ms-fill {
     background-color: #9b4dca;
   }
-  .progress.is-amazon::-webkit-progress-value {
-    background-color: #337357;
+  .progress.is-mummys-tomb::-webkit-progress-value {
+    background-color: #808D8E;
   }
-  .progress.is-amazon::-moz-progress-bar {
-    background-color: #337357;
+  .progress.is-mummys-tomb::-moz-progress-bar {
+    background-color: #808D8E;
   }
-  .progress.is-amazon::-ms-fill {
-    background-color: #337357;
+  .progress.is-mummys-tomb::-ms-fill {
+    background-color: #808D8E;
   }
-  .progress.is-arsenic::-webkit-progress-value {
-    background-color: #3b3b58;
+  .progress.is-blue-bell::-webkit-progress-value {
+    background-color: #A3A5C3;
   }
-  .progress.is-arsenic::-moz-progress-bar {
-    background-color: #3b3b58;
+  .progress.is-blue-bell::-moz-progress-bar {
+    background-color: #A3A5C3;
   }
-  .progress.is-arsenic::-ms-fill {
-    background-color: #3b3b58;
+  .progress.is-blue-bell::-ms-fill {
+    background-color: #A3A5C3;
   }
-  .progress.is-green::-webkit-progress-value {
+  .progress.is-old-lavender::-webkit-progress-value {
+    background-color: #766C7F;
+  }
+  .progress.is-old-lavender::-moz-progress-bar {
+    background-color: #766C7F;
+  }
+  .progress.is-old-lavender::-ms-fill {
+    background-color: #766C7F;
+  }
+  .progress.is-russian-green::-webkit-progress-value {
     background-color: #6d9f71;
   }
-  .progress.is-green::-moz-progress-bar {
+  .progress.is-russian-green::-moz-progress-bar {
     background-color: #6d9f71;
   }
-  .progress.is-green::-ms-fill {
+  .progress.is-russian-green::-ms-fill {
     background-color: #6d9f71;
   }
+  .progress.is-pastel-blue::-webkit-progress-value {
+    background-color: #A9D2D5;
+  }
+  .progress.is-pastel-blue::-moz-progress-bar {
+    background-color: #A9D2D5;
+  }
+  .progress.is-pastel-blue::-ms-fill {
+    background-color: #A9D2D5;
+  }
+
 </style>
