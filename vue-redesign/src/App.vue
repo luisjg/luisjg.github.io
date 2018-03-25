@@ -32,8 +32,8 @@
   a {
     color: #9b4dca;
   }
-  .lilac-text {
-    color: #9b4dca;
+  .russian-green {
+    color: #6d9f71;
   }
   .red-text {
     color: #d00d2d;
