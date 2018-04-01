@@ -17,13 +17,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="../assets/faculty.png" alt="Faculty Application image">
+                <img src="../assets/faculty.png" :alt="json.faculty.title + ' image'">
               </figure>
             </div>
             <div class="card-content">
               <div class="content">
-                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="faculty" href="#" class="app-links" v-html="json['faculty'].title"></a></p>
-                <span v-html="json['faculty'].description"></span>
+                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="faculty" href="#" class="app-links" v-html="json.faculty.title"></a></p>
+                <span v-html="json.faculty.description"></span>
               </div>
             </div>
           </div>
@@ -32,13 +32,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="../assets/scholarship.png" alt="Scholarship Application image">
+                <img src="../assets/scholarship.png" :alt="json.scholarship.title + ' image'">
               </figure>
             </div>
             <div class="card-content">
               <div class="content">
-                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="scholarship" href="#" class="app-links" v-html="json['scholarship'].title"></a></p>
-                <span v-html="json['scholarship'].description"></span>
+                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="scholarship" href="#" class="app-links" v-html="json.scholarship.title"></a></p>
+                <span v-html="json.scholarship.description"></span>
               </div>
             </div>
           </div>
@@ -47,13 +47,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="../assets/aa2.png" alt="Equity and Diversity Application image">
+                <img src="../assets/aa2.png" :alt="json.aa2.title + ' image'">
               </figure>
             </div>
             <div class="card-content">
               <div class="content">
-                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="aa2" href="#" class="app-links" v-html="json['aa2'].title"></a></p>
-                <span v-html="json['aa2'].description"></span>
+                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="aa2" href="#" class="app-links" v-html="json.aa2.title"></a></p>
+                <span v-html="json.aa2.description"></span>
               </div>
             </div>
           </div>
@@ -62,13 +62,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="../assets/etd.png" alt="Metalab Website image">
+                <img src="../assets/etd.png" :alt="json.etd.title + ' image'">
               </figure>
             </div>
             <div class="card-content">
               <div class="content">
                 <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="etd" href="#" class="app-links" v-html="json['etd'].title"></a></p>
-                <span v-html="json['etd'].description"></span>
+                <span v-html="json.etd.description"></span>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@
       }
     },
     created () {
-      this.json = JSON.parse(sessionStorage.getItem('work'))
+      this.json = this.$store.getters.getWorkData
     },
     methods: {
       modalAction: function (event) {
