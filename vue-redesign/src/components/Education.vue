@@ -15,13 +15,13 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/gcc.png" :alt="json['gcc'].title +' image'">
+              <img src="../assets/gcc.png" :alt="json.gcc.title +' image'">
             </figure>
           </div>
           <div class="card-content">
             <div class="content">
-              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="gcc" href="#" v-html="json['gcc'].title"></a></p>
-              <span v-html="json['gcc'].description"></span>
+              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="gcc" href="#" v-html="json.gcc.title"></a></p>
+              <span v-html="json.gcc.description"></span>
             </div>
           </div>
         </div>
@@ -30,13 +30,13 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/csun.png" :alt="json['gcc'].title +' image'">
+              <img src="../assets/csun.png" :alt="json.gcc.title +' image'">
             </figure>
           </div>
           <div class="card-content">
             <div class="content">
-              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction"  id="csun" href="#" v-html="json['csun'].title"></a></p>
-              <span v-html="json['csun'].description"></span>
+              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction"  id="csun" href="#" v-html="json.csun.title"></a></p>
+              <span v-html="json.csun.description"></span>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
       }
     },
     created () {
-      this.json = JSON.parse(sessionStorage.getItem('education'))
+      this.json = this.$store.getters.getSchoolData
     },
     methods: {
       modalAction: function (event) {
