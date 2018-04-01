@@ -2,18 +2,15 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import Footer from '@/components/Footer'
-import NavBar from '@/components/NavBar'
 import router from './router'
+import store from './store'
 
 Vue.config.productionTip = false
-
-Vue.component('nav-bar', NavBar)
-Vue.component('footer-content', Footer)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   template: '<App/>',
   components: { App }
