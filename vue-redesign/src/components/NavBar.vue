@@ -42,8 +42,8 @@
               <i class="russian-green fa fa-graduation-cap" aria-hidden="true"></i> Computer Science, BS
             </li>
             <li>
-              <i class="russian-green fa fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor @
-              META<span class="red-text">+</span>LAB
+              <i class="russian-green fa fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor,
+              CSUN META<span class="red-text">+</span>LAB
             </li>
           </ul>
         </div>
@@ -81,16 +81,15 @@
   background-color: #766C7F;
   border-color: #766C7F;
   color: whitesmoke;
-}
-.hero.is-light a.navbar-item:hover, .navbar-link:hover {
-  background-color: rgba(10, 10, 10, 0.1);
-}
-
-.hero.is-light a.navbar-item.is-active,
-.hero.is-light .navbar-link.is-active {
-  background-color: #766C7F;
-  color: white;
-}
+  }
+  .hero.is-light a.navbar-item:hover, .navbar-link:hover {
+    background-color: rgba(10, 10, 10, 0.1);
+  }
+  .hero.is-light a.navbar-item.is-active,
+  .hero.is-light .navbar-link.is-active {
+    background-color: #766C7F;
+    color: white;
+  }
 </style>
 
 <script>
