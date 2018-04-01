@@ -41,50 +41,17 @@
 </style>
 
 <script>
-  import axios from 'axios'
+  import Footer from '@/components/Footer'
+  import NavBar from '@/components/NavBar'
   export default {
-    data () {
-      return {
-        work: [],
-        education: [],
-        errors: []
-      }
-    },
-    created () {
+    beforeCreate () {
       // set up work items
-      if (sessionStorage.getItem('work')) {
-        this.work = JSON.parse(sessionStorage.getItem('work'))
-      } else {
-        this.retrieveWorkJson()
-      }
-      // set up education items
-      if (sessionStorage.getItem('education')) {
-        this.education = JSON.parse(sessionStorage.getItem('education'))
-      } else {
-        this.retrieveEducationJson()
-      }
+      this.$store.dispatch('retrieveWorkData')
+      this.$store.dispatch('retrieveSchoolData')
     },
-    methods: {
-      retrieveWorkJson () {
-        axios.get('https://luisjg.io/json/work.json')
-        .then(response => {
-          this.work = response.data
-          sessionStorage.setItem('work', JSON.stringify(this.work))
-        })
-        .catch(e => {
-          this.errors.push(e)
-        })
-      },
-      retrieveEducationJson () {
-        axios.get('https://luisjg.io/json/education.json')
-        .then(response => {
-          this.education = response.data
-          sessionStorage.setItem('education', JSON.stringify(this.education))
-        })
-        .catch(e => {
-          this.errors.push(e)
-        })
-      }
+    components: {
+      'footer-content': Footer,
+      'nav-bar': NavBar
     }
   }
 </script>
