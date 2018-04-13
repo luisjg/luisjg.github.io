@@ -93,7 +93,7 @@
         }
       }
     },
-    created () {
+    updated () {
       this.json = this.$store.getters.getWorkData
     },
     methods: {
