@@ -15,7 +15,7 @@ export default new Vuex.Store({
         axios
           .get('https://luisjg.io/json/work.json')
           .then(response => {
-            sessionStorage.setItem('work', JSON.stringify(response.data))
+            context.commit('storeWorkData', response.data)
             // sessionStorage.setItem("work", JSON.stringify(response.data));
           })
           .catch(e => {
@@ -30,7 +30,7 @@ export default new Vuex.Store({
         axios
           .get('https://luisjg.io/json/education.json')
           .then(response => {
-            sessionStorage.setItem('school', JSON.stringify(response.data))
+            context.commit('storeSchoolData', response.data)
           })
           .catch(e => {
             // this.errors.push(e);
@@ -50,9 +50,11 @@ export default new Vuex.Store({
   },
   mutations: {
     storeWorkData: function (state, data) {
+      sessionStorage.setItem('work', JSON.stringify(data))
       state.work = data
     },
     storeSchoolData: function (state, data) {
+      sessionStorage.setItem('school', JSON.stringify(data))
       state.school = data
     }
   }

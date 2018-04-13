@@ -84,7 +84,7 @@
   export default {
     data () {
       return {
-        json: '',
+        json: null,
         status: false,
         modalAttrs: {
           title: '',
@@ -93,7 +93,7 @@
         }
       }
     },
-    updated () {
+    created () {
       this.json = this.$store.getters.getWorkData
     },
     methods: {
