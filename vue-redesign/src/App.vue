@@ -44,7 +44,7 @@
   import Footer from '@/components/Footer'
   import NavBar from '@/components/NavBar'
   export default {
-    beforeCreate () {
+    created () {
       // set up work items
       this.$store.dispatch('retrieveWorkData')
       this.$store.dispatch('retrieveSchoolData')
