@@ -23,5 +23,10 @@
     "title": "META+LAB Website",
     "description": "Learn more about META<span class=\"red-text\">+</span>LAB.",
     "details": "CSUN META+LAB website explains what META+LAB is and what our primary product is - our students.<br><br><strong>Role in project</strong><ul><li>Scrum Master</li><li>Mentor</li><li>Developer</li></ul><br><br><strong>Screenshot</strong><br><img src=\"imgs/metalab.png\" width=\"600px\">"
+  },
+  "web_services": {
+    "title": "Web Services",
+    "description": "",
+    "details": ""
   }
 }
