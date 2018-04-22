@@ -1,5 +1,5 @@
 <template>
-  <div class="column" id="card">
+  <div class="{{class}}">
     <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
@@ -31,7 +31,7 @@ export default {
   components: {
     'modal': Modal
   },
-  props: ['cardIndex', 'cardData']
+  props: ['cardIndex', 'cardData', 'class']
 }
 </script>
 
