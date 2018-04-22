@@ -4,7 +4,9 @@
       <nav-bar />
     </header>
     <main>
-      <router-view />
+      <transition name="fade">
+        <router-view />
+      </transition>
       <div class="has-text-centered">
         <br>
         <sup>Built with</sup>
@@ -24,7 +26,7 @@
         </a>
         <br>
         <br>
-        <a href="https://bulma.io">
+        <a href="https://bulma.io" target="_blank">
           <img src="./assets/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
         </a>
       </div>
@@ -42,6 +44,20 @@
   }
   .red-text {
     color: #d00d2d;
+  }
+  ::selection {
+    color: white;
+    background: #766C7F; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    color: white;
+    background: #766C7F; /* Gecko Browsers */
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.25s ease-out;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>
 
