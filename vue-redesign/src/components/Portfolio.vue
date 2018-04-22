@@ -10,7 +10,6 @@
         </p>
       </div>
     </section>
-
     <div class="columns is-centered">
       <div class="columns">
         <div class="column is-one-quarter">
@@ -75,8 +74,8 @@
         </div>
       </div>
     </div>
-  <modal v-bind:class="{'is-active': status}" v-on:disable="updateModal" v-bind:modalAttrs="modalAttrs"></modal>
-</div>
+    <modal v-bind:class="{'is-active': status}" v-on:disable="updateModal" v-bind:modalAttrs="modalAttrs"></modal>
+  </div>
 </template>
 
 <script>
