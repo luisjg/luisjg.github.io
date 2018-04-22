@@ -51,24 +51,26 @@
 
       <!-- Hero footer: will stick at the bottom -->
       <div v-if="toggleHeroFooter()" class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">
-          <div class="container">
-            <ul>
-              <li v-bind:class="checkActiveTab('portfolio')">
-                <router-link to="portfolio">Portfolio</router-link>
-              </li>
-              <li v-bind:class="checkActiveTab('experience')">
-                <router-link to="experience">Experience</router-link>
-              </li>
-              <li v-bind:class="checkActiveTab('hobbies')">
-                <router-link to="hobbies">Hobbies</router-link>
-              </li>
-              <li v-bind:class="checkActiveTab('education')">
-                <router-link to="education">Education</router-link>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <transition name="fade">
+          <nav class="tabs is-boxed is-fullwidth">
+            <div class="container">
+              <ul>
+                <li v-bind:class="checkActiveTab('portfolio')">
+                  <router-link to="portfolio">Portfolio</router-link>
+                </li>
+                <li v-bind:class="checkActiveTab('experience')">
+                  <router-link to="experience">Experience</router-link>
+                </li>
+                <li v-bind:class="checkActiveTab('hobbies')">
+                  <router-link to="hobbies">Hobbies</router-link>
+                </li>
+                <li v-bind:class="checkActiveTab('education')">
+                  <router-link to="education">Education</router-link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </transition>
       </div>
     </section>
 </template>
