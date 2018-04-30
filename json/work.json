@@ -2,31 +2,37 @@
   "aa2": {
     "title": "Equity &amp; Diversity",
     "description": "Campus Diversity Management Application.",
-    "details": "This Laravel application is used by CSUN HR to keep track of staff hires.<br><br><strong>Role in the project</strong><ul><li>Scrum Master</li><li>Developer</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/aa2.e924a4c.png\" width=\"600px\">"
+    "details": "This Laravel application is used by CSUN HR to keep track of staff hires.<br><br><strong>Role in the project</strong><ul><li>Scrum Master</li><li>Developer</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/aa2.e924a4c.png\" width=\"600px\">",
+    "url": "https://www.metalab.csun.edu/aa2"
   },
   "etd": {
     "title": "ETD",
     "description": "Thesis and Dissertation manager.",
-    "details": "This Laravel application is used by both CSUN Master's Students and academic advisors to keep track and manage the Masters Student's thesis progress from start to finish.<br><br><strong>Role in the project</strong><ul><li>Mentor</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/etd.eb3c548.png\" width=\"600px\">"
+    "details": "This Laravel application is used by both CSUN Master's Students and academic advisors to keep track and manage the Masters Student's thesis progress from start to finish.<br><br><strong>Role in the project</strong><ul><li>Mentor</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/etd.eb3c548.png\" width=\"600px\">",
+    "url": "https://www.metalab.csun.edu/etd"
   },
   "faculty": {
     "title": "Faculty",
     "description": "Get to know CSUN's unique Faculty.",
-    "details": "This Laravel application is used to highlight CSUN's diverse Faculty as well as serve as a hub for students to easily find their Faculty's office hours, sillabi, research interests, and contact information.<br><br><strong>Role in the project</strong><ul><li>Developer</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/faculty.865beee.png\" width=\"600px\">"
+    "details": "This Laravel application is used to highlight CSUN's diverse Faculty as well as serve as a hub for students to easily find their Faculty's office hours, sillabi, research interests, and contact information.<br><br><strong>Role in the project</strong><ul><li>Developer</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/faculty.865beee.png\" width=\"600px\">",
+    "url": "https://www.csun.edu/faculty"
   },
   "scholarship": {
     "title": "Scholarship",
     "description": "Showcasing CSUN's Faculty projects, research &amp; expertise.",
-    "details": "This Laravel application showcases the many projects that are happening throughout the campus. CSUN individuals have the ability to join the project as a student, staff or faculty and display that fact to the world.<br><br><strong>Role in the project</strong><ul><li>Developer</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/scholarship.c41451e.png\" width=\"600px\">"
+    "details": "This Laravel application showcases the many projects that are happening throughout the campus. CSUN individuals have the ability to join the project as a student, staff or faculty and display that fact to the world.<br><br><strong>Role in the project</strong><ul><li>Developer</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/scholarship.c41451e.png\" width=\"600px\">",
+    "url": "https://www.csun.edu/faculty/beta/scholarship"
   },
   "mom": {
     "title": "META+LAB Website",
     "description": "Learn more about META<span class=\"red-text\">+</span>LAB.",
-    "details": "CSUN META+LAB website explains what META+LAB is and what our primary product is - our students.<br><br><strong>Role in project</strong><ul><li>Scrum Master</li><li>Mentor</li><li>Developer</li></ul><br><br><strong>Screenshot</strong><br><img src=\"imgs/metalab.png\" width=\"600px\">"
+    "details": "CSUN META+LAB website explains what META+LAB is and what our primary product is - our students.<br><br><strong>Role in project</strong><ul><li>Scrum Master</li><li>Mentor</li><li>Developer</li></ul><br><br><strong>Screenshot</strong><br><img src=\"imgs/metalab.png\" width=\"600px\">",
+    "url": "https://www.metalab.csun.edu"
   },
   "web_services": {
     "title": "Web Services",
-    "description": "",
-    "details": ""
+    "description": "Expanding our Collaboration.",
+    "details": "The CSUN META+LAB web services provide an easy way to get you up and running on your next CSUN application.",
+    "url": "https://api.metalab.csun.edu"
   }
 }
