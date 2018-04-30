@@ -6,7 +6,7 @@
         <p class="modal-card-title" v-html="modalAttrs.title"></p>
         <button v-on:click.prevent="closeModal" class="delete" aria-label="close"></button>
       </header>
-      <section class="modal-card-body" v-html="modalAttrs.body">
+      <section class="modal-card-body" v-html="modalAttrs.details">
       </section>
       <footer class="modal-card-foot">
         <a v-bind:href="modalAttrs.url" class="button btn-color" v-bind:title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
