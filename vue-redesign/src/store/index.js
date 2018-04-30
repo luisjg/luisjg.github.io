@@ -41,10 +41,10 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    getSchoolData: function (state) {
+    schoolData: function (state) {
       return state.school
     },
-    getWorkData: function (state) {
+    workData: function (state) {
       return state.work
     }
   },

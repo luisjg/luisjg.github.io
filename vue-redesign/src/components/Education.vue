@@ -15,13 +15,13 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/gcc.png" :alt="json.gcc.title +' image'">
+              <img src="../assets/gcc.png" :alt="schoolData.gcc.title +' image'">
             </figure>
           </div>
           <div class="card-content">
             <div class="content">
-              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="gcc" href="#" v-html="json.gcc.title"></a></p>
-              <span v-html="json.gcc.description"></span>
+              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="gcc" href="#" v-html="schoolData.gcc.title"></a></p>
+              <span v-html="schoolData.gcc.description"></span>
             </div>
           </div>
         </div>
@@ -30,13 +30,13 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="../assets/csun.png" :alt="json.gcc.title +' image'">
+              <img src="../assets/csun.png" :alt="schoolData.gcc.title +' image'">
             </figure>
           </div>
           <div class="card-content">
             <div class="content">
-              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction"  id="csun" href="#" v-html="json.csun.title"></a></p>
-              <span v-html="json.csun.description"></span>
+              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction"  id="csun" href="#" v-html="schoolData.csun.title"></a></p>
+              <span v-html="schoolData.csun.description"></span>
             </div>
           </div>
         </div>
@@ -48,26 +48,17 @@
 
 <script>
   import Modal from '@/components/Modal'
+  import { mapGetters } from 'vuex'
   export default {
     data () {
       return {
-        json: null,
         status: false,
-        modalAttrs: {
-          title: '',
-          body: '',
-          url: ''
-        }
+        modalAttrs: null
       }
-    },
-    created () {
-      this.json = this.$store.getters.getSchoolData
     },
     methods: {
       modalAction: function (event) {
-        this.modalAttrs.title = this.json[event.target.id].title
-        this.modalAttrs.body = this.json[event.target.id].details
-        this.modalAttrs.url = this.generateUrls(event.target.id)
+        this.modalAttrs = this.schoolData[event.target.id]
         document.documentElement.classList.add('is-clipped')
         this.updateModal()
       },
@@ -83,6 +74,11 @@
     },
     components: {
       'modal': Modal
+    },
+    computed: {
+      ...mapGetters([
+        'schoolData'
+      ])
     }
   }
 </script>

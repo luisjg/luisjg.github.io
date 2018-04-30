@@ -16,13 +16,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="../assets/faculty.png" :alt="json.faculty.title + ' image'">
+                <img src="../assets/faculty.png" :alt="workData.faculty.title + ' image'">
               </figure>
             </div>
             <div class="card-content">
               <div class="content">
-                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="faculty" href="#" class="app-links" v-html="json.faculty.title"></a></p>
-                <span v-html="json.faculty.description"></span>
+                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="faculty" href="#" class="app-links" v-html="workData.faculty.title"></a></p>
+                <span v-html="workData.faculty.description"></span>
               </div>
             </div>
           </div>
@@ -31,13 +31,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="../assets/scholarship.png" :alt="json.scholarship.title + ' image'">
+                <img src="../assets/scholarship.png" :alt="workData.scholarship.title + ' image'">
               </figure>
             </div>
             <div class="card-content">
               <div class="content">
-                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="scholarship" href="#" class="app-links" v-html="json.scholarship.title"></a></p>
-                <span v-html="json.scholarship.description"></span>
+                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="scholarship" href="#" class="app-links" v-html="workData.scholarship.title"></a></p>
+                <span v-html="workData.scholarship.description"></span>
               </div>
             </div>
           </div>
@@ -46,13 +46,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="../assets/aa2.png" :alt="json.aa2.title + ' image'">
+                <img src="../assets/aa2.png" :alt="workData.aa2.title + ' image'">
               </figure>
             </div>
             <div class="card-content">
               <div class="content">
-                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="aa2" href="#" class="app-links" v-html="json.aa2.title"></a></p>
-                <span v-html="json.aa2.description"></span>
+                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="aa2" href="#" class="app-links" v-html="workData.aa2.title"></a></p>
+                <span v-html="workData.aa2.description"></span>
               </div>
             </div>
           </div>
@@ -61,13 +61,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="../assets/etd.png" :alt="json.etd.title + ' image'">
+                <img src="../assets/etd.png" :alt="workData.etd.title + ' image'">
               </figure>
             </div>
             <div class="card-content">
               <div class="content">
-                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="etd" href="#" class="app-links" v-html="json['etd'].title"></a></p>
-                <span v-html="json.etd.description"></span>
+                <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="etd" href="#" class="app-links" v-html="workData.etd.title"></a></p>
+                <span v-html="workData.etd.description"></span>
               </div>
             </div>
           </div>
@@ -80,26 +80,17 @@
 
 <script>
   import Modal from '@/components/Modal'
+  import { mapGetters } from 'vuex'
   export default {
     data () {
       return {
-        json: null,
         status: false,
-        modalAttrs: {
-          title: '',
-          body: '',
-          url: ''
-        }
+        modalAttrs: null
       }
-    },
-    created () {
-      this.json = this.$store.getters.getWorkData
     },
     methods: {
       modalAction: function (event) {
-        this.modalAttrs.title = this.json[event.target.id].title
-        this.modalAttrs.body = this.json[event.target.id].details
-        this.modalAttrs.url = '//www.metalab.csun.edu/' + this.generateUrls(event.target.id)
+        this.modalAttrs = this.workData[event.target.id]
         document.documentElement.classList.add('is-clipped')
         this.updateModal()
       },
@@ -115,6 +106,11 @@
     },
     components: {
       'modal': Modal
+    },
+    computed: {
+      ...mapGetters([
+        'workData'
+      ])
     }
   }
 </script>
