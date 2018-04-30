@@ -9,7 +9,7 @@
     "title": "ETD",
     "description": "Thesis and Dissertation manager.",
     "details": "This Laravel application is used by both CSUN Master's Students and academic advisors to keep track and manage the Masters Student's thesis progress from start to finish.<br><br><strong>Role in the project</strong><ul><li>Mentor</li></ul><br><strong>Screenshot</strong><br><img src=\"static/img/etd.eb3c548.png\" width=\"600px\">",
-    "url": "https://www.metalab.csun.edu/etd"
+    "url": "https://academics.csun.edu/etd"
   },
   "faculty": {
     "title": "Faculty",
