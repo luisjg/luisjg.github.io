@@ -16,7 +16,7 @@
             </div>
             <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <router-link v-on:click.native="hamburgerToggle()" to="/" exact-active-class="is-active" class="navbar-item">
+                <router-link v-on:click.native="hamburgerToggle()" to="/" exact-active-class="is-active has-text-weight-bold" class="navbar-item">
                   Home
                 </router-link>
                 <router-link v-on:click.native="hamburgerToggle()" to="/portfolio" v-bind:class="applyActive()" class="navbar-item">
@@ -55,18 +55,18 @@
           <nav class="tabs is-boxed is-fullwidth">
             <div class="container">
               <ul>
-                <li v-bind:class="checkActiveTab('portfolio')">
-                  <router-link to="portfolio">Portfolio</router-link>
-                </li>
-                <li v-bind:class="checkActiveTab('experience')">
-                  <router-link to="experience">Experience</router-link>
-                </li>
-                <li v-bind:class="checkActiveTab('hobbies')">
-                  <router-link to="hobbies">Hobbies</router-link>
-                </li>
-                <li v-bind:class="checkActiveTab('education')">
-                  <router-link to="education">Education</router-link>
-                </li>
+                <router-link tag="li" to="portfolio" active-class="is-active has-text-weight-bold">
+                  <a>Portfolio</a>
+                </router-link>
+                <router-link tag="li" to="experience" active-class="is-active has-text-weight-bold">
+                  <a>Experience</a>
+                </router-link>
+                <router-link tag="li" to="hobbies" active-class="is-active has-text-weight-bold">
+                  <a>Hobbies</a>
+                </router-link>
+                <router-link tag="li" to="education" active-class="is-active has-text-weight-bold">
+                  <a>Education</a>
+                </router-link>
               </ul>
             </div>
           </nav>
@@ -105,14 +105,7 @@
     methods: {
       applyActive: function () {
         if (this.$route.name !== 'home' && this.$route.name !== '404') {
-          return 'is-active'
-        } else {
-          return ''
-        }
-      },
-      checkActiveTab: function (section) {
-        if (this.$route.name === section) {
-          return 'is-active'
+          return 'is-active has-text-weight-bold'
         } else {
           return ''
         }
