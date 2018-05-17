@@ -62,12 +62,6 @@
         document.documentElement.classList.add('is-clipped')
         this.updateModal()
       },
-      generateUrls: function (name) {
-        if (name === 'gcc') {
-          return 'https://www.glendale.edu/'
-        }
-        return 'https://www.csun.edu'
-      },
       updateModal: function () {
         this.status = !this.status
       }
