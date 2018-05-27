@@ -24,7 +24,4 @@
  .tab {
    text-indent:5%;
   }
-  .fancy-underline {
-    text-decoration: underline dotted #d00d2d;
-  }
 </style>
