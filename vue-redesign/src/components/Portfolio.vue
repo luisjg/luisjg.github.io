@@ -74,7 +74,7 @@
         </div>
       </div>
     </div>
-    <modal v-bind:class="{'is-active': status}" v-on:disable="updateModal" v-bind:modalAttrs="modalAttrs"></modal>
+    <modal v-if="status" v-bind:class="{'is-active': status}" v-on:disable="updateModal" v-bind:modalAttrs="modalAttrs"></modal>
   </div>
 </template>
 
