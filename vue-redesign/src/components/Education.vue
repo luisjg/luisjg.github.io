@@ -12,39 +12,94 @@
     </section>
     <div class="columns is-centered">
       <div class="column is-one-quarter">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="../assets/gcc.png" :alt="schoolData.gcc.title +' image'">
-            </figure>
+        <p class="has-text-centered title is-4"><a href="#" id="gcc" @click.prevent="modalAction">{{ schoolData.gcc.title }}</a></p>
+        <div class="timeline is-centered">
+        <header class="timeline-header is-icon">
+          <span class="tag is-medium is-primary">Start</span>
+        </header>
+        <div class="timeline-item">
+          <div class="timeline-marker is-blue-bell">
           </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction" id="gcc" href="#" v-html="schoolData.gcc.title"></a></p>
-              <span v-html="schoolData.gcc.description"></span>
-            </div>
+          <div class="timeline-content">
+            <p class="heading">August 2005</p>
+            <p>Start General Education focusing on Math.</p>
           </div>
         </div>
-      </div>
-      <div class="column is-one-quarter">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="../assets/csun.png" :alt="schoolData.gcc.title +' image'">
-            </figure>
+        <div class="timeline-item">
+          <div class="timeline-marker is-blue-bell">
           </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="has-text-centered title is-4"><a v-on:click.prevent="modalAction"  id="csun" href="#" v-html="schoolData.csun.title"></a></p>
-              <span v-html="schoolData.csun.description"></span>
-            </div>
+          <div class="timeline-content">
+            <p class="heading">August 2010</p>
+            <p>Start enrolling in classes for Computer Science.</p>
           </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker is-blue-bell">
+          </div>
+          <div class="timeline-content">
+            <p class="heading">May 2013</p>
+            <p>Completed the CSU General Education.</p>
+          </div>
+        </div>
+        <div class="timeline-header">
+          <span class="tag is-medium is-primary">End</span>
         </div>
       </div>
     </div>
-    <modal v-bind:class="{'is-active': status}" v-on:disable="updateModal" v-bind:modalAttrs="modalAttrs"></modal>
+
+    <div class="column is-one-quarter">
+      <p class="has-text-centered title is-4"><a href="#" id="csun" @click.prevent="modalAction">{{ schoolData.csun.title }}</a></p>
+      <div class="timeline is-centered">
+        <header class="timeline-header">
+          <span class="tag is-medium is-primary">Start</span>
+        </header>
+        <div class="timeline-item">
+          <div class="timeline-marker is-blue-bell">
+          </div>
+          <div class="timeline-content">
+            <p class="heading">August 2013</p>
+            <p>Became first generation enrolled in a Univeristy.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker is-blue-bell">
+          </div>
+          <div class="timeline-content">
+            <p class="heading">February 2016</p>
+            <p>Student Assistant at <a href="https://www.metalab.csun.edu" class="has-text-weight-bold">CSUN META<span class="red-text">+</span>LAB</a>.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker is-blue-bell">
+          </div>
+          <div class="timeline-content">
+            <p class="heading">May 2016</p>
+            <p>Earned a B.S. in Computer Science.</p>
+          </div>
+        </div>
+        <div class="timeline-header">
+          <span class="tag is-medium is-primary">End</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <modal v-if="status" v-bind:class="{'is-active': status}" v-on:disable="updateModal" v-bind:modalAttrs="modalAttrs"></modal>
   </div>
 </template>
+
+<style scoped>
+  .tag:not(body).is-primary {
+    background-color: #6d9f71;
+    color: white;
+  }
+  .timeline .timeline-item .timeline-marker.is-blue-bell {
+    background-color: #A3A5C3!important;
+    border-color: #A3A5C3!important;
+  }
+  .purple-text {
+    color: #9b4dca;
+  }
+</style>
 
 <script>
   import Modal from '@/components/Modal'
