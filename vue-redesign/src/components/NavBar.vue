@@ -36,13 +36,13 @@
           </figure>
           <ul class="subtitle">
             <li>
-              <i class="russian-green fa fa-map-marker" aria-hidden="true"></i> Los Angeles, CA
+              <i class="russian-green fas fa-map-marker-alt" aria-hidden="true"></i> Los Angeles, CA
             </li>
             <li>
-              <i class="russian-green fa fa-graduation-cap" aria-hidden="true"></i> Computer Science, BS
+              <i class="russian-green fas fa-graduation-cap" aria-hidden="true"></i> Computer Science, BS
             </li>
             <li>
-              <i class="russian-green fa fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor,
+              <i class="russian-green fas fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor,
               CSUN META<span class="red-text">+</span>LAB
             </li>
           </ul>

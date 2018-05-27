@@ -7,13 +7,13 @@
         </p>
         <p>
           <a href="https://github.com/luisjg" class="icon" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i>
+            <i class="fab fa-github-square" aria-hidden="true"></i>
           </a>
           <a href="https://www.linkedin.com/in/luis-guzman-a6b59866" class="icon" target="_blank">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
           </a>
           <a href="mailto:contact@luisjg.io" class="icon" target="_blank">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <i class="fas fa-envelope-square" aria-hidden="true"></i>
           </a>
         </p>
       </div>
