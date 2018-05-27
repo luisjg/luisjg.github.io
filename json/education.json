@@ -2,13 +2,13 @@
   "gcc": {
     "title": "Glendale Community College",
     "description": "Completed my General Education<br><strong class=\"has-text-centered\">August 2005 - May 2013</strong>",
-    "details": "Completed my General Education where I focused on Mathematics, Philosophy and Computer Science. Transferred out to a four year university.",
+    "details": "Completed my General Education where I focused on Mathematics, Philosophy and Computer Science. Transferred out to a four year university.<br><img src=\"static/img/gcc.0179e9c.png\" width=\"600px\">",
     "url": "https://www.glendale.edu"
   },
   "csun": {
     "title": "Cal State University, Northridge",
     "description": "Earned a B.S. in Computer Science<br><strong class=\"has-text-centered\">August 2013 - May 2016</strong>",
-    "details": "Completed my Bachelor's Degree in Computer Science and participated in CSUN's 2015 App Jam as well as CSUN's Senior Design Project Showcase 2016.",
+    "details": "Completed my Bachelor's Degree in Computer Science and participated in CSUN's 2015 App Jam as well as CSUN's Senior Design Project Showcase 2016.<br><img src=\"static/img/csun.567d690.png\" width=\"600px\">",
     "url": "https://www.csun.edu"
   }
 }
