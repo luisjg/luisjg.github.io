@@ -47,6 +47,10 @@
       </div>
     </div>
 
+    <div class="column is-one-quarter is-hidden-desktop">
+      <div class="is-divider"></div>
+    </div>
+
     <div class="column is-one-quarter">
       <p class="has-text-centered title is-4"><a href="#" id="csun" @click.prevent="modalAction">{{ schoolData.csun.title }}</a></p>
       <div class="timeline is-centered">
