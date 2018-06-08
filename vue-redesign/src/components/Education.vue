@@ -11,6 +11,47 @@
       </div>
     </section>
     <div class="columns is-centered">
+
+      <div class="column is-one-quarter">
+        <p class="has-text-centered title is-4"><a href="#" id="csun" @click.prevent="modalAction">{{ schoolData.csun.title }}</a></p>
+        <div class="timeline is-centered">
+          <header class="timeline-header">
+            <span class="tag is-medium is-primary">Start</span>
+          </header>
+          <div class="timeline-item">
+            <div class="timeline-marker is-blue-bell">
+            </div>
+            <div class="timeline-content">
+              <p class="heading">August 2013</p>
+              <p>Became first generation enrolled in a Univeristy.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker is-blue-bell">
+            </div>
+            <div class="timeline-content">
+              <p class="heading">February 2016</p>
+              <p>Student Assistant at <a href="https://www.metalab.csun.edu" class="has-text-weight-bold">CSUN META<span class="red-text">+</span>LAB</a>.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker is-blue-bell">
+            </div>
+            <div class="timeline-content">
+              <p class="heading">May 2016</p>
+              <p>Earned a B.S. in Computer Science.</p>
+            </div>
+          </div>
+          <div class="timeline-header">
+            <span class="tag is-medium is-primary">End</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-one-quarter is-hidden-desktop">
+        <div class="is-divider"></div>
+      </div>
+
       <div class="column is-one-quarter">
         <p class="has-text-centered title is-4"><a href="#" id="gcc" @click.prevent="modalAction">{{ schoolData.gcc.title }}</a></p>
         <div class="timeline is-centered">
@@ -39,46 +80,6 @@
           <div class="timeline-content">
             <p class="heading">May 2013</p>
             <p>Completed the CSU General Education.</p>
-          </div>
-        </div>
-        <div class="timeline-header">
-          <span class="tag is-medium is-primary">End</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="column is-one-quarter is-hidden-desktop">
-      <div class="is-divider"></div>
-    </div>
-
-    <div class="column is-one-quarter">
-      <p class="has-text-centered title is-4"><a href="#" id="csun" @click.prevent="modalAction">{{ schoolData.csun.title }}</a></p>
-      <div class="timeline is-centered">
-        <header class="timeline-header">
-          <span class="tag is-medium is-primary">Start</span>
-        </header>
-        <div class="timeline-item">
-          <div class="timeline-marker is-blue-bell">
-          </div>
-          <div class="timeline-content">
-            <p class="heading">August 2013</p>
-            <p>Became first generation enrolled in a Univeristy.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker is-blue-bell">
-          </div>
-          <div class="timeline-content">
-            <p class="heading">February 2016</p>
-            <p>Student Assistant at <a href="https://www.metalab.csun.edu" class="has-text-weight-bold">CSUN META<span class="red-text">+</span>LAB</a>.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker is-blue-bell">
-          </div>
-          <div class="timeline-content">
-            <p class="heading">May 2016</p>
-            <p>Earned a B.S. in Computer Science.</p>
           </div>
         </div>
         <div class="timeline-header">
