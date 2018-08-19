@@ -1,15 +1,15 @@
 <template>
   <div id="modal" class="modal">
-    <div v-on:click="closeModal" class="modal-background"></div>
+    <div @click="closeModal" class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title" v-html="modalAttrs.title"></p>
-        <button v-on:click.prevent="closeModal" class="delete" aria-label="close"></button>
+        <button @click.prevent="closeModal" class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body" v-html="modalAttrs.details">
       </section>
       <footer class="modal-card-foot">
-        <a v-bind:href="modalAttrs.url" class="button btn-color" v-bind:title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
+        <a :href="modalAttrs.url" class="button btn-color" :title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
       </footer>
     </div>
   </div>

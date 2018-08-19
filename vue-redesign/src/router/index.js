@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import ComingSoon from '@/components/ComingSoon'
 import Education from '@/components/Education'
 import Experience from '@/components/Experience'
 import Hobbies from '@/components/Hobbies'
@@ -35,6 +36,16 @@ export default new Router({
       path: '/portfolio',
       name: 'portfolio',
       component: Portfolio
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: ComingSoon
+    },
+    {
+      path: '/resume',
+      name: 'resume',
+      component: ComingSoon
     },
     {
       path: '*',

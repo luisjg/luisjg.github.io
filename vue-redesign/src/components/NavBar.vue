@@ -8,7 +8,7 @@
               <router-link to="/" class="navbar-item">
                 <span class="is-size-4 has-text-weight-bold">luisjg.io</span>
               </router-link>
-              <span v-on:click="hamburgerToggle()" v-bind:class="{'is-active': isActive }" class="navbar-burger burger">
+              <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -16,11 +16,17 @@
             </div>
             <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <router-link v-on:click.native="hamburgerToggle()" to="/" exact-active-class="is-active has-text-weight-bold" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" to="/" exact-active-class="is-active has-text-weight-bold" class="navbar-item">
                   Home
                 </router-link>
-                <router-link v-on:click.native="hamburgerToggle()" to="/portfolio" v-bind:class="applyActive()" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" to="/portfolio" :class="applyActive()" class="navbar-item">
                   About
+                </router-link>
+                <router-link @click.native="hamburgerToggle()" to="/blog" exact-active-class="is-active has-text-weight-bold" class="navbar-item">
+                  Blog
+                </router-link>
+                <router-link @click.native="hamburgerToggle()" to="/resume" exact-active-class="is-active has-text-weight-bold" class="navbar-item">
+                  Resume
                 </router-link>
               </div>
             </div>
@@ -104,7 +110,7 @@
     },
     methods: {
       applyActive: function () {
-        if (this.$route.name !== 'home' && this.$route.name !== '404') {
+        if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog' && this.$route.name !== 'resume') {
           return 'is-active has-text-weight-bold'
         } else {
           return ''
@@ -114,7 +120,7 @@
         this.isActive = !this.isActive
       },
       toggleHeroFooter: function () {
-        if (this.$route.name !== 'home' && this.$route.name !== '404') {
+        if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog' && this.$route.name !== 'resume') {
           return true
         } else {
           return false

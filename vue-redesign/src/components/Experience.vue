@@ -10,33 +10,36 @@
         </p>
       </div>
     </section>
-    <div class="columns">
-      <div class="column is-5 is-offset-2">
-        <div class="column is-6">
-          <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-deep-lilac" value="90" max="100">90%</progress>
+
+    <div class="section">
+      <div class="columns">
+        <div class="column is-5 is-offset-2-desktop is-offset-1-tablet">
+          <div class="column is-6">
+            <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-deep-lilac" value="90" max="100">90%</progress>
+          </div>
+          <div class="column is-6">
+            <span class="has-text-weight-bold">PHP</span> <progress class="progress is-blue-bell" value="78" max="100">78%</progress>
+          </div>
+          <div class="column is-6">
+            <span class="has-text-weight-bold">HTML</span> <progress class="progress is-old-lavender" value="69" max="100">69%</progress>
+          </div>
+          <div class="column is-6">
+            <span class="has-text-weight-bold">JQUERY</span> <progress class="progress is-russian-green" value="50" max="100">50%</progress>
+          </div>
         </div>
-        <div class="column is-6">
-          <span class="has-text-weight-bold">PHP</span> <progress class="progress is-blue-bell" value="78" max="100">78%</progress>
-        </div>
-        <div class="column is-6">
-          <span class="has-text-weight-bold">HTML</span> <progress class="progress is-old-lavender" value="69" max="100">69%</progress>
-        </div>
-        <div class="column is-6">
-          <span class="has-text-weight-bold">JQUERY</span> <progress class="progress is-russian-green" value="50" max="100">50%</progress>
-        </div>
-      </div>
-      <div class="column is-5">
-        <div class="column is-6">
-          <span class="has-text-weight-bold">LINUX</span> <progress class="progress is-deep-lilac" value="50" max="100">50%</progress>
-        </div>
-        <div class="column is-6">
-          <span class="has-text-weight-bold">MYSQL</span> <progress class="progress is-blue-bell" value="45" max="100">45%</progress>
-        </div>
-        <div class="column is-6">
-          <span class="has-text-weight-bold">VUE</span> <progress class="progress is-old-lavender" value="40" max="100">40%</progress>
-        </div>
-        <div class="column is-6">
-          <span class="has-text-weight-bold">CSS</span> <progress class="progress is-russian-green" value="35" max="100">35%</progress>
+        <div class="column is-5">
+          <div class="column is-6">
+            <span class="has-text-weight-bold">LINUX</span> <progress class="progress is-deep-lilac" value="50" max="100">50%</progress>
+          </div>
+          <div class="column is-6">
+            <span class="has-text-weight-bold">MYSQL</span> <progress class="progress is-blue-bell" value="45" max="100">45%</progress>
+          </div>
+          <div class="column is-6">
+            <span class="has-text-weight-bold">VUE</span> <progress class="progress is-old-lavender" value="40" max="100">40%</progress>
+          </div>
+          <div class="column is-6">
+            <span class="has-text-weight-bold">CSS</span> <progress class="progress is-russian-green" value="35" max="100">35%</progress>
+          </div>
         </div>
       </div>
     </div>
