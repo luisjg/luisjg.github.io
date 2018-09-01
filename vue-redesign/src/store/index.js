@@ -16,7 +16,6 @@ export default new Vuex.Store({
           .get('https://luisjg.io/json/work.json')
           .then(response => {
             context.commit('storeWorkData', response.data)
-            // sessionStorage.setItem("work", JSON.stringify(response.data));
           })
           .catch(e => {
             // this.errors.push(e);

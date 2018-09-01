@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import ComingSoon from '@/components/ComingSoon'
-import Education from '@/components/Education'
-import Experience from '@/components/Experience'
-import Hobbies from '@/components/Hobbies'
-import Home from '@/components/Home'
-import NotFound from '@/components/NotFound'
-import Portfolio from '@/components/Portfolio'
+const ComingSoon = () => import('../components/ComingSoon')
+const Education = () => import('../components/Education')
+const Experience = () => import('../components/Experience')
+const Hobbies = () => import('../components/Hobbies')
+const Home = () => import('../components/Home')
+const NotFound = () => import('../components/NotFound')
+const Portfolio = () => import('../components/Portfolio')
 
 Vue.use(Router)
 
