@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// const Blog = () => import('../components/Blog')
 const ComingSoon = () => import('../components/ComingSoon')
 const Education = () => import('../components/Education')
 const Experience = () => import('../components/Experience')
