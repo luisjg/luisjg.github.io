@@ -1,21 +1,21 @@
 {
-  "short_name": "Portfolio",
+  "short_name": "Luis' Portfolio",
   "name": "luisjg's Portfolio",
   "icons": [
     {
-      "src": "/static/img/icons-192.jpg",
+      "src": "/static/img/profile-192.jpg",
       "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "/static/img/icons-512.jpg",
+      "src": "/static/img/profile-512.jpg",
       "type": "image/jpg",
       "sizes": "512x512"
     }
   ],
   "start_url": "/",
-  "background_color": "#3367D6",
+  "background_color": "#766c7f",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#3367D6"
+  "theme_color": "#766c7f"
 }
