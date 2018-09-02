@@ -32,7 +32,7 @@
               </div>
               <div class="timeline-content">
                 <p class="heading">February 2016</p>
-                <p>Student Assistant at <a href="https://www.metalab.csun.edu" class="has-text-weight-bold">CSUN META<span class="red-text">+</span>LAB</a>.</p>
+                <p>Student Assistant at <a href="https://www.metalab.csun.edu" rel="noreferrer" class="has-text-weight-bold" target="_blank" aria-label="Visit the META+LAB website">CSUN META<span class="red-text">+</span>LAB</a>.</p>
               </div>
             </div>
             <div class="timeline-item">
