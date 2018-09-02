@@ -9,7 +9,7 @@
       <section class="modal-card-body" v-html="modalAttrs.details">
       </section>
       <footer class="modal-card-foot">
-        <a :href="modalAttrs.url" class="button btn-color" :title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
+        <a :href="modalAttrs.url" rel="noreferrer" class="button btn-color" :title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
       </footer>
     </div>
   </div>

@@ -6,7 +6,7 @@
       <strong>Los Angeles</strong> area. I currently work for
       <strong>
         CSUN
-        <a href="https://www.metalab.csun.edu/" target="_blank">META<span class="red-text">+</span>LAB</a>
+        <a href="https://www.metalab.csun.edu/" rel="noreferrer" target="_blank" aria-label="Find out more about META+LAB">META<span class="red-text">+</span>LAB</a>
       </strong> where we build <strong>job ready students</strong> and
       <strong>web applications</strong>. Our <span>mission</span> is to <strong>mentor</strong>
       the students by providing them with our
