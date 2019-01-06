@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <header>
-      <nav-bar />
+      <!-- <nav-bar v-if="this.$route.name !== 'blog'"/> -->
+      <nav-bar/>
     </header>
     <main>
       <transition name="fade">
@@ -64,15 +65,22 @@
 <script>
   import Footer from '@/components/Footer'
   import NavBar from '@/components/NavBar'
+  import { mapActions } from 'vuex'
   export default {
     created () {
-      // set up json calls
-      this.$store.dispatch('retrieveWorkData')
-      this.$store.dispatch('retrieveSchoolData')
+      // execute the json calls
+      this.retrieveWorkData()
+      this.retrieveSchoolData()
     },
     components: {
       'footer-content': Footer,
       'nav-bar': NavBar
+    },
+    methods: {
+      ...mapActions([
+        'retrieveWorkData',
+        'retrieveSchoolData'
+      ])
     }
   }
 </script>
