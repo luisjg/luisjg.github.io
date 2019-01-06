@@ -101,5 +101,4 @@
   .progress.is-pastel-blue::-ms-fill {
     background-color: #A9D2D5;
   }
-
 </style>
