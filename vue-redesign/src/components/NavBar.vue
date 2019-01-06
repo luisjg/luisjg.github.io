@@ -37,8 +37,8 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <figure>
-            <img src="../assets/profile.jpg" class="profile-img" alt="profile image" width="10%">
+          <figure class="image is-128x128">
+            <img src="../assets/profile.jpg" class="is-rounded" alt="profile image">
           </figure>
           <ul class="subtitle">
             <li>
@@ -82,8 +82,12 @@
 </template>
 
 <style scoped>
-  .profile-img {
-    border-radius: 50%;
+  .image {
+    margin: auto;
+  }
+  .hero.is-light.is-bold {
+    background-image: none;
+    background-color: #f6f8fa;
   }
   .hero.is-light .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover {
   background-color: #766C7F;
