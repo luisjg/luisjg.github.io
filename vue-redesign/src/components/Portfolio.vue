@@ -13,67 +13,36 @@
 
     <div class="section">
       <div class="columns is-centered">
-        <div class="columns">
-          <div class="column is-offset-1 is-one-fifth-desktop is-one-half-tablet">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="../assets/faculty.png" :alt="workData.faculty.title + ' image'">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="faculty" href="#" class="app-links" v-html="workData.faculty.title"></a></p>
-                  <span v-html="workData.faculty.description"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-one-half-tablet">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="../assets/scholarship.png" :alt="workData.scholarship.title + ' image'">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="scholarship" href="#" class="app-links" v-html="workData.scholarship.title"></a></p>
-                  <span v-html="workData.scholarship.description"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-one-half-tablet">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="../assets/aa2.png" :alt="workData.aa2.title + ' image'">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="aa2" href="#" class="app-links" v-html="workData.aa2.title"></a></p>
-                  <span v-html="workData.aa2.description"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-one-fifth-desktop is-one-half-tablet">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="../assets/etd.png" :alt="workData.etd.title + ' image'">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="etd" href="#" class="app-links" v-html="workData.etd.title"></a></p>
-                  <span v-html="workData.etd.description"></span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- <div v-for="item in this.shortenedArray" :key="item" class="colum is-one-fifth-desktop is-one-half-tablet">
+          {{ item }}
+        </div> -->
+        <div class="column is-one-fifth-desktop is-one-half-tablet">
+          <figure class="image">
+            <img src="../assets/faculty.png" alt="cars">
+          </figure>
+          <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="faculty" href="#" class="app-links" v-html="workData.faculty.title"></a></p>
+          <div class="has-text-centered" v-html="workData.faculty.description"></div>
+        </div>
+        <div class="column is-one-fifth-desktop is-one-half-tablet">
+          <figure class="image">
+            <img src="../assets/scholarship.png" alt="photography">
+          </figure>
+          <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="scholarship" href="#" class="app-links" v-html="workData.scholarship.title"></a></p>
+          <div class="has-text-centered" v-html="workData.scholarship.description"></div>
+        </div>
+        <div class="column is-one-fifth-desktop is-one-half-tablet">
+          <figure class="image">
+            <img src="../assets/etd.png" alt="music">
+          </figure>
+          <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="etd" href="#" class="app-links" v-html="workData.etd.title"></a></p>
+          <div class="has-text-centered" v-html="workData.etd.description"></div>
+        </div>
+        <div class="column is-one-fifth-desktop is-one-half-tablet">
+          <figure class="image">
+            <img src="../assets/aa2.png" alt="music">
+          </figure>
+          <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="aa2" href="#" class="app-links" v-html="workData.aa2.title"></a></p>
+          <div class="has-text-centered" v-html="workData.aa2.description"></div>
         </div>
       </div>
     </div>
@@ -89,9 +58,13 @@
     data () {
       return {
         status: false,
-        modalAttrs: null
+        modalAttrs: null,
+        shuffled: null
       }
     },
+    // created () {
+    //   this.fisherYatesShuffle(Object.keys(this.workData))
+    // },
     methods: {
       modalAction: function (event) {
         this.modalAttrs = this.workData[event.target.id]
@@ -106,6 +79,19 @@
           return 'faculty/beta/' + name
         }
         return name
+      },
+      fisherYatesShuffle: function (array) {
+        let i = array.length
+        let j = 0
+        let temp
+        while (i--) {
+          j = Math.floor(Math.random() * (i + 1))
+          // swap randomly chosen element with current element
+          temp = array[i]
+          array[i] = array[j]
+          array[j] = temp
+        }
+        this.shuffled = array
       }
     },
     components: {
@@ -114,7 +100,11 @@
     computed: {
       ...mapGetters([
         'workData'
-      ])
+      ]),
+      shortenedArray: function () {
+        let halfLength = Math.ceil(this.shuffled.length / 2)
+        return this.shuffled.splice(0, halfLength)
+      }
     }
   }
 </script>
