@@ -24,7 +24,7 @@
 <style scoped>
   footer {
     margin-top: 50px;
-    background-image: linear-gradient(141deg,#dfd8d9 0,#f5f5f5 71%,#fff 100%);
+    background-color: #f6f8fa;
   }
 </style>
 
