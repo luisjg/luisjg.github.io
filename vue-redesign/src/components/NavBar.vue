@@ -16,16 +16,16 @@
             </div>
             <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <router-link @click.native="hamburgerToggle()" to="/" exact-active-class="is-active has-text-weight-bold" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" to="/" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Home
                 </router-link>
                 <router-link @click.native="hamburgerToggle()" to="/portfolio" :class="applyActive()" class="navbar-item">
                   About
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/blog" exact-active-class="is-active has-text-weight-bold" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" to="/blog" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Blog
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/resume" exact-active-class="is-active has-text-weight-bold" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" to="/resume" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Resume
                 </router-link>
               </div>
@@ -40,7 +40,7 @@
           <figure class="image is-128x128">
             <img src="../assets/profile.jpg" class="is-rounded" alt="profile image">
           </figure>
-          <ul class="subtitle">
+          <ul class="is-size-4-desktop">
             <li>
               <i class="russian-green fas fa-map-marker-alt" aria-hidden="true"></i> Los Angeles, CA
             </li>
@@ -82,6 +82,22 @@
 </template>
 
 <style scoped>
+  @media screen and (min-width: 769px), print {
+    .hero.is-medium .hero-body {
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+    }
+  }
+  @media screen and (max-width: 1087px) {
+    .hero.is-light .navbar-menu {
+        background-color: #f6f8fa;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .hero.is-light.is-bold .navbar-menu {
+        background-image: none;
+    }
+  }
   .image {
     margin: auto;
   }
@@ -96,11 +112,18 @@
   }
   .hero.is-light a.navbar-item:hover, .navbar-link:hover {
     background-color: rgba(10, 10, 10, 0.1);
+    border-radius: 4px;
   }
   .hero.is-light a.navbar-item.is-active,
   .hero.is-light .navbar-link.is-active {
     background-color: #766C7F;
-    color: white;
+    border-radius: 4px;
+  }
+  .hero.is-light .tabs.is-boxed a:hover, .hero.is-light .tabs.is-toggle a:hover {
+    border-radius: 4px;
+  }
+  .tabs.is-boxed a {
+    border-radius: 4px;
   }
 </style>
 
@@ -115,7 +138,7 @@
     methods: {
       applyActive: function () {
         if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog' && this.$route.name !== 'resume') {
-          return 'is-active has-text-weight-bold'
+          return 'is-active has-text-weight-bold has-text-white'
         } else {
           return ''
         }
