@@ -37,7 +37,7 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <figure class="image is-128x128">
+          <figure class="image" :class="switchImageStyle">
             <img src="../assets/profile.jpg" class="is-rounded" alt="profile image">
           </figure>
           <ul id="tag-lines" class="is-size-4-desktop">
@@ -136,6 +136,14 @@
       return {
         section: String,
         isActive: false
+      }
+    },
+    computed: {
+      switchImageStyle: function () {
+        if (screen.width < 480) {
+          return 'is-96x96'
+        }
+        return 'is-128x128'
       }
     },
     methods: {
