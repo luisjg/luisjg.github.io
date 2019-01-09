@@ -40,7 +40,7 @@
           <figure class="image is-128x128">
             <img src="../assets/profile.jpg" class="is-rounded" alt="profile image">
           </figure>
-          <ul class="is-size-4-desktop">
+          <ul id="tag-lines" class="is-size-4-desktop">
             <li>
               <i class="russian-green fas fa-map-marker-alt" aria-hidden="true"></i> Los Angeles, CA
             </li>
@@ -97,6 +97,9 @@
     .hero.is-light.is-bold .navbar-menu {
         background-image: none;
     }
+  }
+  #tag-lines {
+    padding-top: .5rem;
   }
   .image {
     margin: auto;
