@@ -47,13 +47,13 @@
 
 <style scoped>
   .progress.is-deep-lilac::-webkit-progress-value {
-    background-color: #9b4dca;
+    background-color: #9b64bc;
   }
   .progress.is-deep-lilac::-moz-progress-bar {
-    background-color: #9b4dca;
+    background-color: #9b64bc;
   }
   .progress.is-deep-lilac::-ms-fill {
-    background-color: #9b4dca;
+    background-color: #9b64bc;
   }
   .progress.is-mummys-tomb::-webkit-progress-value {
     background-color: #808D8E;
