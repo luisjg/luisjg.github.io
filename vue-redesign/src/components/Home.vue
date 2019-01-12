@@ -19,7 +19,7 @@
 
 <style scoped>
  #home {
-   padding: 3rem 1.5rem;
+   padding: 3rem 1.5rem 2.3rem 0;
  }
  .tab {
    text-indent:5%;
