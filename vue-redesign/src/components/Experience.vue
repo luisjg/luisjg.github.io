@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="columns">
+    <div class="columns pb">
       <div class="column is-5 is-offset-2-desktop is-offset-2-tablet">
         <div class="column is-6">
           <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-deep-lilac" value="90" max="100">90%</progress>

@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="columns is-centered">
+    <div class="columns is-centered pb">
       <!-- <div v-for="item in this.shortenedArray" :key="item" class="colum is-one-fifth-desktop is-one-half-tablet">
         {{ item }}
       </div> -->

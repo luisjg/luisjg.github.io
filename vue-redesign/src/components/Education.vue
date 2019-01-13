@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="columns is-centered">
+    <div class="columns is-centered pb">
       <div class="column is-two-fifths-desktop is-half-tablet">
         <p class="has-text-centered title is-4"><a href="#" id="csun" @click.prevent="modalAction">{{ schoolData.csun.title }}</a></p>
         <div class="timeline is-centered">

@@ -32,7 +32,7 @@
         <figure class="image">
           <img src="../assets/pexels-photo-358666.jpg" alt="music">
         </figure>
-        <div class="pt">
+        <div class="pt pb">
           <p class="has-text-centered title is-4">Music</p>
         </div>
       </div>
