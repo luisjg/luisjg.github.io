@@ -62,6 +62,9 @@
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
+  .pb {
+    padding-bottom: 3rem;
+  }
 </style>
 
 <script>
