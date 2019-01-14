@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -116,7 +117,42 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+
+    // Workbox settings
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+      offlineGoogleAnalytics: false,
+      runtimeCaching: [{
+        // To match cross-origin requests, use a RegExp that matches
+        // the start of the origin:
+        urlPattern: new RegExp(/^https:\/\/fonts\.googleapis\.com/),
+        handler: 'staleWhileRevalidate',
+        options: {
+          cacheName: 'google-fonts-styles'
+        }
+      }, {
+        urlPattern: new RegExp(/^https:\/\/fonts\.gstatic\.com/),
+        handler: 'cacheFirst',
+        options: {
+          cacheName: 'google-fonts-webfonts',
+          expiration: {
+            maxAgeSeconds: 60 * 60 * 24 * 365,
+            maxEntries: 30
+          },
+          cacheableResponse: {
+            statuses: [0, 200]
+          }
+        }
+      }, {
+        urlPattern: new RegExp(/\.(?:js|css)$/),
+        handler: 'staleWhileRevalidate',
+        options: {
+          cacheName: 'static-resources'
+        }
+      }]
+    })
   ]
 })
 
