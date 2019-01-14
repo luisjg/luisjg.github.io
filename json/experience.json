@@ -1,0 +1,10 @@
+{
+    "css": 70,
+    "html": 90,
+    "javascript": 75,
+    "laravel": 85,
+    "linux": 70,
+    "mysql": 60,
+    "php": 80,
+    "vue": 65
+}
