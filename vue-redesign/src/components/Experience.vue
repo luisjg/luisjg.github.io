@@ -14,30 +14,30 @@
     <div class="columns pb">
       <div class="column is-5 is-offset-2-desktop is-offset-2-tablet">
         <div class="column is-6">
-          <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-deep-lilac" value="90" max="100">90%</progress>
+          <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-deep-lilac" :value="experienceData.laravel" max="100">{{experienceData.laravel}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">PHP</span> <progress class="progress is-blue-bell" value="78" max="100">78%</progress>
+          <span class="has-text-weight-bold">PHP</span> <progress class="progress is-blue-bell" :value="experienceData.php" max="100">{{experienceData.php}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">HTML</span> <progress class="progress is-old-lavender" value="69" max="100">69%</progress>
+          <span class="has-text-weight-bold">HTML</span> <progress class="progress is-old-lavender" :value="experienceData.html" max="100">{{experienceData.html}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">JQUERY</span> <progress class="progress is-russian-green" value="50" max="100">50%</progress>
+          <span class="has-text-weight-bold">JAVASCRIPT</span> <progress class="progress is-russian-green" :value="experienceData.javascript" max="100">{{experienceData.javascript}}%</progress>
         </div>
       </div>
       <div class="column is-5">
         <div class="column is-6">
-          <span class="has-text-weight-bold">LINUX</span> <progress class="progress is-deep-lilac" value="50" max="100">50%</progress>
+          <span class="has-text-weight-bold">LINUX</span> <progress class="progress is-deep-lilac" :value="experienceData.linux" max="100">{{experienceData.linux}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">MYSQL</span> <progress class="progress is-blue-bell" value="45" max="100">45%</progress>
+          <span class="has-text-weight-bold">MYSQL</span> <progress class="progress is-blue-bell" :value="experienceData.mysql" max="100">{{experienceData.mysql}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">VUE</span> <progress class="progress is-old-lavender" value="40" max="100">40%</progress>
+          <span class="has-text-weight-bold">VUE</span> <progress class="progress is-old-lavender" :value="experienceData.vue" max="100">{{experienceData.vue}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">CSS</span> <progress class="progress is-russian-green" value="35" max="100">35%</progress>
+          <span class="has-text-weight-bold">CSS</span> <progress class="progress is-russian-green" :value="experienceData.css" max="100">{{experienceData.css}}%</progress>
         </div>
       </div>
     </div>
@@ -101,3 +101,15 @@
     background-color: #A9D2D5;
   }
 </style>
+
+<script>
+  import {mapGetters} from 'vuex'
+  export default {
+    computed: {
+      ...mapGetters([
+        'experienceData'
+      ])
+    }
+  }
+</script>
+

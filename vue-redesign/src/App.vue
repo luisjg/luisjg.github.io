@@ -29,7 +29,7 @@
         </div>
         <div style="padding-top: 1.5rem;">
           <a href="https://bulma.io" rel="noreferrer" target="_blank" aria-label="Visit the Bulma homepage to find out more">
-            <img src="./assets/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547432623/luisjg/made-with-bulma.e0eab74.png" alt="Made with Bulma" width="128" height="24">
           </a>
         </div>
       </div>
@@ -73,10 +73,12 @@
   import { mapActions } from 'vuex'
   export default {
     created () {
+      // register service worker
       this.registerServiceWorker()
       // execute the json calls
-      this.retrieveWorkData()
+      this.retrieveExperienceData()
       this.retrieveSchoolData()
+      this.retrieveWorkData()
     },
     components: {
       'footer-content': Footer,
@@ -92,8 +94,9 @@
     },
     methods: {
       ...mapActions([
-        'retrieveWorkData',
-        'retrieveSchoolData'
+        'retrieveExperienceData',
+        'retrieveSchoolData',
+        'retrieveWorkData'
       ]),
       registerServiceWorker: function () {
         if ('serviceWorker' in navigator) {

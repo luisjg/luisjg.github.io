@@ -38,7 +38,7 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <figure class="image" :class="switchImageStyle">
-            <img src="../assets/profile.jpg" class="is-rounded" alt="profile image">
+            <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547432443/luisjg/profile.jpg" class="is-rounded" alt="profile image">
           </figure>
           <ul id="tag-lines" class="is-size-4-desktop">
             <li>

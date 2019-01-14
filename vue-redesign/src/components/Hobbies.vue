@@ -14,7 +14,7 @@
     <div class="columns is-centered">
       <div class="column is-one-fifth-desktop is-one-half-tablet">
         <figure class="image">
-          <img src="../assets/pexels-photo-1905741.jpg" alt="cars">
+          <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547356329/luisjg/pexels-photo-1905741.jpg" alt="cars">
         </figure>
         <div class="pt">
           <p class="has-text-centered title is-4">Cars</p>
@@ -22,7 +22,7 @@
       </div>
       <div class="column is-one-fifth-desktop is-one-half-tablet">
         <figure class="image">
-          <img src="../assets/rtdiii-retro-a6000-nikon-76524.jpg" alt="photography">
+          <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547356329/luisjg/rtdiii-retro-a6000-nikon-76524.jpg" alt="photography">
         </figure>
         <div class="pt">
           <p class="has-text-centered title is-4">Photography</p>
@@ -30,7 +30,7 @@
       </div>
       <div class="column is-one-fifth-desktop is-one-half-tablet">
         <figure class="image">
-          <img src="../assets/pexels-photo-358666.jpg" alt="music">
+          <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547356329/luisjg/pexels-photo-358666.jpg" alt="music">
         </figure>
         <div class="pt pb">
           <p class="has-text-centered title is-4">Music</p>
