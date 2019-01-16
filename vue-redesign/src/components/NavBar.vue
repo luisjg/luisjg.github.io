@@ -19,9 +19,21 @@
                 <router-link @click.native="hamburgerToggle()" to="/" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Home
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/portfolio" :class="applyActive()" class="navbar-item">
-                  About
+                <router-link @click.native="hamburgerToggle()" to="/portfolio" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                  Portfolio
                 </router-link>
+                <router-link @click.native="hamburgerToggle()" to="/experience" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                  Experience
+                </router-link>
+                <router-link @click.native="hamburgerToggle()" to="/hobbies" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                  Hobbies
+                </router-link>
+                <router-link @click.native="hamburgerToggle()" to="/education" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                  Education
+                </router-link>
+                <!-- <router-link @click.native="hamburgerToggle()" to="/portfolio" :class="applyActive()" class="navbar-item">
+                  About
+                </router-link> -->
                 <router-link @click.native="hamburgerToggle()" to="/blog" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Blog
                 </router-link>
@@ -37,7 +49,7 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <figure class="image" :class="switchImageStyle">
+          <figure class="image" :class="switchImageStyle()">
             <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547432443/luisjg/profile.jpg" class="is-rounded" alt="profile image">
           </figure>
           <ul id="tag-lines" class="is-size-4-desktop">
@@ -56,7 +68,7 @@
       </div>
 
       <!-- Hero footer: will stick at the bottom -->
-      <div v-if="toggleHeroFooter()" class="hero-foot">
+      <!-- <div v-if="toggleHeroFooter()" class="hero-foot">
         <transition name="fade">
           <nav class="tabs is-boxed is-fullwidth">
             <div class="container">
@@ -77,7 +89,7 @@
             </div>
           </nav>
         </transition>
-      </div>
+      </div> -->
     </section>
 </template>
 
@@ -138,14 +150,6 @@
         isActive: false
       }
     },
-    computed: {
-      switchImageStyle: function () {
-        if (screen.width < 480) {
-          return 'is-96x96'
-        }
-        return 'is-128x128'
-      }
-    },
     methods: {
       applyActive: function () {
         if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog' && this.$route.name !== 'resume') {
@@ -155,7 +159,9 @@
         }
       },
       hamburgerToggle: function () {
-        this.isActive = !this.isActive
+        if (this.getWidth() <= 1087) {
+          this.isActive = !this.isActive
+        }
       },
       toggleHeroFooter: function () {
         if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog' && this.$route.name !== 'resume') {
@@ -163,6 +169,21 @@
         } else {
           return false
         }
+      },
+      getWidth: function () {
+        return Math.max(
+          document.body.scrollWidth,
+          document.documentElement.scrollWidth,
+          document.body.offsetWidth,
+          document.documentElement.offsetWidth,
+          document.documentElement.clientWidth
+        )
+      },
+      switchImageStyle: function () {
+        if (this.getWidth() <= 480) {
+          return 'is-96x96'
+        }
+        return 'is-128x128'
       }
     }
   }
