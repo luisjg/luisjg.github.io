@@ -11,37 +11,23 @@
       </div>
     </section>
 
+    <div class="columns is-centered" :class="applyPadding()">
+      <div v-for="(item, value) in firstHalfOfProjects" :key="value" class="column is-one-fifth-desktop is-one-half-tablet">
+        <figure class="image">
+          <a @click.prevent="modalAction" href="#"><img :data-id="item[0]" :src="item[1].image" :alt="item[1].title + ' App Image'"></a>
+        </figure>
+        <p class="has-text-centered title is-4"><a @click.prevent="modalAction" :data-id="item[0]" href="#" class="app-links" v-html="item[1].title"></a></p>
+        <div class="has-text-centered" v-html="item[1].description"></div>
+      </div>
+    </div>
+
     <div class="columns is-centered pb">
-      <!-- <div v-for="item in this.shortenedArray" :key="item" class="colum is-one-fifth-desktop is-one-half-tablet">
-        {{ item }}
-      </div> -->
-      <div class="column is-one-fifth-desktop is-one-half-tablet">
+      <div v-for="(item, value) in secondHalfOfProjects" :key="value" class="column is-one-fifth-desktop is-one-half-tablet">
         <figure class="image">
-          <img :src="workData.faculty.image" alt="Faculty App Image">
+          <a @click.prevent="modalAction" href="#"><img :data-id="item[0]" :src="item[1].image" :alt="item[1].title + ' App Image'"></a>
         </figure>
-        <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="faculty" href="#" class="app-links" v-html="workData.faculty.title"></a></p>
-        <div class="has-text-centered" v-html="workData.faculty.description"></div>
-      </div>
-      <div class="column is-one-fifth-desktop is-one-half-tablet">
-        <figure class="image">
-          <img :src="workData.scholarship.image" alt="Scholarship App Image">
-        </figure>
-        <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="scholarship" href="#" class="app-links" v-html="workData.scholarship.title"></a></p>
-        <div class="has-text-centered" v-html="workData.scholarship.description"></div>
-      </div>
-      <div class="column is-one-fifth-desktop is-one-half-tablet">
-        <figure class="image">
-          <img :src="workData.etd.image" alt="Electronic Thesis and Dissertation App Image">
-        </figure>
-        <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="etd" href="#" class="app-links" v-html="workData.etd.title"></a></p>
-        <div class="has-text-centered" v-html="workData.etd.description"></div>
-      </div>
-      <div class="column is-one-fifth-desktop is-one-half-tablet">
-        <figure class="image">
-          <img :src="workData.aa2.image" alt="AA2 App Image">
-        </figure>
-        <p class="has-text-centered title is-4"><a @click.prevent="modalAction" id="aa2" href="#" class="app-links" v-html="workData.aa2.title"></a></p>
-        <div class="has-text-centered" v-html="workData.aa2.description"></div>
+        <p class="has-text-centered title is-4"><a @click.prevent="modalAction" :data-id="item[0]" href="#" class="app-links" v-html="item[1].title"></a></p>
+        <div class="has-text-centered" v-html="item[1].description"></div>
       </div>
     </div>
 
@@ -56,40 +42,35 @@
     data () {
       return {
         status: false,
-        modalAttrs: null,
-        shuffled: null
+        modalAttrs: null
       }
     },
-    // created () {
-    //   this.fisherYatesShuffle(Object.keys(this.workData))
-    // },
+    updated () {
+      console.log('derp')
+    },
     methods: {
       modalAction: function (event) {
-        this.modalAttrs = this.workData[event.target.id]
+        this.modalAttrs = this.workData[event.target.dataset.id]
         document.documentElement.classList.add('is-clipped')
         this.updateModal()
       },
       updateModal: function () {
         this.status = !this.status
       },
-      generateUrls: function (name) {
-        if (name === 'scholarship') {
-          return 'faculty/beta/' + name
+      applyPadding: function () {
+        if (this.getWidth() > 768) {
+          return 'pb'
         }
-        return name
+        return ''
       },
-      fisherYatesShuffle: function (array) {
-        let i = array.length
-        let j = 0
-        let temp
-        while (i--) {
-          j = Math.floor(Math.random() * (i + 1))
-          // swap randomly chosen element with current element
-          temp = array[i]
-          array[i] = array[j]
-          array[j] = temp
-        }
-        this.shuffled = array
+      getWidth: function () {
+        return Math.max(
+          document.body.scrollWidth,
+          document.documentElement.scrollWidth,
+          document.body.offsetWidth,
+          document.documentElement.offsetWidth,
+          document.documentElement.clientWidth
+        )
       }
     },
     components: {
@@ -99,9 +80,11 @@
       ...mapGetters([
         'workData'
       ]),
-      shortenedArray: function () {
-        let halfLength = Math.ceil(this.shuffled.length / 2)
-        return this.shuffled.splice(0, halfLength)
+      firstHalfOfProjects: function () {
+        return Object.entries(this.workData).slice(0, (Object.keys(this.workData).length / 2))
+      },
+      secondHalfOfProjects: function () {
+        return Object.entries(this.workData).slice((Object.keys(this.workData).length / 2), Object.keys(this.workData).length)
       }
     }
   }
