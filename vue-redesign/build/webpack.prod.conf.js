@@ -130,7 +130,10 @@ const webpackConfig = merge(baseWebpackConfig, {
         urlPattern: new RegExp(/^https:\/\/fonts\.googleapis\.com/),
         handler: 'staleWhileRevalidate',
         options: {
-          cacheName: 'google-fonts-styles'
+          cacheName: 'google-fonts-styles',
+          expiration: {
+            maxAgeSeconds: 60 * 60 * 24 * 365
+          }
         }
       }, {
         urlPattern: new RegExp(/^https:\/\/fonts\.gstatic\.com/),
@@ -149,7 +152,10 @@ const webpackConfig = merge(baseWebpackConfig, {
         urlPattern: new RegExp(/\.(?:js|css)$/),
         handler: 'staleWhileRevalidate',
         options: {
-          cacheName: 'static-resources'
+          cacheName: 'static-resources',
+          expiration: {
+            maxAgeSeconds: 60 * 60 * 24 * 365
+          }
         }
       }]
     })
