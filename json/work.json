@@ -8,17 +8,17 @@
       "Developer"
     ],
     "url": "https://www.metalab.csun.edu/aa2",
-    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547357099/luisjg/aa2.png"
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/aa2.jpg"
   },
   "etd": {
     "title": "ETD",
-    "description": "Thesis and Dissertation manager.",
+    "description": "Campus wide thesis and Dissertation manager.",
     "details": "This Laravel application is used by both CSUN Master's Students and academic advisors to keep track and manage the Masters Student's thesis progress from start to finish.",
     "roles": [
       "Mentor"
     ],
     "url": "https://academics.csun.edu/etd",
-    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547357099/luisjg/etd.png"
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/etd.jpg"
   },
   "faculty": {
     "title": "Faculty",
@@ -28,7 +28,7 @@
       "Developer"
     ],
     "url": "https://www.csun.edu/faculty",
-    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547357099/luisjg/faculty.png"
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/faculty.jpg"
   },
   "scholarship": {
     "title": "Scholarship",
@@ -38,30 +38,30 @@
       "Developer"
     ],
     "url": "https://www.csun.edu/faculty/beta/scholarship",
-    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547356330/luisjg/scholarship.png"
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/scholarship.jpg"
   },
   "mom": {
     "title": "META+LAB Website",
     "description": "Learn more about META<span class=\"red-text\">+</span>LAB.",
-    "details": "CSUN META+LAB website explains what META+LAB is and what our primary product is - our students.",
+    "details": "CSUN META+LAB website explains what META+LAB is, showcases what we do and what highlights our primary product which is our students.",
     "roles": [
       "Mentor",
       "Scrum Master",
       "Developer"
     ],
     "url": "https://www.metalab.csun.edu",
-    "image": ""
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/metalab-website.jpg"
   },
   "web_services": {
-    "title": "Web Services",
+    "title": "META+LAB Web Services",
     "description": "Expanding our Collaboration.",
-    "details": "The CSUN META+LAB web services provide an easy way to get you up and running on your next CSUN application.",
+    "details": "These set of APIs provide developers an easy way to get up and running with their CSUN specific applications.",
     "roles": [
       "Mentor",
       "Scrum Master",
       "Developer"
     ],
     "url": "https://api.metalab.csun.edu",
-    "image": ""
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/web-services.jpg"
   }
 }
