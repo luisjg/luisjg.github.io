@@ -14,30 +14,30 @@
     <div class="columns pb">
       <div class="column is-5 is-offset-2-desktop is-offset-2-tablet">
         <div class="column is-6">
-          <span class="has-text-weight-bold">LARAVEL</span> <progress class="progress is-deep-lilac" :value="experienceData.laravel" max="100">{{experienceData.laravel}}%</progress>
+          <span class="has-text-weight-bold">LARAVEL</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.laravel }}</span> <progress class="progress is-deep-lilac" :value="experienceData.laravel" max="100">asdfasdf</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">PHP</span> <progress class="progress is-blue-bell" :value="experienceData.php" max="100">{{experienceData.php}}%</progress>
+          <span class="has-text-weight-bold">PHP</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.php }}</span> <progress class="progress is-blue-bell" :value="experienceData.php" max="100">{{experienceData.php}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">HTML</span> <progress class="progress is-old-lavender" :value="experienceData.html" max="100">{{experienceData.html}}%</progress>
+          <span class="has-text-weight-bold">HTML</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.html }}</span> <progress class="progress is-old-lavender" :value="experienceData.html" max="100">{{experienceData.html}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">JAVASCRIPT</span> <progress class="progress is-russian-green" :value="experienceData.javascript" max="100">{{experienceData.javascript}}%</progress>
+          <span class="has-text-weight-bold">JAVASCRIPT</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.javascript }}</span> <progress class="progress is-russian-green" :value="experienceData.javascript" max="100">{{experienceData.javascript}}%</progress>
         </div>
       </div>
       <div class="column is-5">
         <div class="column is-6">
-          <span class="has-text-weight-bold">LINUX</span> <progress class="progress is-deep-lilac" :value="experienceData.linux" max="100">{{experienceData.linux}}%</progress>
+          <span class="has-text-weight-bold">LINUX</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.linux }}</span> <progress class="progress is-deep-lilac" :value="experienceData.linux" max="100">{{experienceData.linux}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">MYSQL</span> <progress class="progress is-blue-bell" :value="experienceData.mysql" max="100">{{experienceData.mysql}}%</progress>
+          <span class="has-text-weight-bold">MYSQL</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.mysql }}</span> <progress class="progress is-blue-bell" :value="experienceData.mysql" max="100">{{experienceData.mysql}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">VUE</span> <progress class="progress is-old-lavender" :value="experienceData.vue" max="100">{{experienceData.vue}}%</progress>
+          <span class="has-text-weight-bold">VUE</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.vue }}</span> <progress class="progress is-old-lavender" :value="experienceData.vue" max="100">{{experienceData.vue}}%</progress>
         </div>
         <div class="column is-6">
-          <span class="has-text-weight-bold">CSS</span> <progress class="progress is-russian-green" :value="experienceData.css" max="100">{{experienceData.css}}%</progress>
+          <span class="has-text-weight-bold">CSS</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.css }}</span> <progress class="progress is-russian-green" :value="experienceData.css" max="100">{{experienceData.css}}%</progress>
         </div>
       </div>
     </div>
