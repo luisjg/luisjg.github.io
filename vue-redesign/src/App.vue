@@ -65,6 +65,25 @@
   .pb {
     padding-bottom: 3rem;
   }
+  /* width */
+  ::-webkit-scrollbar {
+    width: .5rem;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #766C7F; /* WebKit/Blink Browsers */
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
 </style>
 
 <script>
@@ -86,7 +105,7 @@
     },
     computed: {
       adjustSvgSize: function () {
-        if (screen.width < 480) {
+        if (this.getWidth() <= 480) {
           return '10%'
         }
         return '4%'
@@ -108,6 +127,15 @@
             })
           })
         }
+      },
+      getWidth: function () {
+        return Math.max(
+          document.body.scrollWidth,
+          document.documentElement.scrollWidth,
+          document.body.offsetWidth,
+          document.documentElement.offsetWidth,
+          document.documentElement.clientWidth
+        )
       }
     }
   }
