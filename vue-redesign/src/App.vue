@@ -65,6 +65,9 @@
   .pb {
     padding-bottom: 3rem;
   }
+  .pt {
+    padding-top: 1.5rem;
+  }
   /* width */
   ::-webkit-scrollbar {
     width: .5rem;
