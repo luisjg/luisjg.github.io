@@ -16,7 +16,7 @@
         <figure class="image">
           <a @click.prevent="modalAction" href="#"><img :data-id="item[0]" :src="item[1].image" :alt="item[1].title + ' App Image'"></a>
         </figure>
-        <p class="has-text-centered title is-4"><a @click.prevent="modalAction" :data-id="item[0]" href="#" class="app-links" v-html="item[1].title"></a></p>
+        <p class="has-text-centered title is-4 pt"><a @click.prevent="modalAction" :data-id="item[0]" href="#" class="app-links" v-html="item[1].title"></a></p>
         <div class="has-text-centered" v-html="item[1].description"></div>
       </div>
     </div>
@@ -26,7 +26,7 @@
         <figure class="image">
           <a @click.prevent="modalAction" href="#"><img :data-id="item[0]" :src="item[1].image" :alt="item[1].title + ' App Image'"></a>
         </figure>
-        <p class="has-text-centered title is-4"><a @click.prevent="modalAction" :data-id="item[0]" href="#" class="app-links" v-html="item[1].title"></a></p>
+        <p class="has-text-centered title is-4 pt"><a @click.prevent="modalAction" :data-id="item[0]" href="#" class="app-links" v-html="item[1].title"></a></p>
         <div class="has-text-centered" v-html="item[1].description"></div>
       </div>
     </div>

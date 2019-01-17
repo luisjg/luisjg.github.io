@@ -40,9 +40,3 @@
 
   </div>
 </template>
-
-<style scoped>
-  .pt {
-    padding-top: 1.5rem;
-  }
-</style>
