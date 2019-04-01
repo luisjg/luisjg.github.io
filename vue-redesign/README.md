@@ -1,6 +1,6 @@
-# y
+# Personal Portfolio Website
 
-> luisjg personal site
+> visit [luisjg.io](https://luisjg.io)
 
 ## Build Setup
 
