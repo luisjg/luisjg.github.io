@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="columns is-centered" :class="applyPadding()">
+    <div class="columns is-centered" :class="applyPadding">
       <div v-for="(item, value) in firstHalfOfProjects" :key="value" class="column is-one-fifth-desktop is-one-half-tablet">
         <figure class="image">
           <a @click.prevent="modalAction" href="#"><img :data-id="item[0]" :src="item[1].image" :alt="item[1].title + ' App Image'"></a>
@@ -45,9 +45,6 @@
         modalAttrs: null
       }
     },
-    updated () {
-      console.log('derp')
-    },
     methods: {
       modalAction: function (event) {
         this.modalAttrs = this.workData[event.target.dataset.id]
@@ -56,21 +53,6 @@
       },
       updateModal: function () {
         this.status = !this.status
-      },
-      applyPadding: function () {
-        if (this.getWidth() > 768) {
-          return 'pb'
-        }
-        return ''
-      },
-      getWidth: function () {
-        return Math.max(
-          document.body.scrollWidth,
-          document.documentElement.scrollWidth,
-          document.body.offsetWidth,
-          document.documentElement.offsetWidth,
-          document.documentElement.clientWidth
-        )
       }
     },
     components: {
@@ -80,11 +62,26 @@
       ...mapGetters([
         'workData'
       ]),
+      applyPadding: function () {
+        if (this.getWidth > 768) {
+          return 'pb'
+        }
+        return ''
+      },
       firstHalfOfProjects: function () {
         return Object.entries(this.workData).slice(0, (Object.keys(this.workData).length / 2))
       },
       secondHalfOfProjects: function () {
         return Object.entries(this.workData).slice((Object.keys(this.workData).length / 2), Object.keys(this.workData).length)
+      },
+      getWidth: function () {
+        return Math.max(
+          document.body.scrollWidth,
+          document.documentElement.scrollWidth,
+          document.body.offsetWidth,
+          document.documentElement.offsetWidth,
+          document.documentElement.clientWidth
+        )
       }
     }
   }

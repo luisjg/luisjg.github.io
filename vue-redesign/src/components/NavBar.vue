@@ -34,7 +34,7 @@
                 <!-- <router-link @click.native="hamburgerToggle()" to="/portfolio" :class="applyActive()" class="navbar-item">
                   About
                 </router-link> -->
-                <router-link @click.native="hamburgerToggle()" to="/blog" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" to="/blog" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Blog
                 </router-link>
                 <router-link @click.native="hamburgerToggle()" to="/resume" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
