@@ -96,7 +96,7 @@
   export default {
     created () {
       // register service worker
-      this.registerServiceWorker()
+      // this.registerServiceWorker()
       // execute the json calls
       this.retrieveExperienceData()
       this.retrieveSchoolData()
