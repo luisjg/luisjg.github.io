@@ -31,15 +31,12 @@
                 <router-link @click.native="hamburgerToggle()" to="/education" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Education
                 </router-link>
-                <!-- <router-link @click.native="hamburgerToggle()" to="/portfolio" :class="applyActive()" class="navbar-item">
-                  About
-                </router-link> -->
                 <router-link @click.native="hamburgerToggle()" to="/blog" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Blog
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/resume" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <!-- <router-link @click.native="hamburgerToggle()" to="/resume" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Resume
-                </router-link>
+                </router-link> -->
               </div>
             </div>
           </div>
@@ -54,6 +51,9 @@
           </figure>
           <ul id="tag-lines" class="is-size-4-desktop">
             <li>
+              <a class="button russian-green" href="https://drive.google.com/file/d/1LV7U0QFGkmNHzw6lV_IGIku2QhcCnQMs/view?usp=sharing" target="_blank" rel="noreferrer"><i class="fas fa-cloud-download-alt" aria-disabled="true"></i>&nbsp;View Resume</a>
+            </li>
+            <li>
               <i class="russian-green fas fa-map-marker-alt" aria-hidden="true"></i> Los Angeles, CA
             </li>
             <li>
@@ -66,30 +66,6 @@
           </ul>
         </div>
       </div>
-
-      <!-- Hero footer: will stick at the bottom -->
-      <!-- <div v-if="toggleHeroFooter()" class="hero-foot">
-        <transition name="fade">
-          <nav class="tabs is-boxed is-fullwidth">
-            <div class="container">
-              <ul>
-                <router-link tag="li" to="portfolio" active-class="is-active has-text-weight-bold">
-                  <a>Portfolio</a>
-                </router-link>
-                <router-link tag="li" to="experience" active-class="is-active has-text-weight-bold">
-                  <a>Experience</a>
-                </router-link>
-                <router-link tag="li" to="hobbies" active-class="is-active has-text-weight-bold">
-                  <a>Hobbies</a>
-                </router-link>
-                <router-link tag="li" to="education" active-class="is-active has-text-weight-bold">
-                  <a>Education</a>
-                </router-link>
-              </ul>
-            </div>
-          </nav>
-        </transition>
-      </div> -->
     </section>
 </template>
 
