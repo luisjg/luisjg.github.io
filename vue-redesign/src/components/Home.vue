@@ -12,7 +12,7 @@
           <strong>web applications</strong>. Our <span>mission</span> is to <strong>mentor</strong>
           the students by providing them with our
           <strong>software engineering</strong> tool-set which revolves around
-          <strong>Laravel</strong>, <strong>Git</strong>, <strong>AWS</strong> and
+          <strong>Laravel</strong>, <strong>Git</strong>, <strong>AWS</strong>, and
           <strong>Agile Scrum</strong>.
         </p>
       </div>
