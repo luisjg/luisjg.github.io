@@ -51,7 +51,7 @@
           </figure>
           <ul id="tag-lines" class="is-size-4-desktop">
             <li style="padding-top:0.4rem;padding-bottom:0.3rem;">
-              <a class="button is-primary" href="https://drive.google.com/file/d/11F6cQvHCE5eVwzMUxVjxQ8VKGr6-tptJ/view?usp=sharing" target="_blank" rel="noreferrer"><i class="fas fa-file-download" aria-disabled="true"></i>&nbsp;&nbsp;View Resume</a>
+              <a class="button is-primary" href="https://drive.google.com/file/d/1LV7U0QFGkmNHzw6lV_IGIku2QhcCnQMs/view?usp=sharing" target="_blank" rel="noreferrer"><i class="fas fa-file-download" aria-disabled="true"></i>&nbsp;&nbsp;View Resume</a>
             </li>
             <li>
               <i class="russian-green fas fa-map-marker-alt" aria-hidden="true"></i> Los Angeles, CA
