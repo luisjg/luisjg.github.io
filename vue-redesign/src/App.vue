@@ -31,6 +31,9 @@
           <a href="https://bulma.io" rel="noreferrer" target="_blank" aria-label="Visit the Bulma homepage to find out more">
             <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547432623/luisjg/made-with-bulma.e0eab74.png" alt="Made with Bulma" width="128" height="24">
           </a>
+          <a href="https://buttercms.com" rel="noreferrer" target="_blank" aria-label="Visit the ButterCMS homepage to find out more">
+            <img src="https://cdn.buttercms.com/PGJPyIwaQ2KnOA8UyKfH" alt="Blog powered by ButterCMS" width="128"/>
+          </a>
         </div>
       </div>
     </main>
@@ -96,7 +99,7 @@
   export default {
     created () {
       // register service worker
-      this.registerServiceWorker()
+      // this.registerServiceWorker()
       // execute the json calls
       this.retrieveExperienceData()
       this.retrieveSchoolData()

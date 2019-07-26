@@ -3,9 +3,11 @@
     <div class="container">
       <div class="content">
         <div class="has-text-centered">
-          <p>
-            &copy; luisjg {{ currentYear }}
-          </p>
+          <div>
+            <p>
+              &copy; luisjg {{ currentYear }}
+            </p>
+          </div>
           <div class="has-text-centered contact-icons-container">
           <p class="contact-icons">
             <a href="https://github.com/luisjg" rel="noreferrer" class="icon" target="_blank" aria-label="View my GitHub profile">
