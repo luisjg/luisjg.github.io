@@ -4,8 +4,9 @@
     "description": "Campus Diversity Management Application.",
     "details": "This Laravel application is used by CSUN HR to keep track of staff hires.",
     "roles": [
-      "Scrum Master",
-      "Developer"
+      "Developer",
+      "Code Reviewer",
+      "QA Lead"
     ],
     "url": "https://www.metalab.csun.edu/aa2",
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/aa2.jpg"
@@ -15,7 +16,9 @@
     "description": "Campus wide thesis and Dissertation manager.",
     "details": "This Laravel application is used by both CSUN Master's Students and academic advisors to keep track and manage the Masters Student's thesis progress from start to finish.",
     "roles": [
-      "Mentor"
+      "Developer",
+      "Code Reviewer",
+      "QA Lead"
     ],
     "url": "https://academics.csun.edu/etd",
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/etd.jpg"
@@ -25,7 +28,9 @@
     "description": "Get to know CSUN's unique Faculty.",
     "details": "This Laravel application is used to highlight CSUN's diverse Faculty as well as serve as a hub for students to easily find their Faculty's office hours, sillabi, research interests, and contact information.",
     "roles": [
-      "Developer"
+      "Developer",
+      "Code Reviewer",
+      "QA Lead"
     ],
     "url": "https://www.csun.edu/faculty",
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/faculty.jpg"
@@ -35,7 +40,9 @@
     "description": "Showcasing CSUN's Faculty projects, research &amp; expertise.",
     "details": "This Laravel application showcases the many projects that are happening throughout the campus. CSUN individuals have the ability to join the project as a student, staff or faculty and display that fact to the world.",
     "roles": [
-      "Developer"
+      "Developer",
+      "Code Reviewer",
+      "QA Lead"
     ],
     "url": "https://www.csun.edu/faculty/beta/scholarship",
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/scholarship.jpg"
@@ -45,9 +52,10 @@
     "description": "Learn more about META<span class=\"red-text\">+</span>LAB.",
     "details": "CSUN META+LAB website explains what META+LAB is, showcases what we do and what highlights our primary product which is our students.",
     "roles": [
-      "Mentor",
       "Scrum Master",
-      "Developer"
+      "Lead Developer",
+      "Lead Software Engineer",
+      "QA Lead"
     ],
     "url": "https://www.metalab.csun.edu",
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/metalab-website.jpg"
@@ -57,9 +65,10 @@
     "description": "Expanding our Collaboration.",
     "details": "These set of APIs provide developers an easy way to get up and running with their CSUN specific applications.",
     "roles": [
-      "Mentor",
       "Scrum Master",
-      "Developer"
+      "Lead Developer",
+      "Lead Software Engineer",
+      "QA Lead"
     ],
     "url": "https://api.metalab.csun.edu",
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/web-services.jpg"

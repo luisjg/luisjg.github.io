@@ -50,8 +50,8 @@ export default new Router({
       component: BlogPost
     },
     {
-      path: '/resume',
-      name: 'resume',
+      path: '/projects',
+      name: 'projects',
       component: ComingSoon
     },
     {
