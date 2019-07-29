@@ -39,13 +39,13 @@ export default new Router({
       component: Portfolio
     },
     {
-      path: '/blog',
-      name: 'blog',
+      path: '/projects',
+      name: 'projects',
       component: ComingSoon
     },
     {
-      path: '/resume',
-      name: 'resume',
+      path: '/blog',
+      name: 'blog',
       component: ComingSoon
     },
     {

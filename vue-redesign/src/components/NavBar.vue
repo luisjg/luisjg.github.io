@@ -16,27 +16,27 @@
             </div>
             <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <router-link @click.native="hamburgerToggle()" to="/" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Home
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/portfolio" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'portfolio'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Portfolio
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/experience" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'projects'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                  Projects
+                </router-link> -->
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'experience'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Experience
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/hobbies" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'hobbies'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Hobbies
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/education" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'education'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Education
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" to="/blog" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'blog'}" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Blog
                 </router-link>
-                <!-- <router-link @click.native="hamburgerToggle()" to="/resume" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
-                  Resume
-                </router-link> -->
               </div>
             </div>
           </div>
@@ -57,8 +57,7 @@
               <i class="russian-green fas fa-graduation-cap" aria-hidden="true"></i> Computer Science, BS
             </li>
             <li>
-              <i class="russian-green fas fa-briefcase" aria-hidden="true"></i> Web Developer &amp; Mentor,
-              CSUN META<span class="red-text">+</span>LAB
+              <i class="russian-green fas fa-briefcase" aria-hidden="true"></i> Web Developer, CSUN IT
             </li>
           </ul>
         </div>
