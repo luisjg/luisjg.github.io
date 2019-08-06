@@ -3,7 +3,7 @@
       <div class="container">
         <h2 class="title">Hello there!</h2>
         <p class="is-size-4-desktop tab">
-          I'm a <strong>Full-Stack Web Developer</strong> from the
+          I'm a <strong>Web Developer</strong> from the
           <strong>Los Angeles</strong> area. I currently work for
           <strong>
             CSUN
