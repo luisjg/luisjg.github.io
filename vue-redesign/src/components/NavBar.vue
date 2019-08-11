@@ -44,6 +44,7 @@
       </div>
 
       <!-- Hero content: will be in the middle -->
+      <!-- <div v-if="this.$route.name !== 'blog'" class="hero-body"> -->
       <div class="hero-body">
         <div class="container has-text-centered">
           <figure class="image" :class="switchImageStyle()">

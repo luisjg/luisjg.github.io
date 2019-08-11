@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <header>
-      <!-- <nav-bar v-if="this.$route.name !== 'blog'"/> -->
       <nav-bar/>
     </header>
     <main>
@@ -101,6 +100,8 @@
       // register service worker
       // this.registerServiceWorker()
       // execute the json calls
+      this.initializeButterCms()
+      this.retrieveBlogPosts()
       this.retrieveExperienceData()
       this.retrieveSchoolData()
       this.retrieveWorkData()
@@ -119,6 +120,8 @@
     },
     methods: {
       ...mapActions([
+        'initializeButterCms',
+        'retrieveBlogPosts',
         'retrieveExperienceData',
         'retrieveSchoolData',
         'retrieveWorkData'

@@ -6,11 +6,11 @@
             <div class="card article">
               <div class="card-content">
                 <div class="media">
-                  <!-- <div class="author-image">
+                  <div class="author-image">
                     <figure class="image">
                       <img class="is-rounded" :src="this.post.data.author.profile_image" alt="">
                     </figure>
-                  </div> -->
+                  </div>
                   <div class="media-content">
                     <p class="title article-title has-text-centered">{{ this.post.data.title }}</p>
                     <!-- <div class="tags has-addons level-item">
@@ -129,33 +129,26 @@ div.column.is-8:first-child {
 </style>
 
 <script>
-  import Butter from 'buttercms'
+  import { mapGetters, mapActions } from 'vuex'
   export default {
     name: 'blog-post',
-    data () {
-      return {
-        butter: null,
-        post: null
-      }
-    },
     watch: {
       $route (to, from) {
-        this.getPost()
+        this.retrieveBlogPost(this.$route.params.slug)
       }
     },
     methods: {
-      getPost () {
-        this.butter.post.retrieve(this.$route.params.slug)
-          .then(res => {
-            this.post = res.data
-          }).catch(res => {
-            console.log(res)
-          })
-      }
+      ...mapActions([
+        'retrieveBlogPost'
+      ])
+    },
+    computed: {
+      ...mapGetters([
+        'post'
+      ])
     },
     created () {
-      this.butter = Butter('d3415f0b12675ed0d40fbc678dd7abcca2ef2f9f')
-      this.getPost()
+      this.retrieveBlogPost(this.$route.params.slug)
     }
   }
 </script>
