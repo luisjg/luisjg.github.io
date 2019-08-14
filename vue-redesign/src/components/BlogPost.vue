@@ -139,15 +139,20 @@ div.column.is-8:first-child {
     },
     methods: {
       ...mapActions([
+        'initializeButterCms',
         'retrieveBlogPost'
       ])
     },
     computed: {
       ...mapGetters([
+        'butter',
         'post'
       ])
     },
     created () {
+      if (this.butter === false) {
+        this.initializeButterCms()
+      }
       this.retrieveBlogPost(this.$route.params.slug)
     }
   }

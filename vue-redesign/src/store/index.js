@@ -79,6 +79,13 @@ export default new Vuex.Store({
     }
   },
   getters: {
+    butter: function (state) {
+      if (state.butter == null) {
+        return false
+      } else {
+        return true
+      }
+    },
     posts: function (state) {
       return state.posts
     },

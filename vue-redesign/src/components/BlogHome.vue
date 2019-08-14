@@ -39,9 +39,17 @@
 <script>
 import moment from 'moment'
 import ComingSoon from '@/components/ComingSoon'
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
+  created () {
+    if (this.butter === false) {
+      this.initializeButterCms()
+    }
+  },
   methods: {
+    ...mapActions([
+      'initializeButterCms'
+    ]),
     // formatDate (value) {
     //   return moment(value).format('MMMM Do, YYYY')
     // },
@@ -66,6 +74,7 @@ export default {
   },
   computed: {
     ...mapGetters([
+      'butter',
       'posts'
     ]),
     fomatDate (value) {
