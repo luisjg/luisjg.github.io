@@ -16,9 +16,9 @@
             </div>
             <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Home
-                </router-link>
+                </router-link> -->
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'portfolio'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Portfolio
                 </router-link>
@@ -138,13 +138,6 @@
       hamburgerToggle: function () {
         if (this.getWidth() <= 1087) {
           this.isActive = !this.isActive
-        }
-      },
-      toggleHeroFooter: function () {
-        if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog' && this.$route.name !== 'resume') {
-          return true
-        } else {
-          return false
         }
       },
       getWidth: function () {
