@@ -6,7 +6,6 @@
           I'm a <strong>Web Developer</strong> from the
           <strong>Los Angeles</strong> area. I currently work for
           <strong>
-            CSUN
             <a href="https://www.csun.edu/it" rel="noreferrer" target="_blank" aria-label="Find out more about CSUN IT">CSUN IT</a>
           </strong> where we create <strong>job ready students</strong> and
           <strong>web applications</strong>. Our <span>mission</span> is to <strong>mentor</strong>
