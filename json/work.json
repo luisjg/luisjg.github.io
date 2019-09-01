@@ -1,32 +1,50 @@
 {
-  "aa2": {
-    "title": "Equity &amp; Diversity",
-    "description": "Campus Diversity Management Application.",
-    "details": "This Laravel application is used by CSUN HR to keep track of staff hires.",
+  "luisjg": {
+    "title": "luisjg.io",
+    "description": "Single Page Web Application portfolio.",
+    "details": "Designed and implemented by yours truly, this single page web application serves as a playground to hone my development skills.",
+    "tech_stack": "The SPWA is written in Vuejs, Bulma CSS, and Momentjs. It follows ARIA accessibility guidelines as well as utilizing a colorblind friendly color pallette.",
     "roles": [
-      "Developer",
-      "Code Reviewer",
-      "QA Lead"
+      "Lead Developer",
+      "Lead Designer",
+      "Lead Maintainer"
     ],
-    "url": "https://www.metalab.csun.edu/aa2",
-    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/aa2.jpg"
+    "url": "https://luisjg.io",
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/site.jpg"
   },
-  "etd": {
-    "title": "ETD",
-    "description": "Campus wide thesis and Dissertation manager.",
-    "details": "This Laravel application is used by both CSUN Master's Students and academic advisors to keep track and manage the Masters Student's thesis progress from start to finish.",
+  "calstatepays": {
+    "title": "CalState Pays",
+    "description": "Earnings Data Comparison Tool.",
+    "details": "This Single Page Web Application was part of a is used by CSUN HR to keep track of staff hires.",
+    "tech_stack": "The SPWA is written in Vuejs, Bootstrap CSS, E-Charts, and Laravel. The back end is composed of various API endpoints which get cached and consumed on the front end.",
     "roles": [
-      "Developer",
+      "Lead Software Engineer",
+      "Lead Developer",
       "Code Reviewer",
       "QA Lead"
     ],
-    "url": "https://academics.csun.edu/etd",
-    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/etd.jpg"
+    "url": "https://www.calstatepays.org",
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/csp.jpg"
+  },
+  "web_services": {
+    "title": "META+LAB Web Services",
+    "description": "Expanding our Collaboration.",
+    "details": "These set of APIs provide developers an easy way to get up and running with their CSUN specific applications.",
+    "tech_stack": "All of the APIs are written with Laravel Lumen and are set-up to avoid any CORS issues.",
+    "roles": [
+      "Scrum Master",
+      "Lead Developer",
+      "Lead Software Engineer",
+      "QA Lead"
+    ],
+    "url": "https://api.metalab.csun.edu",
+    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/web-services.jpg"
   },
   "faculty": {
     "title": "Faculty",
     "description": "Get to know CSUN's unique Faculty.",
     "details": "This Laravel application is used to highlight CSUN's diverse Faculty as well as serve as a hub for students to easily find their Faculty's office hours, sillabi, research interests, and contact information.",
+    "tech_stack": "The application is written in Laravel, CSS, HTML, JavaScript. It utilizes different internal APIs for class schedule, office hours, class location, as well as OpenStreetMaps for the map itself. All of the API requests are saved to a cache system that is refreshed every day.",
     "roles": [
       "Developer",
       "Code Reviewer",
@@ -38,19 +56,21 @@
   "scholarship": {
     "title": "Scholarship",
     "description": "Showcasing CSUN's Faculty projects, research &amp; expertise.",
-    "details": "This Laravel application showcases the many projects that are happening throughout the campus. CSUN individuals have the ability to join the project as a student, staff or faculty and display that fact to the world.",
+    "details": "A fully built web application for CSUN faculty and staff to showcase their research as well as a centralized hub for CSUN project grants.",
+    "tech_stack": "The application is written in Laravel, HTML, CSS, and JavaScript and leverages internal APIs as well as an automated data sync with Cayuse.",
     "roles": [
       "Developer",
       "Code Reviewer",
       "QA Lead"
     ],
-    "url": "https://www.csun.edu/faculty/beta/scholarship",
+    "url": "https://www.csun.edu/faculty/scholarship",
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/scholarship.jpg"
   },
   "mom": {
     "title": "META+LAB Website",
     "description": "Learn more about META<span class=\"red-text\">+</span>LAB.",
     "details": "CSUN META+LAB website explains what META+LAB is, showcases what we do and what highlights our primary product which is our students.",
+    "tech_stack": "The application is written in Laravel, HTML, CSS, and JavaScript as well as utilizing the traditional LAMP Stack.",
     "roles": [
       "Scrum Master",
       "Lead Developer",
@@ -59,18 +79,5 @@
     ],
     "url": "https://www.metalab.csun.edu",
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/metalab-website.jpg"
-  },
-  "web_services": {
-    "title": "META+LAB Web Services",
-    "description": "Expanding our Collaboration.",
-    "details": "These set of APIs provide developers an easy way to get up and running with their CSUN specific applications.",
-    "roles": [
-      "Scrum Master",
-      "Lead Developer",
-      "Lead Software Engineer",
-      "QA Lead"
-    ],
-    "url": "https://api.metalab.csun.edu",
-    "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/web-services.jpg"
   }
 }
