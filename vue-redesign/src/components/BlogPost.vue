@@ -1,6 +1,10 @@
 <template>
     <div id="blog-post">
-      <div v-if="post !== null" class="container">
+      <template v-if="post === null">
+        <coming-soon/>
+      </template>
+
+      <div v-else class="container">
         <section class="articles">
           <div class="column is-8 is-offset-2">
             <div class="card article">
@@ -8,7 +12,7 @@
                 <div class="media">
                   <div class="author-image">
                     <figure class="image">
-                      <img class="is-rounded" :src="this.post.data.author.profile_image" alt="">
+                      <img class="is-rounded" :src="this.post.data.author.profile_image" :alt="this.post.data.author.first_name + ' profile image'">
                     </figure>
                   </div>
                   <div class="media-content">
