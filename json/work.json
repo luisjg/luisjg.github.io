@@ -27,7 +27,7 @@
     "image": "https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/csp.jpg"
   },
   "web_services": {
-    "title": "META+LAB Web Services",
+    "title": "META+LAB APIs",
     "description": "Expanding our Collaboration.",
     "details": "These set of APIs provide developers an easy way to get up and running with their CSUN specific applications.",
     "tech_stack": "All of the APIs are written with Laravel Lumen and are set-up to avoid any CORS issues.",
