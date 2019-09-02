@@ -8,15 +8,15 @@
       </header>
       <section class="modal-card-body">
         <strong>Project Details</strong>
-        <div class="li-styled pb" v-html="modalAttrs.details"></div>
+        <p class="paragraph-styled pb" v-html="modalAttrs.details"></p>
         <template v-if="modalAttrs.tech_stack">
           <strong>Technology Stack</strong>
-          <p v-html="modalAttrs.tech_stack" class="pb"></p>
+          <p class="paragraph-styled pb" v-html="modalAttrs.tech_stack"></p>
         </template>
         <div v-if="modalAttrs.roles" class="pb">
           <strong>Role in the project</strong>
-          <ul style="padding-left: 1rem;">
-            <li v-for="(items, id) in modalAttrs.roles" :key="id">{{items}}</li>
+          <ul class="li-styled">
+            <li v-for="(items, id) in modalAttrs.roles" :key="id" v-html="items"></li>
           </ul>
         </div>
         <template v-if="modalAttrs.image">
@@ -38,11 +38,14 @@
     background-color: #766C7F;
     color: whitesmoke;
   }
-  .pb {
-    padding-bottom: 1rem;
+  .paragraph-styled {
+    line-heigh: 1rem;
   }
   .li-styled {
-    line-height: 1rem;
+    padding-left: 1rem;
+  }
+  .pb {
+    padding-bottom: 1rem;
   }
 </style>
 <script>
