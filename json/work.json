@@ -15,7 +15,7 @@
   "calstatepays": {
     "title": "CalStatePays",
     "description": "Earnings Data Comparison Tool.",
-    "details": "This Single Page Web Application was part of a is used by CSUN HR to keep track of staff hires.",
+    "details": "This Single Page Web Application was part of a research grant which analyzed earnings data accross 5 Cal State University campuses accross the Metro LA area. The aim was to show that staying in school and completing a degree yields higher wages.",
     "tech_stack": "The SPWA is written in Vuejs, Bootstrap CSS, E-Charts, and Laravel. The back end is composed of various API endpoints which get cached and consumed on the front end.",
     "roles": [
       "Lead Software Engineer",
