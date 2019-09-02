@@ -11,7 +11,7 @@
         <div class="li-styled pb" v-html="modalAttrs.details"></div>
         <template v-if="modalAttrs.tech_stack">
           <strong>Technology Stack</strong>
-          <p v-html="modalAttrs.tech_stack"></p>
+          <p v-html="modalAttrs.tech_stack" class="pb"></p>
         </template>
         <div v-if="modalAttrs.roles" class="pb">
           <strong>Role in the project</strong>
