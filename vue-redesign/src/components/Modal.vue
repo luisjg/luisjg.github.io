@@ -8,15 +8,15 @@
       </header>
       <section class="modal-card-body">
         <strong>Project Details</strong>
-        <div style="line-height: 1.5rem; padding-bottom: 1rem;" v-html="modalAttrs.details"></div>
-        <template v-if=modalAttrs.tech_stack>
+        <div class="li-styled pb" v-html="modalAttrs.details"></div>
+        <template v-if="modalAttrs.tech_stack">
           <strong>Technology Stack</strong>
           <p v-html="modalAttrs.tech_stack"></p>
         </template>
-        <div v-if="modalAttrs.roles" style="padding-bottom: 1rem;">
+        <div v-if="modalAttrs.roles" class="pb">
           <strong>Role in the project</strong>
           <ul style="padding-left: 1rem;">
-            <li v-for="(items, id) in modalAttrs.roles" :key=id>{{items}}</li>
+            <li v-for="(items, id) in modalAttrs.roles" :key="id">{{items}}</li>
           </ul>
         </div>
         <template v-if="modalAttrs.image">
@@ -37,6 +37,12 @@
   .btn-color {
     background-color: #766C7F;
     color: whitesmoke;
+  }
+  .pb {
+    padding-bottom: 1rem;
+  }
+  .li-styled {
+    line-height: 1rem;
   }
 </style>
 <script>
