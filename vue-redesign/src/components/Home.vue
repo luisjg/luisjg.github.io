@@ -1,7 +1,13 @@
 <template>
-    <section class="section">
+  <div id="home">
+    <section id="home-section" class="section">
       <div class="container">
         <h2 class="title">Hello there!</h2>
+      </div>
+    </section>
+
+    <div class="columns is-centered is-mobile pb">
+      <div class="column is-two-thirds-desktop is-four-fifths-mobile">
         <p class="is-size-4-desktop tab">
           I'm a <strong>Web Developer</strong> from the
           <strong>Los Angeles</strong> area. I currently work for
@@ -15,7 +21,8 @@
           <strong>Agile Scrum</strong>.
         </p>
       </div>
-    </section>
+    </div>
+  </div>
 </template>
 
 <style scoped>
