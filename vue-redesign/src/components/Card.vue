@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import Modal from '@/components/Modal'
 export default {
   methods: {
     modalAction: function (event) {
@@ -27,7 +26,7 @@ export default {
     }
   },
   components: {
-    'modal': Modal
+    'modal': () => import('@/components/Modal')
   },
   props: ['cardIndex', 'cardData']
 }

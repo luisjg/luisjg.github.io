@@ -92,8 +92,6 @@
 </style>
 
 <script>
-  import Footer from '@/components/Footer'
-  import NavBar from '@/components/NavBar'
   import { mapActions } from 'vuex'
   export default {
     created () {
@@ -107,8 +105,8 @@
       this.retrieveWorkData()
     },
     components: {
-      'footer-content': Footer,
-      'nav-bar': NavBar
+      'footer-content': () => import('@/components/Footer'),
+      'nav-bar': () => import('@/components/NavBar')
     },
     computed: {
       adjustSvgSize: function () {

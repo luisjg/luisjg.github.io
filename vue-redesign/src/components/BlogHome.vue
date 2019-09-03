@@ -38,7 +38,6 @@
 
 <script>
 import moment from 'moment'
-import ComingSoon from '@/components/ComingSoon'
 import { mapActions, mapGetters } from 'vuex'
 export default {
   created () {
@@ -70,7 +69,7 @@ export default {
     }
   },
   components: {
-    'coming-soon': ComingSoon
+    'coming-soon': () => import('@/components/ComingSoon')
   },
   computed: {
     ...mapGetters([

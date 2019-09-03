@@ -36,7 +36,6 @@
 </template>
 
 <script>
-  import Modal from '@/components/Modal'
   import { mapGetters } from 'vuex'
   export default {
     data () {
@@ -56,7 +55,7 @@
       }
     },
     components: {
-      'modal': Modal
+      'modal': () => import('@/components/Modal')
     },
     computed: {
       ...mapGetters([

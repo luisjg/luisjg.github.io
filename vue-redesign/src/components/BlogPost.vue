@@ -153,6 +153,9 @@ div.column.is-8:first-child {
         'post'
       ])
     },
+    components: {
+      'coming-soon': () => import('@/components/ComingSoon')
+    },
     created () {
       if (this.butter === false) {
         this.initializeButterCms()
