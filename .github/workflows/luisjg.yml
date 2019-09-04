@@ -4,15 +4,18 @@ on:
     branches:
       - master
 jobs:
-  build:
+  clone:
     runs-on: unbuntu-latest
     steps:
-      - name: Set-up
+      - name: Clone
         uses: actions/checkout@v1
+  install:
+    needs: clone
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install
         uses: actions/setup-node@v1
+        working-directory: vue-redesign
         with:
           node-version: 10
-        shell: bash
-        run: |
-          cd vue-redesign
-          npm install
+          run: npm install
