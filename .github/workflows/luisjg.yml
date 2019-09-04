@@ -8,14 +8,14 @@ jobs:
     runs-on: unbuntu-latest
     steps:
       - name: Clone
-      - uses: actions/checkout@v1
+        uses: actions/checkout@v1
   install:
     needs: clone
     runs-on: ubuntu-latest
     steps:
       - name: Install
-      - uses: actions/setup-node@v1
-      - working-directory: vue-redesign
-      - with:
+        uses: actions/setup-node@v1
+        working-directory: vue-redesign
+        with:
           node-version: 10
-      - run: npm install
+        run: npm install
