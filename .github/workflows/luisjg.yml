@@ -4,10 +4,10 @@ on:
     branches:
       - master
 jobs:
-  clone:
+  initialize:
     runs-on: unbuntu-latest
     steps:
-        - run: ls github/workspace
+        - run: echo "$PATH"
   install:
     runs-on: ubuntu-latest
     steps:
