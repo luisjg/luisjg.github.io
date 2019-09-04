@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10
-      - shell: bash
+      shell: bash
       - run: |
           cd vue-redesign
           npm install
