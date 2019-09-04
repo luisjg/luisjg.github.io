@@ -4,11 +4,12 @@ const BlogHome = () => import('../components/BlogHome')
 const BlogPost = () => import('../components/BlogPost')
 const ComingSoon = () => import('../components/ComingSoon')
 const Education = () => import('../components/Education')
-const Experience = () => import('../components/Experience')
+// const Experience = () => import('../components/Experience')
 const Hobbies = () => import('../components/Hobbies')
 const Home = () => import('../components/Home')
 const NotFound = () => import('../components/NotFound')
 const Portfolio = () => import('../components/Portfolio')
+const Skills = () => import('../components/Skills')
 
 Vue.use(Router)
 
@@ -27,7 +28,7 @@ export default new Router({
     {
       path: '/experience',
       name: 'experience',
-      component: Experience
+      component: ComingSoon
     },
     {
       path: '/hobbies',
@@ -53,6 +54,11 @@ export default new Router({
       path: '/projects',
       name: 'projects',
       component: ComingSoon
+    },
+    {
+      path: '/skills',
+      name: 'skills',
+      component: Skills
     },
     {
       path: '*',

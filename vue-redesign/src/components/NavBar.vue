@@ -25,8 +25,11 @@
                 <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'projects'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Projects
                 </router-link> -->
-                <router-link @click.native="hamburgerToggle()" :to="{name: 'experience'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'experience'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Experience
+                </router-link> -->
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'skills'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                  Skills
                 </router-link>
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'hobbies'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Hobbies
@@ -129,7 +132,7 @@
     },
     methods: {
       applyActive: function () {
-        if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog' && this.$route.name !== 'resume') {
+        if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog') {
           return 'is-active has-text-weight-bold has-text-white'
         } else {
           return ''
