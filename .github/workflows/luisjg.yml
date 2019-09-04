@@ -15,7 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install
-      - working-directory: vue-redesign
         uses: actions/setup-node@v1
         with:
           node-version: 10
