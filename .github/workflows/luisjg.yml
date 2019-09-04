@@ -7,10 +7,10 @@ jobs:
   clone:
     runs-on: unbuntu-latest
     steps:
-        uses: actions/checkout@v1
-        run: echo "Hello"
+        - uses: actions/checkout@v1
+        - run: echo "Hello"
   install:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/setup-node@v1
-        run: npm -v
+        - uses: actions/setup-node@v1
+        - run: npm -v
