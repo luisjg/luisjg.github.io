@@ -7,14 +7,12 @@ jobs:
   clone:
     runs-on: unbuntu-latest
     steps:
-      - name: Clone
         uses: actions/checkout@v1
         run: echo "Hello"
   install:
     needs: clone
     runs-on: ubuntu-latest
     steps:
-      - name: Install
         uses: actions/setup-node@v1
         with:
           node-version: 10
