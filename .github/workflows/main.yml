@@ -5,18 +5,19 @@ on:
     branches:
       - master
 jobs:
-  checkout:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
       - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: checkout
         run: |
           ls -l
-  build:
-    steps:
+        uses: actions/node-setup@master
       - name: build
-      - uses: actions/node-setup@Master
         run: |
           npm -v
           cd vue-redesign
+          ls -l
           npm install
