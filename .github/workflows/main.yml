@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: build
       - uses: actions/checkout@v1
-        with:
+      - with:
           fetch-depth: 1
       - uses: actions/setup-node@master
         run: |
