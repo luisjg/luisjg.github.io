@@ -8,10 +8,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@master
+        with:
+          fetch-depth: 1
         run: |
           ls -l
-          cd vue-redesign
-          ls -l
+    steps:
+      - name: build
+      - uses: actions/node-setup@Master
+        run: |
           npm -v
+          cd vue-redesign
+          npm install
