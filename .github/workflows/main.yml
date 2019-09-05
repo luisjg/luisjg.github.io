@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: checkout
       - uses: actions/checkout@v1
-        with:
+      - with:
           fetch-depth: 1
         run: |
           ls -l
