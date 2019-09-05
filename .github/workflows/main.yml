@@ -5,13 +5,14 @@ on:
     branches:
       - master
 jobs:
-  build:
+  checkout:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
       - uses: actions/checkout@v1
         run: |
           ls -l
+  build:
     steps:
       - name: build
       - uses: actions/node-setup@Master
