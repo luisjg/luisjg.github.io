@@ -14,7 +14,7 @@ jobs:
       - name: checkout
         run: |
           ls -l
-      - uses: actions/node-setup@master
+      - uses: actions/setup-node@master
       - name: build
         run: |
           npm -v
