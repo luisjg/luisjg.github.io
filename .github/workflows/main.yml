@@ -12,3 +12,5 @@ jobs:
       - name: build
         run: |
           ls -l
+          cd vue-redesign
+          npm -v
