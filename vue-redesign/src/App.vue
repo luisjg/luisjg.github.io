@@ -89,6 +89,16 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #888;
   }
+  .columnst {
+    margin: 0;
+  }
+  @media screen and (min-width: 768px) {
+    .columns {
+      margin-left: -0.75rem;
+      margin-right: -0.75rem;
+      margin-right: -0.75rem;
+    }
+  }
 </style>
 
 <script>
