@@ -96,7 +96,7 @@
     .columns {
       margin-left: -0.75rem;
       margin-right: -0.75rem;
-      margin-right: -0.75rem;
+      margin-top: -0.75rem;
     }
   }
 </style>
