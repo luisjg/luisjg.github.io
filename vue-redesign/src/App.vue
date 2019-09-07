@@ -89,7 +89,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #888;
   }
-  .columnst {
+  .columns {
     margin: 0;
   }
   @media screen and (min-width: 768px) {
