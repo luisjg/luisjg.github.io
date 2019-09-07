@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="container has-text-centered pb">
+    <div class="container has-text-centered pb-3">
       <p class="is-size-4-desktop">
         Uh oh something went wrong!<br>
         <router-link to="/">Take me back to safety</router-link>

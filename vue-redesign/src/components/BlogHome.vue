@@ -23,7 +23,7 @@
                 <img :src="post.featured_image" :alt="post.title + ' fatured image'">
               </router-link>
             </figure>
-            <p class="has-text-centered title is-4 pt">
+            <p class="has-text-centered title is-4 pt-1-half">
               <router-link :to="'/blog/' + post.slug">
                 {{ post.title }}
               </router-link>

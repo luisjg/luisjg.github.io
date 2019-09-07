@@ -8,7 +8,7 @@
       </div>
     </section>
 
-    <div class="container has-text-centered pb">
+    <div class="container has-text-centered pb-3">
       <p class="is-size-4-desktop">
         Hang on tight, this is not ready yet!<br>
         <a @click="$router.go(-1)">Take me back to where I came from!</a>

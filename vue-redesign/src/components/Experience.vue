@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="columns pb">
+    <div class="columns pb-3">
       <div class="column is-5 is-offset-2-desktop is-offset-2-tablet">
         <div class="column is-6">
           <span class="has-text-weight-bold">LARAVEL</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.laravel }}</span> <progress class="progress is-deep-lilac" :value="experienceData.laravel" max="100">asdfasdf</progress>
@@ -112,4 +112,3 @@
     }
   }
 </script>
-

@@ -8,12 +8,12 @@
       </header>
       <section class="modal-card-body">
         <strong>Project Details</strong>
-        <p class="paragraph-styled pb" v-html="modalAttrs.details"></p>
+        <p class="paragraph-styled pb-1" v-html="modalAttrs.details"></p>
         <template v-if="modalAttrs.tech_stack">
           <strong>Technology Stack</strong>
-          <p class="paragraph-styled pb" v-html="modalAttrs.tech_stack"></p>
+          <p class="paragraph-styled pb-1" v-html="modalAttrs.tech_stack"></p>
         </template>
-        <div v-if="modalAttrs.roles" class="pb">
+        <div v-if="modalAttrs.roles" class="pb-1">
           <strong>Role in the project</strong>
           <ul class="li-styled">
             <li v-for="(items, id) in modalAttrs.roles" :key="id" v-html="items"></li>
@@ -44,7 +44,7 @@
   .li-styled {
     padding-left: 1rem;
   }
-  .pb {
+  .pb-1 {
     padding-bottom: 1rem;
   }
 </style>

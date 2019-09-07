@@ -11,7 +11,7 @@
         <div>
           <sup>Built with</sup>
         </div>
-        <div style="padding-top: 1rem; letter-spacing: .2rem;">
+        <div class="pt-1-half" style="letter-spacing: .2rem;">
           <a href="https://vuejs.org" rel="noreferrer" target="_blank" aria-label="Visit the Vue homepage to find out more">
             <svg viewBox="0 0 128 128" :width="adjustSvgSize">
               <path d="m-2.3125e-8 8.9337 49.854 0.1586 14.167 24.47 14.432-24.47 49.547-0.1577-63.834 110.14zm126.98 0.6374-24.36 0.0207-38.476 66.052-38.453-66.052-24.749-0.0194 63.211 107.89zm-25.149-0.008-22.745 0.16758l-15.053 24.647-14.817-24.647-22.794-0.1679 37.731 64.476zM25.997 9.3929l23.002 0.0087M25.997 9.3929l23.002 0.0087" fill="none"></path>
@@ -26,7 +26,7 @@
             </svg>
           </a>
         </div>
-        <div style="padding-top: 1.5rem;">
+        <div class="pt-1-half">
           <a href="https://bulma.io" rel="noreferrer" target="_blank" aria-label="Visit the Bulma homepage to find out more">
             <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547432623/luisjg/made-with-bulma.e0eab74.png" alt="Made with Bulma" width="128" height="24">
           </a>
@@ -64,10 +64,10 @@
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
-  .pb {
+  .pb-3 {
     padding-bottom: 3rem;
   }
-  .pt {
+  .pt-1-half {
     padding-top: 1.5rem;
   }
   /* width */

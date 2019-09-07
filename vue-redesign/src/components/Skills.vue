@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="columns is-centered pb">
+    <div class="columns is-centered pb-3">
       <div class="column is-half is-offset-one-quarter">
         <div class="column is-three-fifths">
           <span class="has-text-weight-bold">LARAVEL</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.laravel }}</span> <progress class="progress is-deep-lilac" :value="experienceData.laravel" max="100">asdfasdf</progress>
