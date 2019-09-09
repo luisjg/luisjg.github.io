@@ -12,7 +12,7 @@
     </section>
 
     <div class="container has-text-centered pb-3">
-      <p class="is-size-4-desktop">
+      <p class="is-size-4">
         Uh oh something went wrong!<br>
         <router-link to="/">Take me back to safety</router-link>
       </p>
