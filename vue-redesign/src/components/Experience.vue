@@ -17,12 +17,14 @@
           <h3 class="has-text-weight-bold"><u>Web Developer</u> at CSU Northridge, Northridge CA</h3>
           <p>November 2015 - Present</p>
           <ul>
-            <li>Work with clients to develop product backlogs.</li>
+            <li>Worked with clients to develop product backlogs.</li>
             <li>Authored and maintained documentation.</li>
-            <li>Implement and adhere to change management workflow.</li>
+            <li>Implemented and enforced a change management workflow.</li>
             <li>Designed and developed REST APIs used accross the university.</li>
-            <li>In charge of testing accessibility, usability, and security.</li>
-            <li>Mentored over 40 junior developers.</li>
+            <li>Lead of testing accessibility, usability, and security.</li>
+            <li>Coordinated and supervised junior developers engaged in web development and software engineering principles.</li>
+            <li>Developed training procedures and materials for junior developers in the proper use of git, Scrum, and MVC frameworks.</li>
+            <li>Project lead of successfully deployed web applications that met or exceeded client's expectations.</li>
           </ul>
         </div>
       </div>
