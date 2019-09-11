@@ -13,7 +13,7 @@
 
     <div class="columns is-centered is-mobile pb-3">
       <div class="column is-two-thirds-desktop is-four-fifths-mobile">
-        <div class="is-size-4-desktop">
+        <div class="is-size-4">
           <h3 class="has-text-weight-bold"><u>Web Developer</u> at California State University, Northridge | Northridge CA</h3>
           <p>November 2015 - Present</p>
           <ul>
@@ -23,9 +23,9 @@
             <li>Lead of testing, accessibility, usability, and security.</li>
             <li>Designed and developed REST APIs used accross the university.</li>
             <li>Wrote clean, maintainable, and testable code on production level applications and APIs.</li>
+            <li>Coordinated and supervised junior developers in all aspects of web development and software engineering.</li>
             <li>Project lead and Scrum Master of successfully deployed web applications that met or exceeded client's expectations.</li>
-            <li>Coordinated and supervised junior developers in all aspects of web development and software engineering principles.</li>
-            <li>Developed training procedures and materials for junior developers in the proper use of Git, Scrum, LAMP, MVVM, and MVC frameworks.</li>
+            <li>Developed training procedures and materials for junior developers in the proper use of Git, Scrum, LAMP, MySQL, MVVM, and MVC frameworks.</li>
           </ul>
         </div>
       </div>
