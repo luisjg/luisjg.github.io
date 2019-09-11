@@ -14,7 +14,7 @@
     <div class="columns is-centered pb-3">
       <div class="column is-half is-offset-one-quarter">
         <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">LARAVEL</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.laravel }}</span> <progress class="progress is-deep-lilac" :value="experienceData.laravel" max="100">asdfasdf</progress>
+          <span class="has-text-weight-bold">LARAVEL</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.laravel }}</span> <progress class="progress is-deep-lilac" :value="experienceData.laravel" max="100">{{experienceData.laravel}}</progress>
         </div>
         <div class="column is-three-fifths">
           <span class="has-text-weight-bold">PHP</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.php }}</span> <progress class="progress is-blue-bell" :value="experienceData.php" max="100">{{experienceData.php}}%</progress>
@@ -24,6 +24,9 @@
         </div>
         <div class="column is-three-fifths">
           <span class="has-text-weight-bold">JAVASCRIPT</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.javascript }}</span> <progress class="progress is-russian-green" :value="experienceData.javascript" max="100">{{experienceData.javascript}}%</progress>
+        </div>
+        <div class="column is-three-fifths">
+          <span class="has-text-weight-bold">DOCKER</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.css }}</span> <progress class="progress is-blue-bell" :value="experienceData.css" max="100">{{experienceData.css}}%</progress>
         </div>
       </div>
       <div class="column is-half">
@@ -38,6 +41,9 @@
         </div>
         <div class="column is-three-fifths">
           <span class="has-text-weight-bold">CSS</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.css }}</span> <progress class="progress is-russian-green" :value="experienceData.css" max="100">{{experienceData.css}}%</progress>
+        </div>
+        <div class="column is-three-fifths">
+          <span class="has-text-weight-bold">GIT</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.html }}</span> <progress class="progress is-blue-bell" :value="experienceData.html" max="100">{{experienceData.html}}%</progress>
         </div>
       </div>
     </div>
