@@ -14,13 +14,12 @@
           as a <strong>Full Stack Web Developer</strong> for
           <strong><a href="https://www.csun.edu" rel="noreferrer" target="_blank"
           aria-label="Find out more about California State University, Northridge">
-            California State University, Northridge
-          </a></strong>. I have a <strong>proven</strong> and
-          <strong>reproducible</strong> track record of designing and
-          developing <strong>modern web applications</strong> and
+            California State University, Northridge</a>
+          </strong>. I have a <strong>proven</strong> track record of
+          designing and developing <strong>modern web applications</strong> and
           <strong>REST APIs</strong> that meet the clients needs.
-          I'm a natural <strong>leader</strong> and <strong>mentor</strong>
-          that understands software is built by a <strong>team</strong> of
+          I'm an experienced <strong>team leader</strong> and <strong>mentor</strong>
+          that understands <strong>software</strong> is built by a <strong>team</strong> of
           unique individuals striving for one <strong>goal</strong>.
         </p>
         <p class="is-size-4 has-text-centered pt-1-half">Interested in more? Then let's get in
