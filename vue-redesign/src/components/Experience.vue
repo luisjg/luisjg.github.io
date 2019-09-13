@@ -21,7 +21,7 @@
             <li>Worked with clients to develop product backlogs.</li>
             <li>Implemented and enforced a change management workflow.</li>
             <li>Lead of testing, accessibility, usability, and security.</li>
-            <li>Designed and developed REST APIs used accross the university.</li>
+            <li>Designed and developed REST APIs used across the university.</li>
             <li>Wrote clean, maintainable, and testable code on production level applications and APIs.</li>
             <li>Coordinated and supervised junior developers in all aspects of web development and software engineering.</li>
             <li>Project lead and Scrum Master of successfully deployed web applications that met or exceeded client's expectations.</li>
