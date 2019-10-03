@@ -14,7 +14,7 @@
           <p class="paragraph-styled pb-1" v-html="modalAttrs.tech_stack"></p>
         </template>
         <div v-if="modalAttrs.roles" class="pb-1">
-          <strong>Role in the project</strong>
+          <strong>Roles in the project</strong>
           <ul class="li-styled">
             <li v-for="(items, id) in modalAttrs.roles" :key="id" v-html="items"></li>
           </ul>
