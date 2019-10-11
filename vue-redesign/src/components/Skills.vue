@@ -11,39 +11,64 @@
       </div>
     </section>
 
-    <div class="columns is-centered pb-3">
-      <div class="column is-half is-offset-one-quarter">
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">LARAVEL</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.laravel }}</span> <progress class="progress is-deep-lilac" :value="experienceData.laravel" max="100">{{experienceData.laravel}}</progress>
-        </div>
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">PHP</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.php }}</span> <progress class="progress is-blue-bell" :value="experienceData.php" max="100">{{experienceData.php}}%</progress>
-        </div>
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">HTML</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.html }}</span> <progress class="progress is-old-lavender" :value="experienceData.html" max="100">{{experienceData.html}}%</progress>
-        </div>
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">JAVASCRIPT</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.javascript }}</span> <progress class="progress is-russian-green" :value="experienceData.javascript" max="100">{{experienceData.javascript}}%</progress>
-        </div>
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">DOCKER</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.css }}</span> <progress class="progress is-blue-bell" :value="experienceData.css" max="100">{{experienceData.css}}%</progress>
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="has-text-centered">
+              <i class="fab fa-7x fa-laravel"></i>
+              <div>
+                Modern Web Applications, APIs
+              </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="has-text-centered">
+              <i class="fab fa-7x fa-js-square"></i>
+              <div>
+                HTML, CSS, JQuery, Vue.js, Socket.io
+              </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="has-text-centered">
+              <i class="fab fa-7x fa-jenkins"></i>
+              <div>
+                Travis CI
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="columns is-centered">
       <div class="column is-half">
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">LINUX</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.linux }}</span> <progress class="progress is-deep-lilac" :value="experienceData.linux" max="100">{{experienceData.linux}}%</progress>
-        </div>
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">MYSQL</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.mysql }}</span> <progress class="progress is-blue-bell" :value="experienceData.mysql" max="100">{{experienceData.mysql}}%</progress>
-        </div>
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">VUE</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.vue }}</span> <progress class="progress is-old-lavender" :value="experienceData.vue" max="100">{{experienceData.vue}}%</progress>
-        </div>
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">CSS</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.css }}</span> <progress class="progress is-russian-green" :value="experienceData.css" max="100">{{experienceData.css}}%</progress>
-        </div>
-        <div class="column is-three-fifths">
-          <span class="has-text-weight-bold">GIT</span><span class="has-text-weight-bold is-pulled-right"> {{ experienceData.html }}</span> <progress class="progress is-blue-bell" :value="experienceData.html" max="100">{{experienceData.html}}%</progress>
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="has-text-centered">
+              <i class="fas fa-7x fa-database"></i>
+              <div>
+                MySQL, Reids
+              </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="has-text-centered">
+              <i class="far fa-7x fa-code-branch"></i>
+              <div>
+                Git, GitHub
+              </div>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="has-text-centered">
+              <i class="fab fa-7x fa-docker"></i>
+              <div>
+                Docker, Kubernetes
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
