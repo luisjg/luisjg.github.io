@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="columns is-centered is-mobile pb-3">
+    <div class="columns is-centered is-mobile pb-4">
       <div class="column is-two-thirds-desktop is-four-fifths-mobile">
         <div class="is-size-4">
           <h3 class="has-text-weight-bold">Web Developer at California State University, Northridge | Northridge CA</h3>

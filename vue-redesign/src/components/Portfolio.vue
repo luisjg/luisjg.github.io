@@ -27,7 +27,7 @@
 
     <div class="columns is-centered">
       <div class="column is-half">
-        <div class="columns is-centered pb-3">
+        <div class="columns is-centered pb-4">
           <div v-for="(item, value) in secondHalfOfProjects" :key="value" class="column is-half">
             <figure class="image">
               <a @click.prevent="modalAction" href="#"><img :data-id="item[0]" :src="item[1].image" :alt="item[1].title + ' App Image'"></a>

@@ -6,7 +6,7 @@
       </div>
     </section>
 
-    <div class="columns is-centered is-mobile pb-3">
+    <div class="columns is-centered is-mobile pb-4">
       <div class="column is-two-thirds-desktop is-four-fifths-mobile">
         <p class="is-size-4 tab">
           I'm a <strong>Software Engineer</strong> from the

@@ -34,7 +34,7 @@
             <figure class="image">
               <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547356329/luisjg/pexels-photo-358666.jpg" alt="music">
             </figure>
-            <div class="pt-1-half pb-3">
+            <div class="pt-1-half pb-4">
               <p class="has-text-centered title is-4">Music</p>
             </div>
           </div>

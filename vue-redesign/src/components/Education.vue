@@ -11,7 +11,7 @@
       </div>
     </section>
 
-    <div class="columns is-centered pb-3">
+    <div class="columns is-centered pb-4">
       <div class="column is-two-fifths-desktop is-half-tablet">
         <p class="has-text-centered title is-4"><a href="#" id="csun" @click.prevent="modalAction">{{ schoolData.csun.title }}</a></p>
         <div class="timeline is-centered">
@@ -52,7 +52,7 @@
         <div class="is-divider"></div>
       </div>
 
-      <div class="column is-two-fifths-desktop is-half-tablet">
+      <div class="column is-two-fifths-desktop is-half-tablet pb-4">
         <p class="has-text-centered title is-4"><a href="#" id="gcc" @click.prevent="modalAction">{{ schoolData.gcc.title }}</a></p>
         <div class="timeline is-centered">
         <header class="timeline-header is-icon">
