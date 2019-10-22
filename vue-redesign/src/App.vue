@@ -52,6 +52,21 @@
   .red-text {
     color: #d00d2d;
   }
+  .mummys-tomb {
+    color: #808D8E;
+  }
+  .deep-lilac {
+    color: #9b64bc;
+  }
+  .lue-bell {
+    color: #A3A5C3;
+  }
+  .old-lavender {
+    color: #766C7F;
+  }
+  .pastel-blue {
+    color: #A9D2D5;
+  }
   ::selection {
     color: white;
     background: #766C7F; /* WebKit/Blink Browsers */
@@ -68,6 +83,9 @@
   }
   .pb-3 {
     padding-bottom: 3rem;
+  }
+  .pb-4 {
+    padding-bottom: 4rem;
   }
   .pt-1-half {
     padding-top: 1.5rem;
