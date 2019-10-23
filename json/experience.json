@@ -1,14 +1,14 @@
-{[
-  "Project lead and Scrum Master of successfully deployed web applications that met or exceeded client's expectations.",
-  "Gathered requirements and feedback from clients in weekly meetings and application demos to develop and refine product backlogs.",
-  "Lead designer and developer of eight REST APIs deployed in production environments with over 13 million successful requests used across multiple university web applications.",
-  "Designed and developed REST APIs used across multiple university web applications.",
-  "Developed on 11 production applications using LAMP, Laravel MVC framework, HTML, CSS, JavaScript, and MySQL for resource management.",
-  "Maintained and redesigned legacy code by applying best practices which improved overall application speed and user satisfaction.",
-  "Collaborated with the operations team to analyze and identify issues with the web applications, databases, and server configuration.",
-  "Used test-driven development to write clean, maintainable, and testable code on production-level applications and APIs.",
-  "Developed training procedures and materials for junior developers in the proper use of Git, Scrum, LAMP, MySQL, MVVM, and MVC frameworks.",
-  "Trained and supervised junior developers on web development and software engineering from initial design to final delivery.",
-  "Established and maintained documentation standards for applications and web APIs.",
-  "Implemented and enforced a change management workflow system for all the development teams and projects."
-]}
+{
+  "0": "Project lead and Scrum Master of successfully deployed web applications that met or exceeded client's expectations.",
+  "1": "Gathered requirements and feedback from clients in weekly meetings and application demos to develop and refine product backlogs.",
+  "2": "Lead designer and developer of eight REST APIs deployed in production environments with over 13 million successful requests used across multiple university web applications.",
+  "3": "Designed and developed REST APIs used across multiple university web applications.",
+  "4": "Developed on 11 production applications using LAMP, Laravel MVC framework, HTML, CSS, JavaScript, and MySQL for resource management.",
+  "5": "Maintained and redesigned legacy code by applying best practices which improved overall application speed and user satisfaction.",
+  "6"; "Collaborated with the operations team to analyze and identify issues with the web applications, databases, and server configuration.",
+  "7": "Used test-driven development to write clean, maintainable, and testable code on production-level applications and APIs.",
+  "8": "Developed training procedures and materials for junior developers in the proper use of Git, Scrum, LAMP, MySQL, MVVM, and MVC frameworks.",
+  "9": "Trained and supervised junior developers on web development and software engineering from initial design to final delivery.",
+  "10": "Established and maintained documentation standards for applications and web APIs.",
+  "11": "Implemented and enforced a change management workflow system for all the development teams and projects."
+}
