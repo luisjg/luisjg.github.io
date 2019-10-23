@@ -86,7 +86,7 @@
   .padded--top {
     padding-top: 1.5rem;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     .padded--top__mobile {
       padding-top: 1.5rem;
     }
