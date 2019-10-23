@@ -15,7 +15,7 @@
       <div class="column is-half">
         <div class="columns is-centered">
           <div class="column is-half">
-            <div class="has-text-centered padded--top">
+            <div class="has-text-centered">
               <i class="fab fa-7x fa-laravel russian-green"></i>
               <p class="title is-4 pt-1-half">Back End</p>
               <div>
@@ -24,7 +24,7 @@
             </div>
           </div>
           <div class="column is-half">
-            <div class="has-text-centered padded--top">
+            <div class="has-text-centered padded--top__mobile">
               <i class="fab fa-7x fa-js-square russian-green"></i>
               <p class="title is-4 pt-1-half">Front End</p>
               <div>
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="column is-half">
-            <div class="has-text-centered padded--top">
+            <div class="has-text-centered padded--top__mobile">
               <i class="fas fa-7x fa-conveyor-belt-alt russian-green"></i>
               <p class="title is-4 pt-1-half">CI/CD</p>
               <div>
@@ -85,6 +85,11 @@
 <style scoped>
   .padded--top {
     padding-top: 1.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    .padded--top__mobile {
+      padding-top: 1.5rem;
+    }
   }
 </style>
 
