@@ -19,7 +19,7 @@
               <i class="fad fa-7x fa-laptop-code russian-green" aria-hidden="true"></i>
               <p class="title is-4 pt-1-half">Back End</p>
               <div>
-                Modern Web Applications, APIs
+                PHP, Laravel, Lumen, REST APIs
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@
               <i class="fad fa-7x fa-server russian-green" aria-hidden="true"></i>
               <p class="title is-4 pt-1-half">DevOps</p>
               <div>
-                Docker, Kubernetes
+                Docker, Ubuntu, Kubernetes
               </div>
             </div>
           </div>
