@@ -31,9 +31,9 @@
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'skills'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Skills
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" :to="{name: 'hobbies'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'hobbies'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Hobbies
-                </router-link>
+                </router-link> -->
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'education'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
                   Education
                 </router-link>
@@ -55,13 +55,13 @@
           </figure>
           <ul id="tag-lines" class="is-size-4-desktop">
             <li>
-              <i class="russian-green fas fa-map-marker-alt" aria-hidden="true"></i> Los Angeles, CA
+              <i class="russian-green fad fa-map-marker-alt" aria-hidden="true"></i> Los Angeles, CA
             </li>
             <li>
-              <i class="russian-green fas fa-graduation-cap" aria-hidden="true"></i> Computer Science, BS
+              <i class="russian-green fad fa-graduation-cap" aria-hidden="true"></i> Computer Science, BS
             </li>
             <li>
-              <i class="russian-green fas fa-briefcase" aria-hidden="true"></i> Web Developer, CSUN IT
+              <i class="russian-green fad fa-briefcase" aria-hidden="true"></i> Web Developer, CSUN IT
             </li>
           </ul>
         </div>

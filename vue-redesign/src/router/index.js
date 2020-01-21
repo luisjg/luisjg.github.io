@@ -5,7 +5,6 @@ const BlogPost = () => import('../components/BlogPost')
 const ComingSoon = () => import('../components/ComingSoon')
 const Education = () => import('../components/Education')
 const Experience = () => import('../components/Experience')
-const Hobbies = () => import('../components/Hobbies')
 const Home = () => import('../components/Home')
 const NotFound = () => import('../components/NotFound')
 const Portfolio = () => import('../components/Portfolio')
@@ -29,11 +28,6 @@ export default new Router({
       path: '/experience',
       name: 'experience',
       component: Experience
-    },
-    {
-      path: '/hobbies',
-      name: 'hobbies',
-      component: Hobbies
     },
     {
       path: '/portfolio',
