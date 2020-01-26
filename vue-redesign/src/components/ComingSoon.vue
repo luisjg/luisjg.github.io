@@ -9,7 +9,7 @@
     </section>
 
     <div class="container has-text-centered pb-4">
-      <p class="is-size-4">
+      <p class="is-size-5">
         Hang on tight, this is not ready yet!<br>
         <a @click="$router.go(-1)">Take me back to where I came from!</a>
       </p>
