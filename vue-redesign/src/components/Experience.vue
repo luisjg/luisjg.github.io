@@ -14,7 +14,7 @@
     <div class="columns is-centered is-mobile pb-4">
       <div class="column is-two-thirds-desktop is-four-fifths-mobile">
         <div class="is-size-5">
-          <h3 class="has-text-weight-bold">Web Developer at California State University, Northridge | Northridge CA</h3>
+          <h3 class="has-text-weight-bold">Web Developer at California State University, Northridge</h3>
           <p>November 2015 - Present</p>
           <ul>
             <li v-for="(item, value) in experienceData" :key="value">{{ item }}</li>

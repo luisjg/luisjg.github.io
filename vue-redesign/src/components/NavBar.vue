@@ -6,7 +6,7 @@
           <div class="container">
             <div class="navbar-brand">
               <router-link to="/" class="navbar-item">
-                <span class="is-size-4 has-text-weight-bold">luisjg.io</span>
+                <span class="is-size-5 has-text-weight-bold">luisjg.io</span>
               </router-link>
               <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
                 <span></span>
@@ -53,7 +53,7 @@
           <figure class="image" :class="switchImageStyle()">
             <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547432443/luisjg/profile.jpg" class="is-rounded" alt="profile image">
           </figure>
-          <ul id="tag-lines" class="is-size-4-desktop">
+          <ul id="tag-lines" class="is-size-5">
             <li>
               <i class="russian-green fad fa-map-marker-alt" aria-hidden="true"></i> Los Angeles, CA
             </li>
@@ -70,6 +70,11 @@
 </template>
 
 <style scoped>
+  .is-rounded {
+    -moz-box-shadow: 4px 4px 10px rgba(0,0,0, 0.5);
+    -webkit-box-shadow: 4px 4px 10px rgba(0,0,0, 0.5);
+    box-shadow: 4px 4px 10px rgba(0,0,0, 0.5);
+  }
   @media screen and (min-width: 769px), print {
     .hero.is-medium .hero-body {
         padding-bottom: 3rem;
