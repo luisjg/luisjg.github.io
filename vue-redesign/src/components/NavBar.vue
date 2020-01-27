@@ -1,11 +1,11 @@
 <template>
     <section class="hero is-medium is-light is-bold">
-      <!-- Hero head: will stick at the top -->
+
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <router-link to="/" exact-active-class="is-active" class="navbar-item">
+              <router-link @click.native="hamburgerToggle()" to="/" exact-active-class="is-active" class="navbar-item">
                 <span class="is-size-5">luisjg.io</span>
               </router-link>
               <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
@@ -14,26 +14,17 @@
                 <span></span>
               </span>
             </div>
-            <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
+            <div :class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" exact-active-class="is-active" class="navbar-item">
-                  Home
-                </router-link> -->
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'portfolio'}" active-class="is-active" class="navbar-item">
                   Portfolio
                 </router-link>
-                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'projects'}" active-class="is-active" class="navbar-item">
-                  Projects
-                </router-link> -->
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'experience'}" active-class="is-active" class="navbar-item">
                   Experience
                 </router-link>
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'skills'}" active-class="is-active" class="navbar-item">
                   Skills
                 </router-link>
-                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'hobbies'}" active-class="is-active" class="navbar-item">
-                  Hobbies
-                </router-link> -->
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'education'}" active-class="is-active" class="navbar-item">
                   Education
                 </router-link>
@@ -46,8 +37,6 @@
         </nav>
       </div>
 
-      <!-- Hero content: will be in the middle -->
-      <!-- <div v-if="this.$route.name !== 'blog'" class="hero-body"> -->
       <div class="hero-body">
         <div class="container has-text-centered">
           <figure class="image" :class="switchImageStyle()">
@@ -135,13 +124,6 @@
       }
     },
     methods: {
-      applyActive: function () {
-        if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog') {
-          return 'is-active has-text-weight-bold'
-        } else {
-          return ''
-        }
-      },
       hamburgerToggle: function () {
         if (this.getWidth() <= 1087) {
           this.isActive = !this.isActive
