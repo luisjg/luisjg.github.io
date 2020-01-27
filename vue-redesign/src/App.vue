@@ -117,7 +117,7 @@
   }
   @media screen and (min-width: 768px) {
     a svg {
-      width: 4%;
+      width: 3%;
     }
     .columns {
       margin-left: -0.75rem;
