@@ -2,9 +2,9 @@
   <div id="not-found">
     <section id="not-found-section" class="section">
       <div class="container">
-        <h2 class="title">
+        <h1 class="title">
           WARNING
-        </h2>
+        </h1>
         <p class="subtitle">
           Dragons Ahead!
         </p>

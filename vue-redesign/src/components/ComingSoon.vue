@@ -2,9 +2,9 @@
   <div id="coming-soon">
     <section id="comming-soon-section" class="section">
       <div class="container">
-        <h2 class="title">
+        <h1 class="title">
           Coming Soon!
-        </h2>
+        </h1>
       </div>
     </section>
 

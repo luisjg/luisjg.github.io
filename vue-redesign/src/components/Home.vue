@@ -2,7 +2,7 @@
   <div id="home">
     <section id="home-section" class="section">
       <div class="container">
-        <h2 class="title">Hello there!</h2>
+        <h1 class="title">Hello there!</h1>
       </div>
     </section>
 

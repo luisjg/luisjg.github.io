@@ -2,9 +2,9 @@
   <div id="experience">
     <section class="section">
       <div class="container">
-        <h2 class="title">
+        <h1 class="title">
           Experience
-        </h2>
+        </h1>
         <p class="subtitle">
           What I Contribute
         </p>
