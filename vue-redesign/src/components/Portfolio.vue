@@ -1,10 +1,10 @@
 <template>
   <div id="portfolio">
-    <section id="portfolio" class="section">
+    <section id="portfolio-section" class="section">
       <div class="container">
-        <h2 class="title">
+        <h1 class="title">
           Portfolio
-        </h2>
+        </h1>
         <p class="subtitle">
           What We Built
         </p>
@@ -55,6 +55,7 @@
     methods: {
       modalAction: function (event) {
         this.modalAttrs = this.workData[event.target.dataset.id]
+        this.modalAttrs.id = event.target.dataset.id
         document.documentElement.classList.add('is-clipped')
         this.updateModal()
       },

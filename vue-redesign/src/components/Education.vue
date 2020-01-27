@@ -2,9 +2,9 @@
   <div id="education">
     <section class="section">
       <div class="container">
-        <h2 class="title">
+        <h1 class="title">
           Education
-        </h2>
+        </h1>
         <p class="subtitle">
           Where I Studied
         </p>
@@ -119,6 +119,7 @@
     methods: {
       modalAction: function (event) {
         this.modalAttrs = this.schoolData[event.target.dataset.id]
+        this.modalAttrs.id = event.target.dataset.id
         document.documentElement.classList.add('is-clipped')
         this.updateModal()
       },

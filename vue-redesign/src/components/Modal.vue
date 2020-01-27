@@ -3,11 +3,12 @@
     <div @click="closeModal" class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title" v-html="modalAttrs.title"></p>
+        <p class="modal-card-title" v-html="modifyModalTitle"></p>
         <button @click.prevent="closeModal" class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <strong>Project Details</strong>
+        <strong v-if="displayDetailsOrHighlights">Project Details</strong>
+        <strong v-else>Highlights</strong>
         <p class="paragraph-styled pb-1" v-html="modalAttrs.details"></p>
         <template v-if="modalAttrs.tech_stack">
           <strong>Technology Stack</strong>
@@ -27,7 +28,7 @@
         </template>
       </section>
       <footer class="modal-card-foot">
-        <a :href="modalAttrs.url" rel="noreferrer" class="button btn-color" :title="modalAttrs.title + ' link'" target="_blank" v-html="'Visit ' + modalAttrs.title"></a>
+        <a :href="modalAttrs.url" rel="noreferrer" class="button btn-color" :title="modifyModalTitle + ' link'" target="_blank" v-html="'Visit ' + modifyModalTitle"></a>
       </footer>
     </div>
   </div>
@@ -51,6 +52,12 @@
 <script>
 export default {
   props: ['modalAttrs'],
+  created () {
+    if (this.modalAttrs.id === 'gcc') {
+      console.log('gcc')
+    }
+    // console.log(this.modalAttrs.id)
+  },
   mounted () {
     document.addEventListener('keydown', (e) => {
       if (e.keyCode === 27) {
@@ -62,6 +69,20 @@ export default {
     closeModal: function () {
       document.documentElement.classList.remove('is-clipped')
       this.$emit('disable')
+    }
+  },
+  computed: {
+    displayDetailsOrHighlights: function () {
+      if (this.modalAttrs.id === 'gcc' || this.modalAttrs.id === 'csun') {
+        return false
+      }
+      return true
+    },
+    modifyModalTitle: function () {
+      if (this.modalAttrs.id === 'csun') {
+        return 'Cal State Northridge'
+      }
+      return this.modalAttrs.title
     }
   }
 }
