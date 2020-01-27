@@ -5,8 +5,8 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <router-link to="/" class="navbar-item">
-                <span class="is-size-5 has-text-weight-bold">luisjg.io</span>
+              <router-link to="/" exact-active-class="is-active" class="navbar-item">
+                <span class="is-size-5">luisjg.io</span>
               </router-link>
               <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
                 <span></span>
@@ -16,28 +16,28 @@
             </div>
             <div v-bind:class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
-                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" exact-active-class="is-active" class="navbar-item">
                   Home
                 </router-link> -->
-                <router-link @click.native="hamburgerToggle()" :to="{name: 'portfolio'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'portfolio'}" active-class="is-active" class="navbar-item">
                   Portfolio
                 </router-link>
-                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'projects'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'projects'}" active-class="is-active" class="navbar-item">
                   Projects
                 </router-link> -->
-                <router-link @click.native="hamburgerToggle()" :to="{name: 'experience'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'experience'}" active-class="is-active" class="navbar-item">
                   Experience
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" :to="{name: 'skills'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'skills'}" active-class="is-active" class="navbar-item">
                   Skills
                 </router-link>
-                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'hobbies'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <!-- <router-link @click.native="hamburgerToggle()" :to="{name: 'hobbies'}" active-class="is-active" class="navbar-item">
                   Hobbies
                 </router-link> -->
-                <router-link @click.native="hamburgerToggle()" :to="{name: 'education'}" active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'education'}" active-class="is-active" class="navbar-item">
                   Education
                 </router-link>
-                <router-link @click.native="hamburgerToggle()" :to="{name: 'blog'}" exact-active-class="is-active has-text-weight-bold has-text-white" class="navbar-item">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'blog'}" exact-active-class="is-active" class="navbar-item">
                   Blog
                 </router-link>
               </div>
@@ -101,29 +101,28 @@
     background-image: none;
     background-color: #f6f8fa;
   }
-  .hero.is-light .tabs.is-boxed li.is-active a, .hero.is-light .tabs.is-boxed li.is-active a:hover, .hero.is-light .tabs.is-toggle li.is-active a, .hero.is-light .tabs.is-toggle li.is-active a:hover {
-  background-color: #766C7F;
-  border-color: #766C7F;
-  color: whitesmoke;
+  .hero.is-light .navbar-item {
+    border-color: #f6f8fa;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+  }
+  .hero.is-light a.navbar-item.is-active {
+    background-color: rgba(10, 10, 10, 0.1);
   }
   .hero.is-light a.navbar-item:hover, .navbar-link:hover {
-    background-color: rgba(10, 10, 10, 0.1);
-    border-radius: 4px;
+    background-color: #f6f8fa;
+    border-color: #766C7F;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-radius: 0px;
   }
   .hero.is-light a.navbar-item.is-active,
   .hero.is-light .navbar-link.is-active {
-    background-color: #766C7F;
-    border-radius: 4px;
-  }
-  .hero.is-light .tabs.is-boxed a:hover, .hero.is-light .tabs.is-toggle a:hover {
-    border-radius: 4px;
-  }
-  .tabs.is-boxed a {
-    border-radius: 4px;
-  }
-  .button.is-primary {
-    background-color: #766c7f;
-    color: whitesmoke;
+    background-color: #f6f8fa;
+    border-bottom-color: #766C7F;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-radius: 0px;
   }
 </style>
 
@@ -138,7 +137,7 @@
     methods: {
       applyActive: function () {
         if (this.$route.name !== 'home' && this.$route.name !== '404' && this.$route.name !== 'blog') {
-          return 'is-active has-text-weight-bold has-text-white'
+          return 'is-active has-text-weight-bold'
         } else {
           return ''
         }
