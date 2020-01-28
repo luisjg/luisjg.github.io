@@ -5,7 +5,7 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <router-link @click.native="hamburgerToggle()" to="/" exact-active-class="is-active" class="navbar-item">
+              <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" class="navbar-item">
                 <span class="is-size-5">luisjg.io</span>
               </router-link>
               <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
@@ -16,6 +16,9 @@
             </div>
             <div :class="{'is-active': isActive }" class="navbar-menu">
               <div class="navbar-end">
+                <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" exact-active-class="is-active" class="navbar-item">
+                  Home
+                </router-link>
                 <router-link @click.native="hamburgerToggle()" :to="{name: 'portfolio'}" active-class="is-active" class="navbar-item">
                   Portfolio
                 </router-link>
@@ -91,7 +94,7 @@
     background-color: #f6f8fa;
   }
   .hero.is-light .navbar-item {
-    border-color: #f6f8fa;
+    border-color: transparent;
     border-bottom-width: 5px;
     border-bottom-style: solid;
   }
