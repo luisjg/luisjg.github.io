@@ -5,7 +5,7 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" class="navbar-item">
+              <router-link @click.native="closeHamburger()" :to="{name: 'home'}" class="navbar-item" ref="homeLogo" data-id="home-logo">
                 <span class="is-size-5">luisjg.io</span>
               </router-link>
               <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
@@ -130,6 +130,11 @@
       hamburgerToggle: function () {
         if (this.getWidth() <= 1087) {
           this.isActive = !this.isActive
+        }
+      },
+      closeHamburger: function () {
+        if (this.getWidth() <= 1087) {
+          this.isActive = false
         }
       },
       getWidth: function () {
