@@ -5,7 +5,7 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <router-link @click.native="closeHamburger()" :to="{name: 'home'}" class="navbar-item" ref="homeLogo" data-id="home-logo">
+              <router-link @click.native="closeHamburger()" :to="{name: 'home'}" class="home-logo navbar-item">
                 <span class="is-size-5">luisjg.io</span>
               </router-link>
               <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
@@ -115,6 +115,9 @@
     border-bottom-width: 5px;
     border-bottom-style: solid;
     border-radius: 0px;
+  }
+  .hero.is-light a.home-logo.navbar-item:hover {
+    border-color: transparent;
   }
 </style>
 
