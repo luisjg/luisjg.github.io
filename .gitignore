@@ -1,3 +1,6 @@
 node_modules/
 build_local/
 .idea/
+.DS_Store
+.Trashes
+Thumbs.db
