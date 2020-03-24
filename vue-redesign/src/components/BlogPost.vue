@@ -6,38 +6,39 @@
 
       <div v-else class="container">
         <section class="articles">
-          <div class="column is-8 is-offset-2">
+          <div class="column is-8 is-offset-2 pb-4">
             <div class="card article">
               <div class="card-content">
                 <div class="media">
-                  <div class="author-image">
-                    <figure class="image">
-                      <img class="is-rounded" :src="this.post.data.author.profile_image" :alt="this.post.data.author.first_name + ' profile image'">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <p class="title article-title has-text-centered">{{ this.post.data.title }}</p>
-                    <!-- <div class="tags has-addons level-item">
-                      <span class="tag is-rounded">@{{ this.post.data.author.slug }}</span>
-                    </div> -->
-                    <div class="content article-body" v-html="this.post.data.body"></div>
-
-                    <router-link
-                      v-if="this.post.meta.previous_post"
-                      :to="/blog/ + this.post.meta.previous_post.slug"
-                      class="button"
-                    >
-                      {{ this.post.meta.previous_post.title }}
-                    </router-link>
-                    <router-link
-                      v-if="this.post.meta.next_post"
-                      :to="/blog/ + this.post.meta.next_post.slug"
-                      class="button"
-                    >
-                      {{ this.post.meta.next_post.title }}
-                    </router-link>
+<!--                  <div class="author-image">-->
+<!--                    <figure class="image">-->
+<!--                      <img class="is-rounded" :src="this.post.data.author.profile_image" :alt="this.post.data.author.first_name + ' profile image'">-->
+<!--                    </figure>-->
+<!--                  </div>-->
+                  <div class="media-content has-text-centered">
+                    <p class="title article-title">{{ this.post.data.title }}</p>
+                    <div class="tags has-addons level-item">
+                      <div class="tag is-rounded">{{ postCreatedAt }}</div>
+                    </div>
                   </div>
                 </div>
+                <div class="content article-body pb-3" v-html="this.post.data.body">
+                </div>
+
+                <router-link
+                  v-if="this.post.meta.previous_post"
+                  :to="/blog/ + this.post.meta.previous_post.slug"
+                  class="button"
+                >
+                  {{ this.post.meta.previous_post.title }}
+                </router-link>
+                <router-link
+                  v-if="this.post.meta.next_post"
+                  :to="/blog/ + this.post.meta.next_post.slug"
+                  class="button"
+                >
+                  {{ this.post.meta.next_post.title }}
+                </router-link>
               </div>
             </div>
           </div>
@@ -47,7 +48,6 @@
 </template>
 
 <style scoped>
-
 @media screen and (min-width: 769px) {
   .articles {
     margin: 2rem 0;
@@ -107,7 +107,7 @@
 }
 
 .media-content {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .article {
@@ -121,8 +121,8 @@ div.column.is-8:first-child {
 
 .article-title {
   font-size: 2rem;
-  font-weight: bold;
-  line-height: 2;
+  font-weight: lighter;
+  line-height: 1.25;
 }
 
 .article-subtitle {
@@ -133,6 +133,7 @@ div.column.is-8:first-child {
 </style>
 
 <script>
+  import moment from 'moment'
   import { mapGetters, mapActions } from 'vuex'
   export default {
     name: 'blog-post',
@@ -148,6 +149,9 @@ div.column.is-8:first-child {
       ])
     },
     computed: {
+      postCreatedAt () {
+        return moment(this.post.data.published).format('MMM Do YYYY')
+      },
       ...mapGetters([
         'butter',
         'post'
