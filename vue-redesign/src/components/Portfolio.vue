@@ -70,12 +70,6 @@
       ...mapGetters([
         'workData'
       ]),
-      applyPadding: function () {
-        if (this.getWidth > 768) {
-          return 'pb'
-        }
-        return ''
-      },
       firstHalfOfProjects: function () {
         return Object.entries(this.workData).slice(0, (Object.keys(this.workData).length / 2))
       },
