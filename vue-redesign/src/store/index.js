@@ -19,20 +19,20 @@ export default new Vuex.Store({
     initializeButterCms: function (context) {
       context.commit('initButter', '2bc5de9c5ffa303c5928dfbc228ddb4d2073fe74')
     },
-    retrieveBlogPosts: function ({context, state}) {
+    retrieveBlogPosts: function ({commit, state}) {
       state.butter.post.list({
         page: 1,
         page_size: 10
       }).then(res => {
         if (res.data.data.length > 0) {
-          context.commit('storeBlogPosts', res.data.data)
+          commit('storeBlogPosts', res.data.data)
         }
       })
     },
-    retrieveBlogPost: function ({context, state}, route) {
+    retrieveBlogPost: function ({commit, state}, route) {
       state.butter.post.retrieve(route)
         .then(res => {
-          context.commit('storeBlogPost', res.data)
+          commit('storeBlogPost', res.data)
         })
     },
     retrieveExperienceData: function (context) {
