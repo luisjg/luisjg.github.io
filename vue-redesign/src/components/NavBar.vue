@@ -46,7 +46,16 @@
                 </div>
               </div>
             </template>
-            <template v-else-if="checkPosts">
+            <template v-else>
+              <div :class="{'is-active': isActive }" class="navbar-menu">
+                <div class="navbar-end">
+                  <router-link @click.native="hamburgerToggle()" :to="{name: 'blog'}" active-class="is-active" class="navbar-item">
+                    Blog
+                  </router-link>
+                </div>
+              </div>
+            </template>
+            <template v-if="checkPosts">
               <div class="navbar-menu">
                 <div class="navbar-end">
                   <router-link
@@ -163,7 +172,7 @@
     },
     computed: {
       hideNav () {
-        if (this.$route.name != null && this.$route.name.includes('blog-post')) {
+        if (this.$route.name != null && (this.$route.name.includes('blog-post') || this.$route.name.includes('blog'))) {
           return false
         }
         return true
