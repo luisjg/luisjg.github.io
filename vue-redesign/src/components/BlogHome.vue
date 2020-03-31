@@ -16,14 +16,14 @@
         </div>
       </section>
 
-        <div class="columns is-centered" :class="applyPadding()">
+        <div class="columns is-centered pb-4">
           <div v-for="(post,index) in posts" :key="post.slug + '_' + index" class="column is-one-fifth-desktop is-one-half-table">
-            <figure class="image">
+            <figure class="image is-128x128 is-image-centered">
               <router-link :to="'/blog/' + post.slug">
                 <img :src="post.featured_image" :alt="post.title + ' fatured image'">
               </router-link>
             </figure>
-            <p class="has-text-centered title is-4 pt-1-half">
+            <p class="has-text-centered title is-title-truncated is-4">
               <router-link :to="'/blog/' + post.slug">
                 {{ post.title }}
               </router-link>
@@ -35,6 +35,18 @@
 
   </div>
 </template>
+
+<style scoped>
+  .is-image-centered {
+    margin: auto;
+  }
+  .is-title-truncated {
+    width: 20rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>
 
 <script>
 import moment from 'moment'

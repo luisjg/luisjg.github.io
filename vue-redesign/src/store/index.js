@@ -19,21 +19,29 @@ export default new Vuex.Store({
     initializeButterCms: function (context) {
       context.commit('initButter', '2bc5de9c5ffa303c5928dfbc228ddb4d2073fe74')
     },
-    retrieveBlogPosts: function ({context, state}) {
-      state.butter.post.list({
-        page: 1,
-        page_size: 10
-      }).then(res => {
-        if (res.data.data.length > 0) {
-          context.commit('storeBlogPosts', res.data.data)
-        }
-      })
-    },
-    retrieveBlogPost: function ({context, state}, route) {
-      state.butter.post.retrieve(route)
-        .then(res => {
-          context.commit('storeBlogPost', res.data)
+    retrieveBlogPosts: function ({commit, state}) {
+      if (!sessionStorage.getItem('posts')) {
+        state.butter.post.list({
+          page: 1,
+          page_size: 10
+        }).then(res => {
+          if (res.data.data.length > 0) {
+            commit('storeBlogPosts', res.data.data)
+          }
         })
+      } else {
+        commit('storeBlogPosts', JSON.parse(sessionStorage.getItem('posts')))
+      }
+    },
+    retrieveBlogPost: function ({commit, state}, route) {
+      if (!sessionStorage.getItem(route)) {
+        state.butter.post.retrieve(route)
+          .then(res => {
+            commit('storeBlogPost', res.data)
+          })
+      } else {
+        commit('storeBlogPost', JSON.parse(sessionStorage.getItem(route)))
+      }
     },
     retrieveExperienceData: function (context) {
       if (!sessionStorage.getItem('experience')) {
@@ -119,9 +127,11 @@ export default new Vuex.Store({
       state.work = data
     },
     storeBlogPosts: function (state, data) {
+      sessionStorage.setItem('posts', JSON.stringify(data))
       state.posts = data
     },
     storeBlogPost: function (state, data) {
+      sessionStorage.setItem(data.data.slug, JSON.stringify(data))
       state.post = data
     }
   }
