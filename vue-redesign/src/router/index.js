@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const BlogHome = () => import('../components/BlogHome')
+const Blog = () => import('../components/Blog')
 const BlogPost = () => import('../components/BlogPost')
 const ComingSoon = () => import('../components/ComingSoon')
 const Education = () => import('../components/Education')
@@ -37,7 +37,7 @@ export default new Router({
     {
       path: '/blog',
       name: 'blog',
-      component: BlogHome
+      component: Blog
     },
     {
       path: '/blog/:slug',
