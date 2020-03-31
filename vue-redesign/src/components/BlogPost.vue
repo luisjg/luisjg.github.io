@@ -6,42 +6,48 @@
 
       <div v-else class="container">
         <section class="articles">
-          <div class="column is-8 is-offset-2 pb-4">
             <div class="card article">
               <div class="card-content">
                 <div class="media">
-<!--                  <div class="author-image">-->
-<!--                    <figure class="image">-->
-<!--                      <img class="is-rounded" :src="this.post.data.author.profile_image" :alt="this.post.data.author.first_name + ' profile image'">-->
-<!--                    </figure>-->
-<!--                  </div>-->
+                  <div class="author-image">
+                    <figure class="image">
+                      <img class="is-rounded" :src="authorImage" :alt="postAuthor + ' profile image'">
+                    </figure>
+                  </div>
                   <div class="media-content has-text-centered">
-                    <p class="title article-title">{{ this.post.data.title }}</p>
+                    <p class="title article-title">{{ postTitle }}</p>
                     <div class="tags has-addons level-item">
                       <div class="tag is-rounded">{{ postCreatedAt }}</div>
                     </div>
                   </div>
                 </div>
-                <div class="content article-body pb-3" v-html="this.post.data.body">
-                </div>
-
-                <router-link
-                  v-if="this.post.meta.previous_post"
-                  :to="/blog/ + this.post.meta.previous_post.slug"
-                  class="button"
-                >
-                  {{ this.post.meta.previous_post.title }}
-                </router-link>
-                <router-link
-                  v-if="this.post.meta.next_post"
-                  :to="/blog/ + this.post.meta.next_post.slug"
-                  class="button"
-                >
-                  {{ this.post.meta.next_post.title }}
-                </router-link>
+                <template v-if="postBody">
+                  <div class="content article-body" v-html="postBody">
+                  </div>
+                </template>
               </div>
+          </div>
+          <div v-if="checkPosts" class="columns">
+            <div class="column is-offset-2">
+              <router-link
+                :to="/blog/ + previousPost"
+                class="button"
+              >
+                <i style="margin-right: 0.5rem;" class="far fa-chevron-left"></i>Previous
+              </router-link>
+            </div>
+            <div class="column">
+            </div>
+            <div class="column">
+              <router-link
+                :to="/blog/ + nextPost"
+                class="button"
+              >
+                Next <i style="margin-left: 0.5rem;" class="far fa-chevron-right"></i>
+              </router-link>
             </div>
           </div>
+<!--          <div class="pb-4"></div>-->
         </section>
       </div>
   </div>
@@ -57,6 +63,12 @@
     line-height: 1.4;
     margin: 0 6rem;
   }
+  .title {
+    margin: 0 4rem;
+  }
+  .tag {
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -68,6 +80,12 @@
     line-height: 1.4;
     margin: 0 3rem;
   }
+  .title {
+    margin: 0 3rem;
+  }
+  .tag {
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 591px) {
@@ -75,6 +93,16 @@
     line-height: 1.4;
     margin: 0 1rem;
   }
+  .title {
+    margin: 0 1rem;
+  }
+}
+.card {
+  background-color: #fff;
+  color: #4a4a4a;
+  box-shadow: none;
+  max-width: 100%;
+  position: relative;
 }
 
 .articles .content p {
@@ -98,12 +126,6 @@
 .author-image i.fas {
   display: inline-block;
   padding: 0.3em 0.2em;
-
-}
-
-.media-center {
-  display: block;
-  margin-bottom: 1rem;
 }
 
 .media-content {
@@ -114,22 +136,11 @@
   margin-top: 6rem;
 }
 
-div.column.is-8:first-child {
-  padding-top: 0;
-  margin-top: 0;
-}
-
 .article-title {
   font-size: 2rem;
-  font-weight: lighter;
+  font-style: italic;
   line-height: 1.25;
 }
-
-.article-subtitle {
-  color: #909AA0;
-  margin-bottom: 3rem;
-}
-
 </style>
 
 <script>
@@ -151,6 +162,47 @@ div.column.is-8:first-child {
     computed: {
       postCreatedAt () {
         return moment(this.post.data.published).format('MMM Do YYYY')
+      },
+      postBody () {
+        if (this.post && this.post.data.body) {
+          return this.post.data.body
+        }
+      },
+      postTitle () {
+        if (this.post && this.post.data.title) {
+          return this.post.data.title
+        }
+      },
+      authorImage () {
+        if (this.post && this.post.data.author.profile_image) {
+          return this.post.data.author.profile_image
+        }
+      },
+      postAuthor () {
+        if (this.post && this.post.data.author.first_name) {
+          return this.post.data.author.first_name
+        }
+      },
+      nextPost () {
+        if (this.post != null && this.post.meta.next_post != null) {
+          return this.post.meta.next_post
+        } else {
+          return null
+        }
+      },
+      previousPost () {
+        if (this.post != null && this.post.meta.previous_post != null) {
+          return this.post.meta.previous_post
+        } else {
+          return null
+        }
+      },
+      checkPosts () {
+        if (this.nextPost === null && this.previousPost === null) {
+          return null
+        } else {
+          return true
+        }
       },
       ...mapGetters([
         'butter',
