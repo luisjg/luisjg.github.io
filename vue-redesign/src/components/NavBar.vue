@@ -5,26 +5,26 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <template v-if="hideNav">
-                <router-link @click.native="closeHamburger()" :to="{name: 'home'}" class="home-logo navbar-item">
-                  <span class="is-size-5">luisjg.io</span>
-                </router-link>
-                <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+              <router-link @click.native="closeHamburger()" :to="{name: 'home'}" class="home-logo navbar-item">
+                <span class="is-size-5">
+                  <template v-if="hideNav">
+                    luisjg.io
+                  </template>
+                  <template v-else>
+                    back to luisjg.io
+                  </template>
                 </span>
-              </template>
-              <template v-else>
-                <router-link @click.native="closeHamburger()" :to="{name: 'home'}" class="home-logo navbar-item">
-                  <span class="is-size-5">back to luisjg.io</span>
-                </router-link>
-              </template>
+              </router-link>
+              <span @click="hamburgerToggle()" :class="{'is-active': isActive }" class="navbar-burger burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
             </div>
 
-            <template v-if="hideNav">
-              <div :class="{'is-active': isActive }" class="navbar-menu">
-                <div class="navbar-end">
+            <div :class="{'is-active': isActive }" class="navbar-menu">
+              <div class="navbar-end">
+                <template v-if="hideNav">
                   <router-link @click.native="hamburgerToggle()" :to="{name: 'home'}" exact-active-class="is-active" class="navbar-item">
                     Home
                   </router-link>
@@ -43,18 +43,14 @@
                   <router-link @click.native="hamburgerToggle()" :to="{name: 'blog'}" active-class="is-active" class="navbar-item">
                     Blog
                   </router-link>
-                </div>
-              </div>
-            </template>
-            <template v-else>
-              <div :class="{'is-active': isActive }" class="navbar-menu">
-                <div class="navbar-end">
+                </template>
+                <template v-else>
                   <router-link @click.native="hamburgerToggle()" :to="{name: 'blog'}" active-class="is-active" class="navbar-item">
                     Blog
                   </router-link>
-                </div>
+                </template>
               </div>
-            </template>
+            </div>
             <template v-if="checkPosts">
               <div class="navbar-menu">
                 <div class="navbar-end">
