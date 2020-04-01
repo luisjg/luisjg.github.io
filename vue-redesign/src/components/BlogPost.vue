@@ -86,6 +86,9 @@
   .tag {
     margin-top: 1rem;
   }
+  .media-content {
+    overflow-x: unset;
+  }
 }
 
 @media screen and (max-width: 591px) {
