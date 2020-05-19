@@ -17,7 +17,7 @@
           <h3 class="has-text-weight-bold">Web Developer at California State University, Northridge</h3>
           <p>November 2015 - Present</p>
           <ul>
-            <li v-for="(item, value) in experienceData" :key="value">{{ item }}</li>
+            <li class="icons list-element" v-for="(item, value) in experienceData" :key="value"><span>{{ item }}</span></li>
           </ul>
         </div>
       </div>
@@ -30,11 +30,15 @@
   .is-size-4-desktop p {
     padding-top: 0.5rem;
   }
+  li span {
+    color: #4a4a4a;
+  }
   li {
     list-style: square;
     margin-left: 1.20rem;
     padding-left: 1rem;
     margin-top: .5rem;
+    color: #6d9f71;
   }
 </style>
 
