@@ -93,6 +93,7 @@
   /* width */
   ::-webkit-scrollbar {
     width: .5rem;
+    max-height: .5rem;
   }
 
   /* Track */
