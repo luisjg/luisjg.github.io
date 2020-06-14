@@ -75,15 +75,6 @@
       },
       secondHalfOfProjects: function () {
         return Object.entries(this.workData).slice((Object.keys(this.workData).length / 2), Object.keys(this.workData).length)
-      },
-      getWidth: function () {
-        return Math.max(
-          document.body.scrollWidth,
-          document.documentElement.scrollWidth,
-          document.body.offsetWidth,
-          document.documentElement.offsetWidth,
-          document.documentElement.clientWidth
-        )
       }
     }
   }
