@@ -31,7 +31,7 @@
   footer {
     margin-top: 3rem;
     padding: 3rem 0 3rem 0;
-    background-color: #f6f8fa;
+    background-color: #f7f8fa;
   }
   .contact-icons-container {
     padding-top: .5rem;
