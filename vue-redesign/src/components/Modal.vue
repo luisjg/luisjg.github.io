@@ -28,7 +28,7 @@
         </template>
       </section>
       <footer class="modal-card-foot">
-        <a :href="modalAttrs.url" rel="noreferrer" class="button btn-color" :title="modifyModalTitle + ' link'" target="_blank" v-html="'Visit ' + modifyModalTitle"></a>
+        <a :href="modalAttrs.url" rel="noopener noreferrer" class="button btn-color" :title="modifyModalTitle + ' link'" target="_blank" v-html="'Visit ' + modifyModalTitle"></a>
       </footer>
     </div>
   </div>
@@ -52,12 +52,6 @@
 <script>
 export default {
   props: ['modalAttrs'],
-  created () {
-    if (this.modalAttrs.id === 'gcc') {
-      console.log('gcc')
-    }
-    // console.log(this.modalAttrs.id)
-  },
   mounted () {
     document.addEventListener('keydown', (e) => {
       if (e.keyCode === 27) {
