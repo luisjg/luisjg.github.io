@@ -28,7 +28,7 @@
         <p class="is-size-5 has-text-centered pt-1-half"> If you would like to
           know more about me or are interested in collaborating,
           feel free and send me an <strong><a href="mailto:contact@luisjg.io"
-            rel="noreferrer" target="_blank"
+            rel="noopener noreferrer" target="_blank"
             aria-label="Send me an e-mail, let's talk."><u>email</u></a></strong>.
         </p>
       </div>
