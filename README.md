@@ -2,8 +2,6 @@
 
 > visit [luisjg.io](https://luisjg.io)
 
-![CI](https://github.com/luisjg/luisjg.github.io/workflows/CI/badge.svg?branch=master)
-
 ### Built using the following
 
 - HTML
