@@ -885,6 +885,9 @@ select {
 .gap-4 {
 	gap: 1rem;
 }
+.gap-2 {
+	gap: 0.5rem;
+}
 .self-center {
 	align-self: center;
 }
@@ -966,9 +969,6 @@ select {
 }
 .pb-2 {
 	padding-bottom: 0.5rem;
-}
-.pt-10 {
-	padding-top: 2.5rem;
 }
 .text-left {
 	text-align: left;
@@ -1338,16 +1338,8 @@ pre[class*="language-"] {
 		height: 12rem;
 	}
 
-	.md\:h-auto {
-		height: auto;
-	}
-
 	.md\:w-48 {
 		width: 12rem;
-	}
-
-	.md\:w-auto {
-		width: auto;
 	}
 
 	.md\:grid-cols-2 {
