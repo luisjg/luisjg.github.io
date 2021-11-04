@@ -820,6 +820,9 @@ select {
 .grid {
 	display: grid;
 }
+.h-screen {
+	height: 100vh;
+}
 .h-6 {
 	height: 1.5rem;
 }
