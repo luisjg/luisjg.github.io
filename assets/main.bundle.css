@@ -791,9 +791,6 @@ select {
 		content: 'screen: lg';
 	}
 }
-.invisible {
-	visibility: hidden;
-}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -822,6 +819,9 @@ select {
 }
 .grid {
 	display: grid;
+}
+.hidden {
+	display: none;
 }
 .h-screen {
 	height: 100vh;
