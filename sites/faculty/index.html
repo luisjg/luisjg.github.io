@@ -51,13 +51,23 @@
   <main class="container py-8">
     
 <section id="site-body" class="markdown">
-    <center>
-    <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/faculty.jpg">
-</center>
-<p>This Laravel application is used to highlight CSUN's diverse Faculty as well as serve as a hub for students to easily find their Faculty's office hours, sillabi, research interests, and contact information.</p>
+    <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/faculty-new.jpg">
+<h2>Introduction</h2>
+<hr>
+<p>The Faculty web application was built by META+LAB and commissioned by the CSUN Office of Faculty Affairs and the CSUN Office of the Provost in order to highlight CSUN’s diverse faculty. The web application also serves as a hub for students to easily find a faculty member’s office hours, class syllabi, contact information, and their research interests.</p>
+<h2>Challenges</h2>
+<hr>
+<p>The challenges that this project presented revolved around getting access to the faculty data that is already being collected by the university. This data includes office hours, contact information, which department they teach under, as well as their class schedule. Once agreements and the appropriate access to the Oracle Database was given, the next hurdle was to organize the data in such a way that made the software design straightforward.</p>
+<p>In order to get to that point, the data had to be altered to fit the desired target MySQL database schema and have it done in a consistent way for each upcoming semester. To achieve this, bash scripts were utilized and ran on a schedule to do the necessary synchronizations.</p>
+<h2>Lessons Learned</h2>
+<hr>
+<p>On paper this might seem like a straightforward project but due to the way the data was being stored and not exposed through APIs, it quickly became a very ambitions project with multiple phases that lent itself for a case study in project management. This fact was not lost with leadership and we were instructed to tackle items and features as the data was made available to us. Seeing how successful this approach was allowed the team and department to buy-in to the Agile Scrum methodology as this was the first project such approach was implemented.</p>
 <h2>Tech Stack</h2>
-<p>The application is written in Laravel, CSS, HTML, JavaScript. It utilizes different internal APIs for class schedule, office hours, class location, as well as OpenStreetMaps for the map itself. All of the API requests are saved to a cache system that is refreshed every day.</p>
+<hr>
+<p>The web application portion was written in Laravel, Bootstrap CSS, HTML, JavaScript, and a bit of Vuejs. The Oracle to MySQL database synchronization system was written primarily in Bash. Additionally it utilizes different internally built APIs for class schedule, office hours, class location, as well as OpenStreetMaps for the map itself. All of the API requests are saved to a cache system that is refreshed every day.</p>
 <h2>Roles</h2>
+<hr>
+<p>The following is a list of the various roles that I assumed during the development of this project:</p>
 <ul>
 <li>Developer</li>
 <li>Code Reviewer</li>

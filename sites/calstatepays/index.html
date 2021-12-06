@@ -51,13 +51,23 @@
   <main class="container py-8">
     
 <section id="site-body" class="markdown">
-    <center>
-    <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/csp.jpg">
-</center>
-<p>This Single Page Web Application was part of a research grant which analyzed earnings data accross 5 Cal State University campuses accross the Metro LA area. The aim was to show that staying in school and completing a degree yields higher wages.</p>
+    <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/calstatepays-new.jpg">
+<h2>Introduction</h2>
+<hr>
+<p>This Single Page Web Application (SPWA) was part of a research grant which analyzed earnings data across 5 California State University campuses that span the Metropolitan Los Angeles area. The goal was to convey via charts that staying in school and completing a degree yields higher wages in the long run. To that end META+LAB was commissioned to make the web application portion of the research grant into reality.</p>
+<h2>Challenges</h2>
+<hr>
+<p>The challenges that this project presented were two-fold. On the one hand, it was our first time working on a project that focused on representing data in chart form. On the other hand, it was also our first time working with big data which required the use of Python, Pandas, and some R to analyze and filter down various CSV files to fit the application's MySQL needs.</p>
+<p>With this in mind the development was broken down into three teams: The front end team was in-charge of finding open source chart libraries that produced charts which were easy to navigate as well as making them accessible from an a11y stand point. The back end team was split in two; one part of the back end team was tasked with building out the various API endpoints and cache mechanism that the front end would hit, and the rest of the back end team focused on filtering out the data - using Python, Pandas, and R - as well as managing the data import into MySQL.</p>
+<h2>Lessons Learned</h2>
+<hr>
+<p>As the lead software engineer on this project, one of the keys in making sure that each phase of the project was completed on time was to have a clear software design that everyone understood. To accomplish this, another key was to have constant communication amongst the development team as well as with the client to make sure that everyone was on the same page. This of course was difficult in the beginning but establishing consistent schedules and updates was another key in achieving the project's completion.</p>
 <h2>Tech Stack</h2>
-<p>The SPWA is written in Vuejs, Bootstrap CSS, E-Charts, and Laravel. The back end is composed of various API endpoints which get cached and consumed on the front end.</p>
+<hr>
+<p>We decided to stick with a our tried and true web stack of Bootstrap CSS, Vuejs, and Laravel all hosted on two AWS spot instances. Utilizing Vuejs was the right call because it had all the necessary first party and third party libraries in place to accomplish the task of building a SPWA. For the chart functionality we used Vue-ECharts which is a third party Vue wrapper for Apache ECharts. The front-end routing was handled by Vue Router, and the application's state management was done with Vuex. Together with Vue and Bootstrap we were able to build an easy to navigate and quick to respond SPWA.</p>
 <h2>Roles</h2>
+<hr>
+<p>The following is a list of the various roles that I assumed during the development of this project:</p>
 <ul>
 <li>Lead Software Engineer</li>
 <li>Lead Developer</li>

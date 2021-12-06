@@ -51,13 +51,23 @@
   <main class="container py-8">
     
 <section id="site-body" class="markdown">
-    <center>
-    <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/scholarship.jpg">
-</center>
-<p>A fully built web application for CSUN faculty and staff to showcase their research as well as a centralized hub for CSUN project grants.</p>
+    <img src="https://res.cloudinary.com/dfhliq7vp/image/upload/v1547608037/luisjg/scholarship-new.jpg">
+<h2>Introduction</h2>
+<hr>
+<p>Scholarship is part of the Faculty web application suite which was built by META+LAB and commissioned by the CSUN Office of Faculty Affairs and the CSUN Office of the Provost. This web application serves as the research hub that showcases all of the grant funded projects as well as non-grant funded projects taking place at CSUN. Showcasing this information allows the campus community to know what research is going on as well as provide an opportunity to join in on the research project.</p>
+<h2>Challenges</h2>
+<hr>
+<p>The challenges that this project presented revolved around getting access to the research data that is already being recorded into <a href="https://cayuse.com/">Cayuse</a>. Some of the data includes grant award amount, length of the research, title, abstract, as well as any additional team members. Once agreements were made and the appropriate access to Cayuse was given, the next hurdle was to organize the data in such a way that made the software design straightforward.</p>
+<p>The other challenge outside of the Cayuse data was how to categorize each project into a category hierarchy that made sense, and was easy to search for. This was the main hurdle of the project due to the lack of experience of building such a system.</p>
+<h2>Lessons Learned</h2>
+<hr>
+<p>A lot of the heavy lifting for this project was taken care of during the development of the Faculty project, so the lessons learned there were applied to Scholarship. That previous experience allowed us to confidently set-up the Cayuse data syncs. This allowed us to focus on creating the research categorization tool which went through many renditions until everyone was happy with the results. Having the luxury of devoting a lot of time to the categorization tool made me appreciate having a good project timeline.</p>
 <h2>Tech Stack</h2>
-<p>The application is written in Laravel, HTML, CSS, and JavaScript and leverages internal APIs as well as an automated data sync with Cayuse.</p>
+<hr>
+<p>The web application was written in Laravel, Bootstrap CSS, HTML, JavaScript, and jQuery. The Cayuse to MySQL database synchronization system was written in Bash and runs each morning on a set schedule.</p>
 <h2>Roles</h2>
+<hr>
+<p>The following is a list of the various roles that I assumed during the development of this project:</p>
 <ul>
 <li>Developer</li>
 <li>Code Reviewer</li>
