@@ -12,11 +12,8 @@
   
 </head>
 <body class="" style="background: #f3f2f0">
-  
-<header class="bg-purple-400 bg-opacity-40">
+  <header class="bg-purple-400 bg-opacity-40">
     <nav class="py-4">
-    
-    
         <div class="container">
             <div class="grid grid-cols-2">
                 <div>
@@ -33,7 +30,6 @@
     
     
 <div class="py-20" style="background: linear-gradient(180deg, #d5c9f4 0%, #f3f2f0 100%)">
-
   <div class="container mx-auto text-center p-5">
     <h1 class="text-4xl font-bold mb-2 text-gray-600">
       
@@ -55,15 +51,18 @@
 <img src="https://cdn.buttercms.com/Qvppaf1RRzuO0s9pK3cN" width="35%" alt="Laravel logo" title="Laravel logo">
 </center>
 <h2>Introduction</h2>
+<hr>
 <p>I was introduced to the Laravel framework when it was in version 5.0 and the more I've used it the more I see myself seeking out similar web frameworks for other languages. As the framework has matured I have been impressed at the many official plug-ins and features it has available to it. I truly enjoy how fast and simple it is to get your project set-up with a basic user authentication scaffold as illustrated by the following three commands:</p>
 <pre class="language-bash"><code class="language-bash">  $ <span class="token function">composer</span> create-project --prefer-dist laravel/laravel <span class="token operator">&lt;</span>project-name<span class="token operator">></span><br>  $ <span class="token builtin class-name">cd</span> <span class="token operator">&lt;</span>project-name<span class="token operator">></span><br>  $ php artisan migrate<br>  $ php artisan make:auth</code></pre>
 <p>and that's all it takes to get you up and running with a registration page, login page, password reset page with token expiration functionality so that the password reset request sent via e-mail expires after a certain amount of time. Of course you still need to set-up a database and email server but Laravel provides temporary alternatives so that the developers focus on writing code. Again I marvel at all of this functionality you get out of the box.</p>
 <h2>Problem</h2>
+<hr>
 <p>But sometimes however a one size fits all solution just doesn't cut it as experience tells us but thankfully since most of the heavy lifting was done by Laravel, adjusting the user provisioning becomes easy and straight forward. So without any more fanfare I present to you this exercise: Assuming an admin is provisioning the user on their behalf, how can we use what Laravel gives us to create a password-less user provisioning system that follows best practice security? How do we go about this if the user only provides us an email address and their first and last name?</p>
 <blockquote>
 <p>Disclaimer: This is just one way of implementing this functionality. The approach taken here was to not re-create the wheel and use what was already provided to us by Laravel itself!</p>
 </blockquote>
 <h2>Solution</h2>
+<hr>
 <p>As mentioned before, we will keep with the KISS principle and not re-invent the wheel so we will go with a Laravel-out-of-the-box set-up. We want to build functionality for a third party (admin) to create users given just three things: First name, last name and email. We also do not want to email out a temporary password because that's not all that secure. Having in mind these constraints, we will treat the user creation flow as if he's resetting their password.</p>
 <p>This leaves us with the following application flow:</p>
 <p>Retrieve the user's <code>first_name</code>, <code>last_name</code>, and <code>email</code>.
@@ -91,13 +90,13 @@ Once we have that down we can proceed to investigate how Laravel does its passwo
 <p>Once a user receives their email with the password reset/account activation link. We will call the <code>deleteExpiredTokens()</code> look up the user by their email and compare the emailed hashedKey with the token we saved on the database. Once we do that we delete the token from the database.</p>
 <pre class="language-php"><code class="language-php">  <span class="token comment">//...</span><br>  <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">deleteExpiredTokens</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token variable">$user</span> <span class="token operator">=</span> <span class="token class-name static-context">PasswordReset</span><span class="token operator">::</span><span class="token function">whereEmail</span><span class="token punctuation">(</span><span class="token variable">$email</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">first</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">is_null</span><span class="token punctuation">(</span><span class="token variable">$user</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>      <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">compareTokens</span><span class="token punctuation">(</span><span class="token variable">$token</span><span class="token punctuation">,</span> <span class="token variable">$user</span><span class="token operator">-></span><span class="token property">token</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$result</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>        <span class="token variable">$this</span><span class="token operator">-></span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token variable">$email</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>        <span class="token comment">// allow the user to reset their password</span><br>        <span class="token comment">// by displaying a front end view with the password reset fields.</span><br>      <span class="token punctuation">}</span><br>  <span class="token punctuation">}</span><br>  <span class="token comment">//...</span><br><span class="token punctuation">}</span><br></code></pre>
 <h2>In closing</h2>
+<hr>
 <p>If you've followed along with this guide then you should have the necessary back-end functionality to provision user accounts on behalf of others. The front-end work omitted here can serve as a nice little implementation challenge.</p>
 
 </section>
 
   </main>
-  
-<div class="py-20" style="background: linear-gradient(360deg, #d5c9f4 0%, #f3f2f0 100%)">
+  <div class="py-20" style="background: linear-gradient(360deg, #d5c9f4 0%, #f3f2f0 100%)">
 
 </div>
 <footer class="bg-purple-400 bg-opacity-40 py-4">
@@ -130,4 +129,13 @@ Once we have that down we can proceed to investigate how Laravel does its passwo
     </div>
 </footer>
 </body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CBSXD5KNQV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CBSXD5KNQV');
+</script>
 </html>

@@ -906,19 +906,12 @@ select {
 .border-b-4 {
 	border-bottom-width: 4px;
 }
-.border-purple-300 {
-	--tw-border-opacity: 1;
-	border-color: rgba(196, 181, 253, var(--tw-border-opacity));
-}
 .border-transparent {
 	border-color: transparent;
 }
 .border-purple-800 {
 	--tw-border-opacity: 1;
 	border-color: rgba(91, 33, 182, var(--tw-border-opacity));
-}
-.border-opacity-50 {
-	--tw-border-opacity: 0.5;
 }
 .bg-purple-400 {
 	--tw-bg-opacity: 1;
