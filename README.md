@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-> visit [luisjg.io](https://luisjg.io)
+> visit [luisjg.dev](https://luisjg.dev)
 
 ## Built using the following
 
