@@ -4,3 +4,6 @@
 [submodule "assets"]
 	path = assets
 	url = https://github.com/luisjg/assets.git
+[submodule "work"]
+	path = work
+	url = https://github.com/luisjg/work.git
