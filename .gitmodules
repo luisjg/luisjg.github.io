@@ -7,3 +7,6 @@
 [submodule "work"]
 	path = work
 	url = https://github.com/luisjg/work.git
+[submodule "contact"]
+	path = contact
+	url = https://github.com/luisjg/contact.git
